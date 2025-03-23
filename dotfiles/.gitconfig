@@ -1,0 +1,18 @@
+[user]
+	email = splixx05@gmail.com
+	name = ricky
+[core]
+	editor = nvim
+[merge]
+	tool = meld
+[alias]
+	co = checkout
+	br = branch
+	mm = commit
+	st = status
+[push]
+	rebase = false
+[pull]
+	rebase = false
+[init]
+	defaultBranch = master

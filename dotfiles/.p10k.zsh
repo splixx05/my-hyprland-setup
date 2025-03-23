@@ -189,7 +189,7 @@
 
   #################################[ os_icon: os identifier ]##################################
   # OS identifier color.
-  typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND='#7713A6'
+  typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND=39
   # Custom icon.
   # typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='⭐'
 
@@ -197,7 +197,7 @@
   # Green prompt symbol if the last command succeeded.
   typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND='#289ddf'
   # Red prompt symbol if the last command failed.
-  typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND='#F7768E'
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND='#EC0D50'
   # Default prompt symbol.
   typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VIINS_CONTENT_EXPANSION='❯'
   # Prompt symbol in command vi mode.
@@ -214,7 +214,7 @@
 
   ##################################[ dir: current directory ]##################################
   # Default current directory color.
-  typeset -g POWERLEVEL9K_DIR_FOREGROUND=31
+  typeset -g POWERLEVEL9K_DIR_FOREGROUND=39
   # If directory is too long, shorten some of its segments to the shortest possible unique
   # prefix. The shortened directory can be tab-completed to the original.
   typeset -g POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_unique
@@ -224,7 +224,7 @@
   typeset -g POWERLEVEL9K_DIR_SHORTENED_FOREGROUND=103
   # Color of the anchor directory segments. Anchor segments are never shortened. The first
   # segment is always an anchor.
-  typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND=39
+  typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND='#ff0684'
   # Display anchor directory segments in bold.
   typeset -g POWERLEVEL9K_DIR_ANCHOR_BOLD=true
   # Don't shorten directories that contain any of these files. They are anchors.
@@ -552,7 +552,7 @@
   # Show this many fractional digits. Zero means round to seconds.
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_PRECISION=0
   # Execution time color.
-  typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND='#7aa2f7'
+  typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND='#ff0684'
   # Duration format: 1d 2h 3m 4s.
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FORMAT='d h m s'
   # Custom icon.

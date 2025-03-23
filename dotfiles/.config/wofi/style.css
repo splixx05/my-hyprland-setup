@@ -1,0 +1,62 @@
+/*
+ * -----------------------------------
+ * ---        WOFI STYLE           ---
+ * -----------------------------------
+ */
+
+#entry {
+  border-radius: 5px;
+  padding: 2px 3px 2px 3px;
+}
+
+#entry:selected {
+  background-color: #289ddf;
+}
+
+#text:selected {
+  color: #262838;
+}
+
+#window {
+  padding: 2px;
+  background-color: #0d1932;
+  border: 1px solid #ff0684;
+  border-radius: 5px;
+  font-family: "Roboto, bold";
+  font-size: 17px;
+}
+
+#input {
+  border: 2px solid #289ddf;
+  background-color: #262838;
+  color: #787c99;
+  padding: 3px 5px 3px 5px;
+  border-radius: 5px;
+}
+
+#inner-box {
+  color: #d8dee9;
+  padding: 2px;
+  background-color: transparent;
+}
+
+#outer-box {
+  margin: 15px;
+  background-color: transparent;
+}
+
+#scroll {
+  margin-top: 10px;
+  background-color: transparent;
+  border: none;
+}
+
+#text {
+  padding: 3px;
+  background-color: transparent;
+}
+
+#img {
+  background-color: transparent;
+  padding: 5px;
+}
