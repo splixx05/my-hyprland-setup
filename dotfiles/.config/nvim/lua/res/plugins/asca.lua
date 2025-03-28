@@ -33,10 +33,10 @@ return {
 			-- List of directory paths, or functions that return paths
 			directories = {
 				"~/.config/nvim/lua",
-				"~/.config/alacritty",
+				"~/.config/kitty",
 				"~/.config/hypr",
 				"~/.config/waybar",
-				"~/.zshrc",
+				"~/Documents/notes/",
 			},
 			-- Sections to add at bottom, these can be string references to
 			-- functions in sections.lua, custom strings, or custom functions
