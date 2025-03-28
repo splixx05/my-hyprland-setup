@@ -9,6 +9,6 @@ tags:
 
 ## ==ToDo==
 
-- [ ] Postconfig
+- [x] Postconfig
 - [ ] Integrations
-- [ ] Keymaps
+- [>] Keymaps

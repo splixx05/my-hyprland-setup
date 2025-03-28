@@ -4,13 +4,13 @@ return {
 	lazy = true,
 	ft = "markdown",
 	-- event = {
-	-- --   -- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand'.
+	--   -- to use the home shortcut '~' here you need to call 'vim.fn.expand'.
 	-- "BufReadPre "
 	-- 	.. vim.fn.expand("~")
-	-- 	.. "/Documents/notes/*.md",
-	-- --   -- refer to `:h file-pattern` for more examples
-	-- --   "BufReadPre path/to/my-vault/*.md",
-	-- --   "BufNewFile path/to/my-vault/*.md",
+	-- 	.. "/path/to/notes/*.md",
+	--   -- refer to `:h file-pattern` for more examples
+	--   "BufReadPre path/to/my-vault/*.md",
+	--   "BufNewFile path/to/my-vault/*.md",
 	-- },
 	dependencies = {
 		"nvim-lua/plenary.nvim",
@@ -52,12 +52,9 @@ return {
 					[">"] = { char = "", hl_group = "ObsidianRightArrow" },
 					["~"] = { char = "󰰱", hl_group = "ObsidianTilde" },
 					["!"] = { char = "", hl_group = "ObsidianImportant" },
-					-- [" "] = { char = "☐", hl_group = "ObsidianTodo" },
-					-- ["x"] = { char = "✔", hl_group = "ObsidianDone" },
 				},
 				bullets = { char = "•", hl_group = "ObsidianBullet" },
 				external_link_icon = { char = "", hl_group = "ObsidianExtLinkIcon" },
-				-- external_link_icon = { char = "", hl_group = "ObsidianExtLinkIcon" },
 				reference_text = { hl_group = "ObsidianRefText" },
 				highlight_text = { hl_group = "ObsidianHighlightText" },
 				tags = { hl_group = "ObsidianTag" },
