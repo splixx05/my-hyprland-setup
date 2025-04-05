@@ -12,7 +12,7 @@ return {
 		require("barbar").setup({
 			animation = true,
 			tabpages = true,
-			highlight_visible = true,
+			highlight_visible = false,
 			icons = {
 				buffer_index = true,
 				buffer_number = false,
