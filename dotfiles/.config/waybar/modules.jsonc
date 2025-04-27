@@ -13,7 +13,7 @@
 
   "custom/settings": {
     "format": "",
-    "on-click": "kitty nvim ~/.config/hypr/",
+    "on-click": "kitty nvim $HOME/.config/hypr/",
     "tooltip-format": "Open Config",
   },
 
@@ -25,33 +25,14 @@
 
   "custom/filemanager": {
     "format": "",
-    "on-click": "kitty yazi",
+    "on-click": "kitty yazi $HOME/myStuff",
     "tooltip-format": "Open Yazi",
-  },
-
-  "custom/browser": {
-    "format": "",
-    "on-click": "zen",
-    "tooltip-format": "Open Zen",
-  },
-
-  "custom/mail": {
-    "format": " ",
-    "on-click": "thunderbird",
-    "tooltip-format": "Open Thunderbird",
-  },
-
-  "custom/calculator": {
-    "format": "",
-    "on-click": "kcalc",
-    "tooltip-format": "Open Calculator",
   },
 
   "custom/appmenu": {
     "format": "",
-    "on-click": "~/.config/nwg-drawer/config.sh",
-    "on-click-right": "wlogout",
-    "tooltip": false,
+    "on-click": "wlogout",
+    "tooltip-format": "System Action",
   },
 
   "custom/separator": {

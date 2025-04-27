@@ -8,9 +8,11 @@ fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
-# Path to your Oh My Zsh installation.
+# Path to your Oh My Zsh installation & zsh config.d
 export ZSH="$HOME/.oh-my-zsh"
+export ZCONFIG="$HOME/dotfiles/.config/zsh"
 
+# ZSH_THEME="frisk"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -44,14 +46,14 @@ ENABLE_CORRECTION="true"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Plugins
-plugins=(git fzf zsh-autosuggestions zsh-syntax-highlighting zsh-yazi-mount)
+plugins=(git fzf zsh-autosuggestions zsh-syntax-highlighting zsh-yazi-mount zsh-cloud-drives emoji tmux)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
 # Load files from ~/.config/zsh/
-for file in ~/.config/zsh/*.zsh; do
+for file in $ZCONFIG/*.zsh; do
   [[ -f "$file" ]] && source "$file"
 done
 

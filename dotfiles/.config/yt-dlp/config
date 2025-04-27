@@ -1,0 +1,5 @@
+# output format
+-x --audio-format mp3
+
+# storage folder
+-o "$HOME/Downloads/yt/%(artists)s.%(title)s"

@@ -122,15 +122,18 @@ keymap = [
 	{ on = [ ",", "r" ], run = "sort random --reverse=no",                      desc = "Sort randomly" },
 
 	# Goto
-	{ on = [ "g", "/" ],       run = "cd /",             desc = "Goto root" },
-	{ on = [ "g", "h" ],       run = "cd ~",             desc = "Goto $HOME" },
-	{ on = [ "g", "c" ],       run = "cd ~/.config",     desc = "Goto ~/dotfiles" },
-	{ on = [ "g", "p" ],       run = "cd ~/projects",    desc = "Goto ~/projects" },
-	{ on = [ "g", "r" ],       run = "cd ~/res",				 desc = "Goto ~/res" },
-	{ on = [ "g", "R" ],       run = "cd ~/res/repos",	 desc = "Goto ~/res/repos" },
-	{ on = [ "g", "D" ],       run = "cd ~/Downloads",   desc = "Goto ~/Downloads" },
-	{ on = [ "g", "d" ],       run = "cd ~/dotfiles",    desc = "Goto ~/dotfiles" },
-	{ on = [ "g", "<Space>" ], run = "cd --interactive", desc = "Jump interactively" },
+	{ on = [ "g", "/" ],       run = "cd /",																		desc = "Goto Root" },
+	{ on = [ "g", "h" ],       run = "cd $HOME",																desc = "Goto Home" },
+	{ on = [ "g", "c" ],       run = "cd ~/.config",														desc = "Goto Config-files" },
+	{ on = [ "g", "p" ],       run = "cd ~/Dev/projects",   										desc = "Goto Projects" },
+	{ on = [ "g", "r" ],       run = "cd ~/Dev/res",				    								desc = "Goto Resources" },
+	{ on = [ "g", "R" ],       run = "cd ~/Dev/res/repos",				    					desc = "Goto My Repos" },
+	{ on = [ "g", "D" ],       run = "cd ~/Downloads",													desc = "Goto Downloads" },
+	{ on = [ "g", "d" ],       run = "cd ~/dotfiles",														desc = "Goto Dotfiles" },
+	{ on = [ "g", "m" ],       run = "cd ~/myStuff",														desc = "Goto My Stuff" },
+	{ on = [ "g", "t" ],       run = "cd ~/.local/share/Trash/files",						desc = "Goto Trash" },
+	{ on = [ "g", "l" ],       run = "cd ~/.local/share",												desc = "Goto Locale Config" },
+	{ on = [ "g", "<Space>" ], run = "cd --interactive",												desc = "Jump interactively" },
 
 	# Tabs
 	{ on = "t", run = "tab_create --current", desc = "Create a new tab with CWD" },

@@ -11,7 +11,7 @@
   // General Settings
   "layer": "top",
   "position": "bottom",
-  "height": 45,
+  "height": 25,
   "margin-top": 5,
   "margin-bottom": 10,
   "margin-left": 20,
@@ -20,7 +20,6 @@
 
   // Load Modules
   "include": [
-    // "~/.config/waybar/quicklinks.jsonc",
     "~/.config/waybar/modules.jsonc",
   ],
 
@@ -30,7 +29,6 @@
 
   "modules-left": [
     "custom/empty",
-    // "custom/exit",
     "custom/appmenu",
     "custom/separator",
     "custom/settings",
@@ -57,7 +55,7 @@
     "bluetooth",
     "battery",
     "network",
-    "custom/separator",
+    // "custom/separator",
 // "custom/notification",
     "tray",
     "custom/separator",

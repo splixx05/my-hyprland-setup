@@ -13,8 +13,9 @@ eval "$(zoxide init zsh)"
 # Set Cargo to PATH
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# Set Nvim to standard editor
+# Set Nvim to standard & sudo editor
 export EDITOR=nvim
+export SUDO_EDITOR=nvim
 
 # pnpm
 export PNPM_HOME="/home/ricky/.local/share/pnpm"
@@ -28,3 +29,6 @@ export HYPRSHOT_DIR="$HOME/Pictures/Screenshots"
 
 # Standard DIR for eza (LS_COLORS)
 export EZA_CONFIG_DIR="$HOME/.config/eza"
+
+# XDG User dirs
+[ -f "${HOME}/.config/user-dirs.dirs" ] && source "${HOME}/.config/user-dirs.dirs"
