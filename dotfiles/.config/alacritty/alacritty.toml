@@ -21,7 +21,7 @@ blur = true
 option_as_alt = "Both"
 
 [font]
-normal = { family = "MesloLGS NF", style = "bold" }
+normal = { family = "FiraCode", style = "bold" }
 size = 15
 offset = { x = 0, y = 0 }
 

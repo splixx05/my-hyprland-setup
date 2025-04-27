@@ -13,20 +13,20 @@
 
   "custom/settings": {
     "format": "",
-    "on-click": "alacritty nvim ~/.config/hypr/",
+    "on-click": "kitty nvim ~/.config/hypr/",
     "tooltip-format": "Open Config",
   },
 
   "custom/terminal": {
     "format": "",
-    "on-click": "alacritty",
-    "tooltip-format": "Open Alacritty",
+    "on-click": "kitty tmux",
+    "tooltip-format": "Open Tmux",
   },
 
   "custom/filemanager": {
     "format": "",
-    "on-click": "dolphin",
-    "tooltip-format": "Open Dolphin",
+    "on-click": "kitty yazi",
+    "tooltip-format": "Open Yazi",
   },
 
   "custom/browser": {
@@ -51,10 +51,12 @@
     "format": "",
     "on-click": "~/.config/nwg-drawer/config.sh",
     "on-click-right": "wlogout",
+    "tooltip": false,
   },
 
   "custom/separator": {
     "format": "|",
+    "tooltip": false,
   },
   //------------------------------------------------------//
   //                Modules center                        //
@@ -249,7 +251,7 @@
   // Taskbar
   "wlr/taskbar": {
     "format": "{icon}",
-    "icon-size": 18,
+    "icon-size": 24,
     "tooltip-format": "{title}",
     "on-click": "activate",
     "on-click-middle": "close",

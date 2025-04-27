@@ -4,7 +4,7 @@ return {
 	priority = 999,
 	config = function()
 		require("themify").setup({
-			activity = true,
+			activity = false,
 			-- Your list of colorschemes
 			"folke/tokyonight.nvim",
 			"sho-87/kanagawa-paper.nvim",

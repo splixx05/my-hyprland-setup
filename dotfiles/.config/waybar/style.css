@@ -18,8 +18,8 @@
 }
 
 window#waybar {
-  background-color: #0b1732;
-  border: 1px solid #ff0684;
+  background-color: #010f25;
+  border: 1px solid #3ea5d9;
   margin: 2px 20px 2px 20px;
   padding: 5px 5px 5px 5px;
   /* background: transparent; */
@@ -230,7 +230,7 @@ window#waybar.empty #window {
   font-weight: bold;
   opacity: 1;
   /* color: #7713a6; */
-  color: #ff0684;
+  color: #3ea5d9;
 }
 
 /* -----------------------------------------------------
@@ -375,21 +375,21 @@ window#waybar.empty #window {
   /* background-color: #000000; */
 }
 
-@keyframes blink {
-  to {
-    /* background-color: #000000; */
-    color: #787c99;
-  }
-}
+/* @keyframes blink { */
+/*   to { */
+/*     background-color: none; */
+/*     color: #787c99; */
+/*   } */
+/* } */
 
 #battery.critical:not(.charging) {
-  background-color: #f53c3c;
-  color: #f7768e;
-  animation-name: blink;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+  background-color: #f7768e;
+  color: #ff0684;
+  /* animation-name: blink; */
+  /* animation-duration: 0.5s; */
+  /* animation-timing-function: linear; */
+  /* animation-iteration-count: infinite; */
+  /* animation-direction: alternate; */
 }
 
 /* -----------------------------------------------------

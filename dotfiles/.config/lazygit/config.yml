@@ -2,7 +2,7 @@ gui:
   nerdFontsVersion: "3"
   theme:
     activeBorderColor:
-      - "#ff0684"
+      - "#bec2d3"
       - "bold"
     inactiveBorderColor:
       - "#7aa2f7"

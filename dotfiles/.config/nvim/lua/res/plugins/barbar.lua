@@ -27,13 +27,6 @@ return {
 						changed = { enabled = true, icon = "~" },
 						deleted = { enabled = true, icon = "-" },
 					},
-					filetype = {
-						custom_colors = false,
-						enabled = true,
-					},
-					sidebar_filetypes = {
-						NvimTree = true,
-					},
 					separator = { left = "▎", right = "▎" },
 					separator_at_end = true,
 					modified = { button = "●" },

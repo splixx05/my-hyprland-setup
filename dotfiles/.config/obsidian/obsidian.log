@@ -136,3 +136,11 @@
 2025-02-28 18:28:01 Success.
 2025-02-28 18:28:01 Latest version is 1.8.7
 2025-02-28 18:28:01 App is up to date.
+2025-04-27 06:16:34 Loading main app package /nix/store/94srqgl81p5i3m1adk6xh739hf8i8mcd-obsidian-1.8.9/share/obsidian/obsidian.asar
+2025-04-27 06:16:34 Checking for update using Github
+2025-04-27 06:16:34 Success.
+2025-04-27 06:16:34 Latest version is 1.8.10
+2025-04-27 06:16:34 Downloading update from https://github.com/obsidianmd/obsidian-releases/releases/download/v1.8.10/obsidian-1.8.10.asar.gz
+2025-04-27 06:16:35 Verifying hash & signature. Size= 8128788
+2025-04-27 06:16:35 Saving file
+2025-04-27 06:16:36 Update complete.

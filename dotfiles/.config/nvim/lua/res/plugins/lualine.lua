@@ -2,16 +2,16 @@ return {
 	"nvim-lualine/lualine.nvim",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	config = function()
-		vim.cmd("colorscheme nightfox")
+		vim.cmd("colorscheme")
 		local lualine = require("lualine")
 		require("lualine").setup({
 			options = {
 				icons_enabled = true,
-				-- theme = "nightfly",
-				-- theme = require("neofusion.lualine"),
-				component_separators = { left = "", right = "" },
-				-- section_separators = { left = "", right = "" },
+				component_separators = { left = "|", right = "|" },
 				section_separators = { left = "", right = "" },
+				-- component_separators = { left = "", right = "" },
+				-- section_separators = { left = "", right = "" },
+				-- component_separators = { left = "", right = "" },
 				disabled_filetypes = {
 					statusline = {},
 					winbar = {},

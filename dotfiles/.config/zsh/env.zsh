@@ -3,11 +3,8 @@
 # |_  / __| '_ \   / _ \ '_ \ \ / / | '__/ _ \| '_ \| '_ ` _ \ / _ \ '_ \| __|
 #  / /\__ \ | | | |  __/ | | \ V /| | | | (_) | | | | | | | | |  __/ | | | |_ 
 # /___|___/_| |_|  \___|_| |_|\_/ |_|_|  \___/|_| |_|_| |_| |_|\___|_| |_|\__|
-# 
-
-
-
-# source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+#
+# ----------------------------------------------------------------------------
 
 # zoxide config
 export _ZO_ECHO='1'
@@ -29,3 +26,5 @@ esac
 # Standard DIR for Hyprshot to safe screenshots
 export HYPRSHOT_DIR="$HOME/Pictures/Screenshots"
 
+# Standard DIR for eza (LS_COLORS)
+export EZA_CONFIG_DIR="$HOME/.config/eza"

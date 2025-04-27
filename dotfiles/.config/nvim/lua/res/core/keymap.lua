@@ -8,17 +8,8 @@ keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 keymap.set("v", "kj", "<ESC>", { desc = "Exit visual mode with ev" })
 
 -- commands (:)
-keymap.set("n", "<leader>sr", ":source", { desc = "switch to 'Explore-Mode'" })
-
--- Navigation
--- keymap.set("n", "j", "h", { desc = "Navigation left" })
--- keymap.set("n", "k", "j", { desc = "Navigation down" })
--- keymap.set("n", "l", "k", { desc = "Navigation up" })
--- keymap.set("n", "ö", "l", { desc = "Navigation right" })
--- keymap.set("v", "j", "h", { desc = "Navigation left" })
--- keymap.set("v", "k", "j", { desc = "Navigation down" })
--- keymap.set("v", "l", "k", { desc = "Navigation up" })
--- keymap.set("v", "ö", "l", { desc = "Navigation right" })
+keymap.set("n", "<leader>sr", ":source")
+keymap.set("n", "<leader>tt", ":ToggleTerm size=16 dir=~ direction=horizontal name=default")
 
 -- window management
 keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" }) -- split window vertically

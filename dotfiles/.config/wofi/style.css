@@ -10,7 +10,7 @@
 }
 
 #entry:selected {
-  background-color: #289ddf;
+  background-color: #1793d1;
 }
 
 #text:selected {
@@ -19,16 +19,16 @@
 
 #window {
   padding: 2px;
-  background-color: #0d1932;
-  border: 1px solid #ff0684;
+  background-color: #010f25;
+  border: 2px solid #095fa2;
   border-radius: 5px;
   font-family: "Roboto, bold";
   font-size: 17px;
 }
 
 #input {
-  border: 2px solid #289ddf;
-  background-color: #262838;
+  border: 2px solid #095fa2;
+  background-color: #010f25;
   color: #787c99;
   padding: 3px 5px 3px 5px;
   border-radius: 5px;
