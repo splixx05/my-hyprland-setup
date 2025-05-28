@@ -3,20 +3,7 @@ id: Documentation
 aliases:
   - Doc-File
 tags:
-  - "[My"
-  - Hyprland
-  - Setup
-  - 🐧📦
-  - ❯
-  - A
-  - arch
-  - based
-  - setup
-  - with
-  - hyprland
-  - as
-  - a
-  - DE](README.md#a-arch-based-setup-with-hyprland-as-a-de)
+  - MyHyprlandSetuUp
 ---
 
 # Documentation
