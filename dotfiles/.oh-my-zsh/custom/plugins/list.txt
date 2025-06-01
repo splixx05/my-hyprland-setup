@@ -1,4 +1,0 @@
-zsh-autosuggestions
-zsh-cloud-drives
-zsh-syntax-highlighting
-zsh-yazi-mount
