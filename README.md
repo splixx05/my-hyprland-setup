@@ -4,12 +4,13 @@
 
 My definition of a consistent, clean and harmonious DE is to use it without a GUI.
 So I decided to only use programs that run via a terminal (with the exception of the browser and the mail client).
+
+![Screenshot clean DE](assets/DE-clear.png)
+
 The runtime environments and dotfiles are kept very minimalistic and require almost no memory.
 This leaves more space and time for the cool stuff :)
 
-[A clean and harmonic DE](https://github.com/splixx05/my-hyprland-setup/blob/master/DE-hyprshot.png)
-<br>
-[Take a look @ the Screenshot](https://github.com/splixx05/my-hyprland-setup/blob/master/DE-hyprshot-info.png)
+![Screenshot of a harmonic DE](DE-info.png)
 
 ---
 
