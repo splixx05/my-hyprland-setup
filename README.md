@@ -10,7 +10,7 @@ So I decided to only use programs that run via a terminal (with the exception of
 The runtime environments and dotfiles are kept very minimalistic and require almost no memory.
 This leaves more space and time for the cool stuff :)
 
-![Screenshot of a harmonic DE](DE-info.png)
+![Screenshot of a harmonic DE](assets/DE-info.png)
 
 ---
 
