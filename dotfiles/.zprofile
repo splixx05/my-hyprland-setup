@@ -21,3 +21,6 @@ export XDG_SESSION_DESKTOP=hyprland
 
 # --------  dir config for hypr apps ------------- #
 export HYPRSHOT_DIR="$HOME/myStuff/Pictures/Screenshots"
+
+# --------  x11 / Wayland config  ---------------- #
+export MOZ_ENABLE_WAYLAND=1
