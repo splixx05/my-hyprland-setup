@@ -4,7 +4,7 @@
 yay -Syu
 
 # Install required packages
-yay -S --needed $(<basepkg.txt)
+yay -S --needed $ <"basepkg.txt"
 
 # Install Oh My Zsh
 if [ ! -d "$HOME/.oh-my-zsh" ]; then

@@ -1,10 +1,19 @@
 return {
-	-- require("res.colors.catppucin"),
-	-- require("res.colors.dracula"),
-	-- require("res.colors.evergarden"),
-	-- require("res.colors.neofusion"),
-	require("res.colors.nightfox"),
-	-- require("res.colors.nord"),
-	-- require("res.colors.tokio-night"),
-	-- require("res.colors.tokyodark"),
+  "EdenEast/nightfox.nvim",
+  priority = 1000,
+  config = function()
+    require("nightfox").setup({
+      options = {
+        transparent = true,
+        blur = 1,
+        opacity = 0.7,
+        terminal_colors = true,
+        dim_inactive = true,
+        module_default = true,
+        styles = {},
+      },
+    })
+    -- setup must be called before loading
+    vim.cmd("colorscheme nightfox")
+  end,
 }

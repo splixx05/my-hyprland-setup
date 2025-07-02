@@ -21,7 +21,7 @@ blur = true
 option_as_alt = "Both"
 
 [font]
-normal = { family = "FiraCode", style = "bold" }
+normal = { family = "MesloLGS NF", style = "regular" }
 size = 15
 offset = { x = 0, y = 0 }
 
@@ -32,15 +32,15 @@ hide_when_typing = true
 save_to_clipboard = true
 
 [cursor]
-style = { shape = "underline", blinking = "Off"}
+style = { shape = "underline", blinking = "On"}
 blink_interval = 500
 unfocused_hollow = true
 
 [keyboard]
 bindings = [
 { key = "n", mods = "Control|Alt", action = "CreateNewWindow" },
-{ key = "c", mods = "Control", action = "CopySelection" },
-{ key = "v", mods = "Control", action = "PasteSelection" },
+{ key = "c", mods = "Control|Shift", action = "CopySelection" },
+{ key = "v", mods = "Control|Shift", action = "PasteSelection" },
 { key = "q", mods = "Control|Alt", action = "Quit" },
 { key = "f", mods = "Control|Alt", action = "ToggleFullscreen" },
 { key = "m", mods = "Control|Alt", action = "Minimize" },

@@ -24,7 +24,7 @@ To keep the environment harmonious I use most of the features via Hyprland itsel
 - Hyprlock
 - Hyprdock
 - Hyprpicker
-- nwg-look / gtk-3.0
+- gtk-3.0
 - qt6ct
 - waybar
 - Wlogout
@@ -58,14 +58,15 @@ You can then fine-tune the settings in the dotfiles according to your wishes
 Since this repo contains a basic setup for Arch, no special pre-installation is required.
 However, if a different distro is desired, then consider using specific tools such as:
 
-- Kittty (or Alycritty)
+- Kitty (or Alacritty)
 - Zsh (incl. OMZ)
 - Ly (or greetd & tuigreet)
 - Tmux
 - Neovim
 - Plymouth (Splash)
+- gum
 - Meslo / Roboto fonts
-- Icons
+- Noto Color Emoji (font)
 
 ## 🛡️ Safety
 

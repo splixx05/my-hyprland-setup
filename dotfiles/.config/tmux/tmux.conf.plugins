@@ -5,33 +5,68 @@
 # |_|   |_|\__,_|\__, |_|_| |_|___/
 #                |___/             
 
-# tpm plugin
+# tpm plugin init
 set -g @plugin 'tmux-plugins/tpm'
-
-# list of tmux plugins
+# ---------------------------------------------
+# ------  list of tmux plugins  ------------- #
+# ---------------------------------------------
 set -g @plugin 'christoomey/vim-tmux-navigator'
-
+# ---------------------------------------------
 set -g @plugin 'tmux-plugins/tmux-resurrect' # persist tmux sessions after computer restart
 set -g @resurrect-capture-pane-contents 'on'
-
+# prefix + Ctrl-s for save a session
+# prefix + Ctrl-r for restore a session
+# ---------------------------------------------
 set -g @plugin 'tmux-plugins/tmux-continuum' # automatically saves sessions for you every 15 minutes
 set -g @continuum-restore 'on'
-
-set -g @plugin "janoamaral/tokyo-night-tmux"
-
+# ---------------------------------------------
 set -g @plugin 'tmux-plugins/tmux-sidebar'
-
+# ---------------------------------------------
 set -g @plugin 'alexwforsythe/tmux-which-key'
-
+# ---------------------------------------------
 set -g @plugin 'rickstaa/tmux-notify'
-
+# ---------------------------------------------
 set -g @plugin 'laktak/tome'
 set -g @tome_key "p"
 set -g @tome-scratch_key "P"
 set -g @tome_height "12"
-
+# ---------------------------------------------
 set -g @plugin 'sainnhe/tmux-fzf'
-
+# ---------------------------------------------
+# ----------------  Themes  ----------------- #
+# ---------------------------------------------
+# set -g @plugin "janoamaral/tokyo-night-tmux"
+# ---------------------------------------------
+# set -g @plugin 'jimeh/tmux-themepack'
+# set -g @themepack 'powerline/double/cyan'
+# ---------------------------------------------
+set -g @plugin 'o0th/tmux-nova'
+set -g @nova-nerdfonts true
+set -g @nova-nerdfonts-left 
+set -g @nova-nerdfonts-right 
+set -g @nova-rows 0
+# Style
+set -g @nova-pane "#I:#P#{?pane_in_mode, ❱ #{pane_mode},} ❱ #W"
+set -g @nova-pane-active-border-style "#171D26"
+set -g @nova-pane-border-style "#171D26"
+set -g @nova-status-style-bg "#171D26"
+set -g @nova-status-style-fg "#1793D1"
+set -g @nova-status-style-active-bg "#1793D1"
+set -g @nova-status-style-active-fg "#171D26"
+set -g @nova-status-style-double-bg "#171D26"
+# Segments left
+set -g @nova-segment-mode "#{?client_prefix,⬤,◯}"
+set -g @nova-segment-mode-colors "#1793D1 #171D26"
+set -g @nova-segment-session "#{session_name}"
+set -g @nova-segment-session-colors "#1793D1 #171D26"
+set -g @nova-segments-0-left "mode | session"
+# Segments right
+set -g @nova-segment-whoami "#(whoami)@#h"
+set -g @nova-segment-whoami-colors "#1793D1 #171D26"
+set -g @nova-segment-info "#{client_termname}"
+set -g @nova-segment-info-colors "#171D26 #1793D1"
+set -g @nova-segments-0-right "info | whoami"
+# --------------------------------  EOL  ---------------------------------------- #
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run -b '~/.config/tmux/plugins/tpm/tpm'
 
