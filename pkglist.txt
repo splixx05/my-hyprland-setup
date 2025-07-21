@@ -11,6 +11,9 @@ bluez-utils
 brightnessctl
 calcurse
 cliphist
+cnijfilter2
+cups
+cups-pdf
 dmenu
 dosfstools
 efibootmgr
@@ -62,6 +65,7 @@ noto-fonts-emoji
 npm
 nwg-dock-hyprland
 nwg-look
+obsidian-bin
 pacman-contrib
 pavucontrol
 pipewire-alsa
@@ -88,6 +92,7 @@ solaar
 stow
 sudo
 swayimg
+system-config-printer
 terminus-font
 thunderbird
 tmux

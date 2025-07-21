@@ -1,6 +1,7 @@
 {
     "diagnostics.globals": [
-        "vim"
+        "vim",
+        "mapping"
     ],
     "diagnostics.disable": [
         "undefined-global",

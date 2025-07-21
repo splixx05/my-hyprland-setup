@@ -4,14 +4,14 @@ return {
   Accent = "#00B7EB",
   Highlight = "#B4C9FF",
   CursorForeground = "#00B7EB",
-  CursorBackground = "#131A24",
+  CursorBackground = "##131A24",
   Visual = "#1C2533",
   CursorLine = "#1C2533",
   CursorLineNr = "#00B7EB",
   LineNr = "#7898C7",
 
   Comment = "#5C6773",
-  Todo = "#8CCF7E",
+  Todo = "#34eb83",
 
   Constant = "#FFD580",
   String = "#00cccc",

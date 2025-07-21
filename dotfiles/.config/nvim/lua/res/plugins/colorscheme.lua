@@ -8,7 +8,7 @@ return {
         blur = 1,
         opacity = 0.7,
         terminal_colors = true,
-        dim_inactive = true,
+        dim_inactive = false,
         module_default = true,
         styles = {},
       },
