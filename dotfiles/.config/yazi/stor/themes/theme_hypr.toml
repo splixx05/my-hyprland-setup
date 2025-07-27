@@ -1,7 +1,8 @@
-[flavor]
-dark = "tokyonight-storm"
-
+# [flavor]
+# dark = "tokyonight-storm"
+#
 [mgr]
+# syntect_theme = "~/.config/yazi/flavors/tokyonight-storm.yazi/tmtheme.xml"
 cwd = { fg = "#7898C7", italic = true }
 
 # Hovered
@@ -18,6 +19,11 @@ marker_cut = { fg = "#FF6B6B", bg = "#FF6B6B" }
 marker_marked = { fg = "#CBA6F7", bg = "#CBA6F7" }
 marker_selected = { fg = "#065287", bg = "#065287" }
 
+# Tab
+tab_active = { fg = "#131A24", bg = "#1793D1" }
+tab_inactive = { fg = "#1793D1", bg = "#131A24" }
+tab_width = 1
+
 # Count
 count_copied = { fg = "#7898C7", bg = "#8CCF7E" }
 count_cut = { fg = "#7898C7", bg = "#FF6B6B" }
@@ -26,13 +32,6 @@ count_selected = { fg = "#7898C7", bg = "#065287" }
 # Border
 border_symbol = "│"
 border_style = { fg = "#7898C7" }
-
-# Highlight
-syntect_theme = "tokyonight-storm"
-
-[tabs]
-active = { fg = "#131A24", bg = "#1793D1" }
-inactive = { fg = "#1793D1", bg = "#131A24" }
 
 [mode]
 normal_main = { fg = "#131A24", bg = "#1793D1", bold = true }
