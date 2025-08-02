@@ -7,7 +7,7 @@ desc = "run lazygit"
 
 [[mgr.prepend_keymap]]
 # Chmod on howered files
-on = ["c", "m"]
+on = ["m", "c"]
 run = "plugin chmod"
 desc = "Chmod on selected files"
 
