@@ -48,7 +48,7 @@ require("yatline"):setup({
 				{ type = "coloreds", custom = false, name = "tab_path" },
 			},
 			section_b = {
-				{ type = "string", custom = false, name = "hovered_path" },
+				-- { type = "string", custom = false, name = "hovered_path" },
 			},
 			section_c = {
 				{ type = "coloreds", custom = false, name = "symlink" },
@@ -131,6 +131,10 @@ require("yatline-symlink"):setup({
 require("yamb"):setup({
 	jump_notify = true,
 })
+
+-- ########################################################################
+
+require("restore"):setup({})
 
 -- ########################################################################
 

@@ -4,6 +4,11 @@ rev = "de53d90"
 hash = "1adc12c2b2b025411ab61eb8f0879574"
 
 [[plugin.deps]]
+use = "lpanebr/yazi-plugins:first-non-directory"
+rev = ""
+hash = "386df6fbcd34b29774ab171b642e91f2"
+
+[[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
 rev = "de53d90"
 hash = "3996fc74044bc44144b323686f887e1"
@@ -52,6 +57,26 @@ hash = "487c8c8ec5028db6de2a901a31dd74c2"
 use = "lpanebr/yazi-plugins:yatline-symlink"
 rev = ""
 hash = "386df6fbcd34b29774ab171b642e91f2"
+
+[[plugin.deps]]
+use = "GrzegorzKozub/mdcat"
+rev = "7b7380a"
+hash = "40c20e6c1085d1f45309b9f148bf4f6e"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:toggle-pane"
+rev = "de53d90"
+hash = "d6f60c24d8c0cf57a855bf46115b2502"
+
+[[plugin.deps]]
+use = "boydaihungst/restore"
+rev = "84f1921"
+hash = "355f163cb374b5c9514aee2b64121678"
+
+[[plugin.deps]]
+use = "MasouShizuka/close-and-restore-tab"
+rev = "5047217"
+hash = "bb24648b1f96f1cef8c1543742189aad"
 
 [[flavor.deps]]
 use = "kalidyasin/yazi-flavors:tokyonight-storm"

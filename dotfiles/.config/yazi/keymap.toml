@@ -1,9 +1,18 @@
 [[mgr.prepend_keymap]]
+on = ["<C-c>"]
+run = "plugin close-and-restore-tab close_to_left"
+desc = "Close the current tab and turn to right tab, or quit if it is last tab"
 
-# Lazygit
-on = ["u", "g"]
-run = "plugin lazygit"
-desc = "run lazygit"
+[[mgr.prepend_keymap]]
+on = ["<C-t>"]
+run = "plugin close-and-restore-tab restore"
+desc = "Restore the closed tab"
+
+[[mgr.prepend_keymap]]
+# First Non-directory
+on = ["g", "f", "f"]
+run = "plugin first-non-directory"
+desc = "Jumps to the first file"
 
 [[mgr.prepend_keymap]]
 # Chmod on howered files
@@ -92,7 +101,12 @@ run = "plugin wl-clipboard"
 #############      Navgigation      ################
 ####################################################
 
-# Goto: 
+# Goto:
+
+[[mgr.prepend_keymap]]
+on = ["g", "f", "l"]
+run = "follow"
+desc = "Follow hovered symlink"
 
 [[mgr.prepend_keymap]]
 on = ["g", "/"]
@@ -110,27 +124,27 @@ run = "cd ~/.config"
 desc = "Goto Config-files"
 
 [[mgr.prepend_keymap]]
-on = ["g", "p"]
+on = ["g", "d", "p"]
 run = "cd ~/Dev/projects"
 desc = "Goto Projects"
 
 [[mgr.prepend_keymap]]
-on = ["g", "r"]
+on = ["g", "d", "r"]
 run = "cd ~/Dev/res"
 desc = "Goto Resources"
 
 [[mgr.prepend_keymap]]
-on = ["g", "R"]
+on = ["g", "d", "e"]
 run = "cd ~/Dev/res/repos"
 desc = "Goto My Repos"
 
 [[mgr.prepend_keymap]]
-on = ["g", "D"]
+on = ["g", "d", "w"]
 run = "cd ~/Downloads"
 desc = "Goto Downloads"
 
 [[mgr.prepend_keymap]]
-on = ["g", "d"]
+on = ["g", "d", "o"]
 run = "cd ~/dotfiles"
 desc = "Goto Dotfiles"
 
@@ -146,7 +160,7 @@ desc = "Goto Trash"
 
 [[mgr.prepend_keymap]]
 on = ["g", "l"]
-run = "cd ~/.local/share"
+run = "cd ~/.local"
 desc = "Goto Locale Config"
 
 [[mgr.prepend_keymap]]
@@ -155,12 +169,12 @@ run = "cd /run/media/ricky"
 desc = "Goto USB Mountpoint"
 
 [[mgr.prepend_keymap]]
-on = ["g", "B"]
+on = ["g", "m", "b"]
 run = "cd /$HOME/myStuff/Documents/Bachata-Novalis"
 desc = "Goto Bachata-Novalis"
 
 [[mgr.prepend_keymap]]
-on = ["g", "v"]
+on = ["g", "d", "v"]
 run = "cd /$HOME/Dev"
 desc = "Goto Dev"
 
@@ -169,4 +183,31 @@ on = ["g", "<Space>"]
 run = "cd --interactive"
 desc = "Jump interactively"
 
-# ------------------------------
+####################################################
+#############      Yazi UI      ####################
+####################################################
+
+# Lazygit
+[[mgr.prepend_keymap]]
+on = ["u", "g"]
+run = "plugin lazygit"
+desc = "run lazygit"
+
+# Trash Restore
+[[mgr.prepend_keymap]]
+on = ["u", "t", "f"]
+run = "plugin restore"
+desc = "Restore last deleted files/folders"
+
+[[mgr.prepend_keymap]]
+on = ["u", "t", "i"]
+run = "shell --block -- clear && trash-restore"
+desc = "Restore deleted file (Interactive)"
+
+# TODO: run = "shell --block -- clear && trash-restore --overwrite" --> merge instead of overwrite?
+
+# Toggle Pane
+[[mgr.prepend_keymap]]
+on = ["u", "p"]
+run = "plugin toggle-pane min-preview"
+desc = "Show or hide the preview pane"
