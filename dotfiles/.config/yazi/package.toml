@@ -59,11 +59,6 @@ rev = ""
 hash = "386df6fbcd34b29774ab171b642e91f2"
 
 [[plugin.deps]]
-use = "GrzegorzKozub/mdcat"
-rev = "7b7380a"
-hash = "40c20e6c1085d1f45309b9f148bf4f6e"
-
-[[plugin.deps]]
 use = "yazi-rs/plugins:toggle-pane"
 rev = "de53d90"
 hash = "d6f60c24d8c0cf57a855bf46115b2502"
@@ -77,6 +72,36 @@ hash = "355f163cb374b5c9514aee2b64121678"
 use = "MasouShizuka/close-and-restore-tab"
 rev = "5047217"
 hash = "bb24648b1f96f1cef8c1543742189aad"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:piper"
+rev = "de53d90"
+hash = "2143a53182dbbe935a1abd1623424aa5"
+
+[[plugin.deps]]
+use = "KKV9/compress"
+rev = "9fc8fe0"
+hash = "2ad086899bf368fba211a33d8f68c39d"
+
+[[plugin.deps]]
+use = "dedukun/relative-motions"
+rev = "a603d9e"
+hash = "e02a788e5b8ae0fb47fd0193dda589cc"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:types"
+rev = "de53d90"
+hash = "1e047e1b13b5e3fc6ab1f5d0d04a14e2"
+
+[[plugin.deps]]
+use = "AnirudhG07/plugins-yazi:copy-file-contents"
+rev = "71545f4"
+hash = "f8530ee84fee95dbcc26bb1d8d8019c7"
+
+[[plugin.deps]]
+use = "dawsers/dual-pane"
+rev = "c2fed12"
+hash = "c7c303f806f5bbbdc863f22956876551"
 
 [[flavor.deps]]
 use = "kalidyasin/yazi-flavors:tokyonight-storm"

@@ -24,9 +24,6 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 
-# Standard DIR for Hyprshot to safe screenshots
-export HYPRSHOT_DIR="$HOME/Pictures/Screenshots"
-
 # Standard DIR for eza (LS_COLORS)
 export EZA_CONFIG_DIR="$HOME/.config/eza"
 

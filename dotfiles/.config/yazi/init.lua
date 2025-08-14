@@ -1,3 +1,5 @@
+-- ########################################################################
+
 require("git"):setup()
 
 -- ########################################################################
@@ -15,21 +17,21 @@ require("yatline"):setup({
 	inverse_separator = { open = "", close = "" },
 
 	style_a = {
-		fg = "#131A24",
+		fg = "#1793D1",
 		bg_mode = {
-			normal = "#1793D1",
+			-- normal = "#101322",
 			select = "#CBA6F7",
 			un_select = "#FF6B6B",
 		},
 	},
-	style_b = { fg = "#1793D1", bg = "#131A24" },
-	style_c = { fg = "#1793D1", bg = "#131A24" },
+	style_b = { fg = "#1793D1", bg = "#101322" },
+	style_c = { fg = "#1793D1", bg = "#101322" },
 
-	permissions_t_fg = "#8CCF7E",
-	permissions_r_fg = "#FFD580",
-	permissions_w_fg = "#FF6B6B",
-	permissions_x_fg = "#1793D1",
-	permissions_s_fg = "#7898C7",
+	permissions_t_fg = "#1793D1",
+	permissions_r_fg = "#8CCF7E",
+	permissions_w_fg = "#FFD580",
+	permissions_x_fg = "#FF6B6B",
+	permissions_s_fg = "#1793D1",
 
 	selected = { icon = "󰻭", fg = "#FFD580" },
 	copied = { icon = "", fg = "#8CCF7E" },
@@ -45,7 +47,8 @@ require("yatline"):setup({
 	header_line = {
 		left = {
 			section_a = {
-				{ type = "coloreds", custom = false, name = "tab_path" },
+				-- { type = "coloreds", custom = false, name = "tab_path" },
+				{ type = "string", custom = false, name = "hovered_path" },
 			},
 			section_b = {
 				-- { type = "string", custom = false, name = "hovered_path" },
@@ -92,7 +95,7 @@ require("yatline"):setup({
 	},
 })
 
--- ########################################################################
+-- -- ########################################################################
 
 local hypr = {
 	prefix_color = "#7898C7",
@@ -108,10 +111,10 @@ require("yatline-githead"):setup({
 	theme = hypr,
 })
 
--- ########################################################################
-
+-- -- ########################################################################
+--
 require("yatline-tab-path"):setup({
-	path_fg = "#131A24",
+	path_fg = "#101322",
 	filter_fg = "#FFD580",
 	search_label = " search",
 	filter_label = " filter",
@@ -120,22 +123,37 @@ require("yatline-tab-path"):setup({
 	separator = "",
 })
 
--- ########################################################################
+-- -- ########################################################################
 
 require("yatline-symlink"):setup({
 	symlink_color = "#CBA6F7",
 })
 
--- ########################################################################
+-- -- ########################################################################
 
 require("yamb"):setup({
 	jump_notify = true,
 })
 
--- ########################################################################
+-- -- ########################################################################
 
 require("restore"):setup({})
 
--- ########################################################################
+-- -- ########################################################################
 
--- ########################################################################
+require("relative-motions"):setup({
+	show_numbers = "relative",
+	show_motion = true,
+	enter_mode = "first",
+})
+
+-- -- ########################################################################
+
+require("copy-file-contents"):setup({
+	append_char = "\n",
+	notification = true,
+})
+
+-- -- ########################################################################
+
+-- -- ########################################################################

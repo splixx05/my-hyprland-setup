@@ -1,6 +1,5 @@
-
 [mgr]
-ratio = [2, 4, 4]
+ratio = [3, 5, 7]
 linemode = "none"
 show_hidden = true
 show_symlink = true
@@ -9,9 +8,69 @@ mouse_events = ["click", "scroll"]
 title_format = "Yazi: {cwd}"
 
 [preview]
+enable = true
 tab_size = 2
 max_width = 600
 max_height = 900
+fetchers = [
+	# Mimetype
+	{ id = "mime", name = "*", run = "mime", if = "!mime", prio = "high" },
+]
+spotters = [
+	{ name = "*/", run = "folder" },
+	# Code
+	{ mime = "text/*", run = "code" },
+	{ mime = "*/{xml,javascript,wine-extension-ini}", run = "code" },
+	# Image
+	{ mime = "image/{avif,hei?,jxl,svg+xml}", run = "magick" },
+	{ mime = "image/*", run = "image" },
+	# Video
+	{ mime = "video/*", run = "video" },
+	# Fallback
+	{ name = "*", run = "file" },
+]
+preloaders = [
+	# Image
+	{ mime = "image/{avif,hei?,jxl,svg+xml}", run = "magick" },
+	{ mime = "image/*", run = "image" },
+	# Video
+	{ mime = "video/*", run = "video" },
+	# PDF
+	{ mime = "application/pdf", run = "pdf" },
+	# Font
+	{ mime = "font/*", run = "font" },
+	{ mime = "application/ms-opentype", run = "font" },
+]
+previewers = [
+	{ name = "*/", run = "folder", sync = true },
+	# Code
+	{ mime = "text/*", run = "code" },
+	{ mime = "*/{xml,javascript,wine-extension-ini}", run = "code" },
+	# JSON
+	{ mime = "application/{json,ndjson}", run = "json" },
+	# Image
+	{ mime = "image/{avif,hei?,jxl,svg+xml}", run = "magick" },
+	{ mime = "image/*", run = "image" },
+	# Video
+	{ mime = "video/*", run = "video" },
+	# PDF
+	{ mime = "application/pdf", run = "pdf" },
+	# Archive
+	{ mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", run = "archive" },
+	{ mime = "application/{debian*-package,redhat-package-manager,rpm,android.package-archive}", run = "archive" },
+	{ name = "*.{AppImage,appimage}", run = "archive" },
+	# Virtual Disk / Disk Image
+	{ mime = "application/{iso9660-image,qemu-disk,ms-wim,apple-diskimage}", run = "archive" },
+	{ mime = "application/virtualbox-{vhd,vhdx}", run = "archive" },
+	{ name = "*.{img,fat,ext,ext2,ext3,ext4,squashfs,ntfs,hfs,hfsx}", run = "archive" },
+	# Font
+	{ mime = "font/*", run = "font" },
+	{ mime = "application/ms-opentype", run = "font" },
+	# Empty file
+	{ mime = "inode/empty", run = "empty" },
+	# Fallback
+	{ name = "*", run = "file" },
+]
 
 [opener]
 edit = [{ run = '$EDITOR $@', desc = "$EDITOR", block = true, for = "unix" }]
@@ -79,76 +138,31 @@ rules = [
 	] },
 ]
 
-[tasks]
-
 [plugin]
+prepend_previewers = [
+	{ name = "*.md", run = 'piper -- CLICOLOR_FORCE=1 glow -w=$w -s=dark "$1"' },
+]
 
 prepend_fetchers = [
 	{ id = "git", name = "*", run = "git" },
 	{ id = "git", name = "*/", run = "git" },
 ]
-fetchers = [
-	# Mimetype
-	{ id = "mime", name = "*", run = "mime", if = "!mime", prio = "high" },
-]
-spotters = [
-	{ name = "*/", run = "folder" },
-	# Code
-	{ mime = "text/*", run = "code" },
-	{ mime = "*/{xml,javascript,wine-extension-ini}", run = "code" },
-	# Image
-	{ mime = "image/{avif,hei?,jxl,svg+xml}", run = "magick" },
-	{ mime = "image/*", run = "image" },
-	# Video
-	{ mime = "video/*", run = "video" },
-	# Fallback
-	{ name = "*", run = "file" },
-]
-preloaders = [
-	# Image
-	{ mime = "image/{avif,hei?,jxl,svg+xml}", run = "magick" },
-	{ mime = "image/*", run = "image" },
-	# Video
-	{ mime = "video/*", run = "video" },
-	# PDF
-	{ mime = "application/pdf", run = "pdf" },
-	# Font
-	{ mime = "font/*", run = "font" },
-	{ mime = "application/ms-opentype", run = "font" },
-]
-previewers = [
-	{ name = "*/", run = "folder", sync = true },
-	# Code
-	{ mime = "text/*", run = "code" },
-	{ mime = "*/{xml,javascript,wine-extension-ini}", run = "code" },
-	# JSON
-	{ mime = "application/{json,ndjson}", run = "json" },
-	# Image
-	{ mime = "image/{avif,hei?,jxl,svg+xml}", run = "magick" },
-	{ mime = "image/*", run = "image" },
-	# Video
-	{ mime = "video/*", run = "video" },
-	# PDF
-	{ mime = "application/pdf", run = "pdf" },
-	# Archive
-	{ mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", run = "archive" },
-	{ mime = "application/{debian*-package,redhat-package-manager,rpm,android.package-archive}", run = "archive" },
-	{ name = "*.{AppImage,appimage}", run = "archive" },
-	# Virtual Disk / Disk Image
-	{ mime = "application/{iso9660-image,qemu-disk,ms-wim,apple-diskimage}", run = "archive" },
-	{ mime = "application/virtualbox-{vhd,vhdx}", run = "archive" },
-	{ name = "*.{img,fat,ext,ext2,ext3,ext4,squashfs,ntfs,hfs,hfsx}", run = "archive" },
-	# Font
-	{ mime = "font/*", run = "font" },
-	{ mime = "application/ms-opentype", run = "font" },
-	# Empty file
-	{ mime = "inode/empty", run = "empty" },
-	# Fallback
-	{ name = "*", run = "file" },
-]
 
 [input]
+cursor_blink = true
+cd_origin = "center"
+create_origin = "center"
+rename_origin = "center"
+filter_origin = "center"
+find_origin = "center"
+search_origin = "center"
+shell_origin = "center"
+
+[tasks]
+
+[confirm]
 
 [pick]
+open_origin = "center"
 
 [which]

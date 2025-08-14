@@ -1,0 +1,135 @@
+/*
+ * ROFI color theme
+ */
+
+* {
+	/* Primary colors */
+	bg:	#101322;
+	fg:	#7898C7;
+	base:	#1793D1;
+
+	/* Secondary colors */
+	black:		#0e141b;
+	darkgrey:	#2E3C43;
+	lightgrey:	#5C6773;
+	white:		#f0f4ff;
+	red:		#FF6B6B;
+	orange:		#FFAA66;
+	yellow:		#FFD580;
+	green:		#8CCF7E;
+	cyan:		#00B7EB;
+	violet:		#A099FF;
+	magenta:	#CBA6F7;
+	darkred:	#FF5370;
+
+
+	spacing: 0;
+	background-color: transparent;
+
+}
+
+window {
+	transparency: "real";
+	background-color: @bg; /*base00 + CC (80% opacity)*/
+}
+
+mainbox {
+	children: [inputbar, message, mode-switcher, listview];
+	spacing: 30px;
+	padding: 30px 0;
+	border: 1px;
+	border-color: @fg;
+}
+
+inputbar {
+	padding: 0 30px;
+	children: [prompt, textbox-prompt-colon, entry, case-indicator];
+}
+
+prompt {
+	text-color: @base;
+}
+
+textbox-prompt-colon {
+	expand: false;
+	str: ":";
+	margin: 0 1ch 0 0;
+	text-color: @fg;
+}
+
+entry {
+	text-color: @fg;
+}
+
+case-indicator {
+	text-color: @fg;
+}
+
+mode-switcher, message {
+	border: 1px 0;
+	border-color: @fg;
+}
+
+button, textbox {
+	background-color: @bg;
+	text-color: @fg;
+	padding: 5px;
+}
+
+button selected {
+	background-color: @base;
+	text-color: @bg;
+}
+
+listview {
+	scrollbar: true;
+	margin: 0 10px 0 30px;
+}
+
+scrollbar {
+	background-color: @bg;
+	handle-color: @base;
+	handle-width: 10px;
+	border: 0 1px;
+	border-color: @base;
+	margin: 0 0 0 20px;
+}
+
+element {
+	padding: 5px;
+  spacing: 5px;
+	highlight: bold underline;
+	children: [element-icon, element-text];
+}
+element-text, element-icon {
+	background-color : inherit;
+	text-color	     : inherit;
+	foreground-color : inherit;
+}
+
+element normal {
+	background-color: transparent;
+	text-color: @fg;
+}
+
+element selected {
+	background-color: @base;
+	text-color: @bg;
+}
+
+element alternate {
+	background-color: @bg;
+	text-color: @fg;
+}
+
+// element normal normal, element selected normal, element alternate normal {
+// 	text-color: @white;
+// }
+
+element normal urgent, element selected urgent, element alternate urgent {
+	text-color: @darkred;
+}
+
+element normal active, element selected active, element alternate active {
+	text-color: @green;
+}

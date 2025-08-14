@@ -1,6 +1,4 @@
-general.import = [
-"~/.config/alacritty/themes/themes/hypr.toml"
-]
+general.import = ["~/.config/alacritty/themes/themes/hypr.toml"]
 
 [env]
 WINIT_X11_SCALE_FACTOR = "1.0"
@@ -32,19 +30,17 @@ hide_when_typing = true
 save_to_clipboard = true
 
 [cursor]
-style = { shape = "underline", blinking = "On"}
+style = { shape = "underline", blinking = "On" }
 blink_interval = 500
 unfocused_hollow = true
 
 [keyboard]
 bindings = [
-{ key = "n", mods = "Control|Alt", action = "CreateNewWindow" },
-{ key = "c", mods = "Control|Shift", action = "CopySelection" },
-{ key = "v", mods = "Control|Shift", action = "PasteSelection" },
-{ key = "q", mods = "Control|Alt", action = "Quit" },
-{ key = "f", mods = "Control|Alt", action = "ToggleFullscreen" },
-{ key = "m", mods = "Control|Alt", action = "Minimize" },
-{ key = "t", mods = "Control|Shift", action = "CreateNewTab" },
+  { key = "n", mods = "Control|Alt", action = "CreateNewWindow" },
+  { key = "c", mods = "Control|Shift", action = "CopySelection" },
+  { key = "v", mods = "Control|Shift", action = "PasteSelection" },
+  { key = "q", mods = "Control|Alt", action = "Quit" },
+  { key = "f", mods = "Control|Alt", action = "ToggleFullscreen" },
+  { key = "m", mods = "Control|Alt", action = "Minimize" },
+  { key = "t", mods = "Control|Shift", action = "CreateNewTab" },
 ]
-
-
