@@ -83,12 +83,12 @@ hovered = { fg = "#7898C7", bg = "#ffaa66" }
 
 [which]
 cols = 3
-mask = { bg = "#101322" }
-cand = { fg = "#7dcfff" }
-rest = { fg = "#1793D1" }
-desc = { fg = "#34eb83" }
+mask = { bg = "#283457" }
+cand = { fg = "#1793D1" }
+rest = { fg = "#7dcfff" }
+desc = { fg = "#7898C7" }
 separator = " ➜ "
-separator_style = { fg = "#3ea5d9" }
+separator_style = { fg = "#f7768e" }
 
 [confirm]
 border = { fg = "#1793D1" }
