@@ -16,7 +16,6 @@ alias mocp='mocp $PWD'
 alias host='hostnamectl hostname'
 alias yt='yt-dlp'
 alias task='python ~/Dev/tasks/t/t.py --task-dir ~/Dev/tasks/list --list tasks'
-# alias tmux='tmux new -s Main'
-
-# useful but very lazy =)
-# alias n='nvim'
+alias sysupdate='yay -Syu'
+alias install='yay -S'
+alias search='yay -s'
