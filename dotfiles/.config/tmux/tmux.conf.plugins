@@ -63,7 +63,7 @@ set -g @nova-segments-0-left "mode | session"
 # Segments right
 set -g @nova-segment-whoami "#(whoami)@#h"
 set -g @nova-segment-whoami-colors "#1793D1 #101322"
-set -g @nova-segment-info "#{client_termname}"
+set -g @nova-segment-info "#(~/.config/tmux/scripts/nova-info.sh)"
 set -g @nova-segment-info-colors "#101322 #1793D1"
 set -g @nova-segments-0-right "info | whoami"
 # --------------------------------  EOL  ---------------------------------------- #
