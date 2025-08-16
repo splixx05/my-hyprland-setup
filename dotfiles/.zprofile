@@ -6,21 +6,15 @@
 #                 |_|                           
 #
 
-# -------  QT config for QT framework (QT6) ------ #
-export QT_QPA_PLATFORM=wayland
-export QT_QPA_PLATFORMTHEME=qt6ct
-export QT_WAYLAND_DISABLE_WINDOWDECORATIONS=1
-export QT_STYLE_OVERRIDE=kvantum
+# ------------------------  Hypr Env Configs  -------------------------- #
 
+# In some cases, Hyprland's environment variables are not transferred correctly via “env”.
+# In such cases, the variables can be loaded via .zprofile.
+# However, I recommend maintaining these via a separate config file and loading them via .zprofile.
+# In my case, I have stored the separate file in the conf.d of hypr and access it via .zprofile.
+# If the file exists, it is loaded, otherwise it is ignored, so it doesn't matter whether the line is commented out or not.
+# -- Can be customized if required --
 
-# -----------  XDG config  ----------------------- #
-export XDG_SESSION_TYPE=wayland
-export XDG_SESSION_DESKTOP=hyprland
-# export XDG_CURRENT_DESKTOP=hyprland
+# [ -f ~/.config/hypr/conf.d/zp-env.conf ] && source ~/.config/hypr/conf.d/zp-env.conf
 
-
-# --------  dir config for hypr apps ------------- #
-export HYPRSHOT_DIR="$HOME/myStuff/Pictures/Screenshots"
-
-# --------  x11 / Wayland config  ---------------- #
-export MOZ_ENABLE_WAYLAND=1
+#  --------------------------------------------------------------------- #

@@ -6,7 +6,7 @@
 #           |___/                |_|    
 
 
-# remap prefix from 'C-b' to 'C-a'
+# remap prefix from 'C-b' to 'M-a'
 unbind C-b
 set -g prefix M-a
 bind-key M-a send-prefix

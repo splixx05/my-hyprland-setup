@@ -6,7 +6,7 @@ vim.g.loaded_netrwPlugin = 1
 
 tree.setup({
   view = {
-    width = 40,
+    width = 25,
     relativenumber = false,
   },
   -- change folder arrow icons

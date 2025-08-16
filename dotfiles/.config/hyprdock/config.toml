@@ -1,0 +1,50 @@
+default_external_mode = "extend"
+css_string = ""
+
+[init_command]
+base = ""
+args = []
+
+[open_bar_command]
+base = "waybar"
+args = []
+
+[close_bar_command]
+base = "pkill"
+args = ["-f", "waybar"]
+
+[reload_bar_command]
+base = "waybar"
+args = []
+
+[lock_command]
+base = "hyprlock"
+args = ["lock-session"]
+
+[utility_command]
+base = "playerctl"
+args = ["--all-players", "-a", "pause"]
+
+[get_monitors_command]
+base = "hyprctl"
+args = ["monitors"]
+
+[enable_internal_monitor_command]
+base = "hyprctl"
+args = ["keyword", "monitor", "eDP-1,preferred,0x0,1"]
+
+[disable_internal_monitor_command]
+base = "hyprctl"
+args = ["keyword", "monitor", "eDP-1,disabled"]
+
+[enable_external_monitor_command]
+base = "hyprctl"
+args = ["keyword", "monitor", "DP-1,preferred,0x0,1"]
+
+[disable_external_monitor_command]
+base = "hyprctl"
+args = ["keyword", "monitor", "DP-1,disabled"]
+
+[wallpaper_command]
+base = "hyprctl"
+args = ["dispatch", "hyprpaper"]

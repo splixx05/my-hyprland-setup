@@ -1,10 +1,10 @@
 return {
   Foreground = "#7898C7",
-  Background = "#131A24",
+  Background = "#101322",
   Accent = "#00B7EB",
   Highlight = "#B4C9FF",
   CursorForeground = "#00B7EB",
-  CursorBackground = "##131A24",
+  CursorBackground = "#101322",
   Visual = "#1C2533",
   CursorLine = "#1C2533",
   CursorLineNr = "#00B7EB",
@@ -17,7 +17,7 @@ return {
   String = "#00cccc",
   Character = "#00E5FF",
   Number = "#FFAA66",
-  Boolean = "#FF6B6B",
+  Boolean = "#f7768e",
   Float = "#00B7EB",
 
   Identifier = "#5CAEFF",
@@ -29,7 +29,7 @@ return {
   Label = "#E4C9FF",
   Operator = "#A099FF",
   Keyword = "#A099FF",
-  Exception = "#FF6B6B",
+  Exception = "#f7768e",
 
   PreProc = "#00B7EB",
   Include = "#00E5FF",
@@ -46,11 +46,11 @@ return {
   Tag = "#CBA6F7",
   Delimiter = "#5C6773",
   SpecialComment = "#5C6773",
-  Debug = "#FF6B6B",
+  Debug = "#f7768e",
 
   Underlined = "#A0CFFF",
   Ignore = "#3A3E52",
-  Error = "#FF6B6B",
+  Error = "#f7768e",
   Warning = "#FFAA66",
   Boarder = "#00E5FF",
 }

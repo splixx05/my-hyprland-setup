@@ -4,6 +4,7 @@ vim.keymap.set("n", "<leader>mf", function()
 end, { desc = "Set format" })
 
 -- conform
+local conform = require("conform")
 vim.keymap.set({ "n", "v" }, "<leader>mc", function()
   conform.format({
     lsp_fallback = true,
@@ -13,6 +14,7 @@ vim.keymap.set({ "n", "v" }, "<leader>mc", function()
 end, { desc = "Trigger format for current files" })
 
 -- linting
+local lint = require("lint")
 vim.keymap.set("n", "<leader>ml", function()
   lint.try_lint()
 end, { desc = "Trigger linting for current file" })

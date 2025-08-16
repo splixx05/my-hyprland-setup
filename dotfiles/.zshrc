@@ -40,13 +40,22 @@ zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Plugins
-plugins=(git fzf zsh-autosuggestions zsh-syntax-highlighting zsh-yazi-mount zsh-cloud-drives emoji tmux)
+plugins=(
+  git 
+  fzf 
+  emoji 
+  tmux 
+  zsh-autosuggestions 
+  zsh-syntax-highlighting 
+  zsh-yazi-mount zsh-cloud-drives 
+  zsh-drive-formatter
+)
 
 source $ZSH/oh-my-zsh.sh
 

@@ -1,0 +1,2 @@
+[monitor_layout]
+commands = ["monitor=DP-1, disable", "monitor=eDP-1, preferred, auto, 1"]

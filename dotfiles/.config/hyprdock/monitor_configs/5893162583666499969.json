@@ -1,0 +1,67 @@
+[{
+    "id": 0,
+    "name": "eDP-1",
+    "description": "AU Optronics 0x5F2D",
+    "make": "AU Optronics",
+    "model": "0x5F2D",
+    "serial": "",
+    "width": 1920,
+    "height": 1080,
+    "refreshRate": 60.03300,
+    "x": 2560,
+    "y": 700,
+    "activeWorkspace": {
+        "id": 1,
+        "name": "1"
+    },
+    "specialWorkspace": {
+        "id": 0,
+        "name": ""
+    },
+    "reserved": [0, 0, 0, 0],
+    "scale": 1.00,
+    "transform": 0,
+    "focused": true,
+    "dpmsStatus": true,
+    "vrr": false,
+    "solitary": "0",
+    "activelyTearing": false,
+    "directScanoutTo": "0",
+    "disabled": false,
+    "currentFormat": "XRGB8888",
+    "mirrorOf": "none",
+    "availableModes": ["1920x1080@60.03Hz"]
+},{
+    "id": 1,
+    "name": "DP-1",
+    "description": "Lenovo Group Limited P24q-30 V90D79YD",
+    "make": "Lenovo Group Limited",
+    "model": "P24q-30",
+    "serial": "V90D79YD",
+    "width": 2560,
+    "height": 1440,
+    "refreshRate": 59.95100,
+    "x": 4480,
+    "y": 0,
+    "activeWorkspace": {
+        "id": 2,
+        "name": "2"
+    },
+    "specialWorkspace": {
+        "id": 0,
+        "name": ""
+    },
+    "reserved": [0, 0, 0, 0],
+    "scale": 1.00,
+    "transform": 0,
+    "focused": false,
+    "dpmsStatus": true,
+    "vrr": false,
+    "solitary": "0",
+    "activelyTearing": false,
+    "directScanoutTo": "0",
+    "disabled": false,
+    "currentFormat": "XRGB8888",
+    "mirrorOf": "none",
+    "availableModes": ["2560x1440@59.95Hz","2560x1440@74.78Hz","1920x1080@60.00Hz","1920x1080@59.94Hz","1920x1080@50.00Hz","1680x1050@59.88Hz","1600x900@75.00Hz","1600x900@60.00Hz","1280x1024@75.03Hz","1280x1024@70.00Hz","1280x1024@60.02Hz","1440x900@59.90Hz","1152x864@75.00Hz","1280x720@60.00Hz","1280x720@60.00Hz","1280x720@59.94Hz","1280x720@50.00Hz","1024x768@75.03Hz","1024x768@70.07Hz","1024x768@60.00Hz","800x600@75.00Hz","800x600@72.19Hz","800x600@60.32Hz","720x576@50.00Hz","720x480@60.00Hz","720x480@60.00Hz","720x480@59.94Hz","720x480@59.94Hz","720x480@59.94Hz","640x480@75.00Hz","640x480@72.81Hz","640x480@60.00Hz","640x480@59.94Hz","640x480@59.94Hz","720x400@70.08Hz"]
+}]

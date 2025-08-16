@@ -1,0 +1,5 @@
+[monitor_layout]
+commands = [
+    "monitor=eDP-1, preferred, 0x0, 1",
+    "monitor= DP-1, preferred, -250x-1440, 1",
+]

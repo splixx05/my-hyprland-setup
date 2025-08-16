@@ -6,7 +6,6 @@
 //                 |___/
 //
 //  Main Config File
-
 {
   // General Settings
   "layer": "top",
@@ -17,16 +16,13 @@
   "margin-left": 20,
   "margin-right": 20,
   "spacing": 0,
-
   // Load Modules
   "include": [
     "~/.config/waybar/modules.jsonc",
   ],
-
   //--------------------------------------//
   // Modules Left                         //
   //--------------------------------------//
-
   "modules-left": [
     "custom/empty",
     "custom/appmenu",
@@ -34,20 +30,22 @@
     "custom/settings",
     "custom/terminal",
     "custom/filemanager",
+    "custom/solaar",
+    "custom/pwmgr",
     "custom/separator",
     "wlr/taskbar",
   ],
-
   //-----------------------------------//
   //          Modules Center           //
   //-----------------------------------//
-
-  "modules-center": ["hyprland/workspaces", "custom/empty"],
-
+  "modules-center": [
+    "custom/empty",
+    "hyprland/workspaces",
+    "custom/empty"
+  ],
   //---------------------------------//
   //                   Modules Right //
   //---------------------------------//
-
   "modules-right": [
     "custom/updates",
     "pulseaudio",
@@ -56,7 +54,7 @@
     "battery",
     "network",
     // "custom/separator",
-// "custom/notification",
+    // "custom/notification",
     "tray",
     "custom/separator",
     "clock",

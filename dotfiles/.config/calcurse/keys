@@ -37,11 +37,11 @@ generic-scroll-down  ^N
 generic-scroll-up  ^P 
 generic-goto-today  ^G 
 generic-command  : 
-move-right  RGT ö 
-move-left  LFT j 
-move-down  DWN k 
-move-up  UP l 
-start-of-week  0 
+move-right  RGT l 
+move-left  LFT h 
+move-down  DWN j 
+move-up  UP k 
+start-of-week  0 [ 
 end-of-week  $ 
 add-item  a A 
 del-item  d D 

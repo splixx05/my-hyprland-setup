@@ -5,36 +5,40 @@
 // |_|  |_|\___/ \__,_|\__,_|_|\___||___/
 //
 //
-
 {
   //------------------------------------------------------//
   // Modules left                                         //
   //----------------------------------------------------- //
-
+  "custom/pwmgr": {
+    "format": "🛡",
+    "on-click": "bitwarden-desktop",
+    "tooltip-format": "Open Bitwarden",
+  },
+  "custom/solaar": {
+    "format": "",
+    "on-click": "solaar",
+    "tooltip-format": "Open Solaar",
+  },
   "custom/settings": {
     "format": "",
     "on-click": "kitty nvim $HOME/.config/hypr/",
     "tooltip-format": "Open Config",
   },
-
   "custom/terminal": {
     "format": "",
-    "on-click": "kitty tmux",
-    "tooltip-format": "Open Tmux",
+    "on-click": "kitty",
+    "tooltip-format": "Open kitty (clear)",
   },
-
   "custom/filemanager": {
     "format": "",
     "on-click": "kitty yazi $HOME/myStuff",
     "tooltip-format": "Open Yazi",
   },
-
   "custom/appmenu": {
     "format": "",
     "on-click": "wlogout",
     "tooltip-format": "System Action",
   },
-
   "custom/separator": {
     "format": "|",
     "tooltip": false,
@@ -42,10 +46,9 @@
   //------------------------------------------------------//
   //                Modules center                        //
   //------------------------------------------------------//
-
   "hyprland/workspaces": {
-    "on-scroll-up": "hyprctl dispatch workspace r-1",
-    "on-scroll-down": "hyprctl dispatch workspace r+1",
+    "on-scroll-up": "hyprctl dispatch workspace r+1",
+    "on-scroll-down": "hyprctl dispatch workspace r-1",
     "on-click": "activate",
     "active-only": false,
     "all-outputs": true,
@@ -55,15 +58,11 @@
       "active": "",
       "default": "",
     },
-    "persistent-workspaces": {
-      "*": 5,
-    },
+    "persistent-workspaces": 5,
   },
-
   //------------------------------------------------------//
   //                                        Modules right //
   //------------------------------------------------------//
-
   // Power Menu
   "custom/exit": {
     "format": "",
@@ -71,7 +70,6 @@
     "on-click-right": "hyprlock",
     "tooltip-format": "Left: Power menu\nRight: Lock screen",
   },
-
   "custom/notification": {
     "tooltip-format": "Left: Notifications\nRight: Do not disturb",
     "format": "{icon}",
@@ -92,7 +90,6 @@
     "on-click-right": "swaync-client -d -sw",
     "escape": true,
   },
-
   "custom/hypridle": {
     "format": "",
     "return-type": "json",
@@ -102,26 +99,22 @@
     "exec": "~/.config/hypr/scripts/hypridle.sh status",
     "on-click": "~/.config/hypr/scripts/hypridle.sh toggle",
   },
-
   // System tray
   "tray": {
     "icon-size": 21,
     "spacing": 10,
   },
-
   "clock": {
-    "format": "{:%H:%M - %a}",
+    "format": "{:%H:%M}",
     "on-click": "kitty calcurse",
     "interval": 60,
     "timezone": "",
-    "tooltip-format": "{:%d.%m.%Y}",
+    "tooltip-format": "{:%a - %d.%m.%y}",
   },
-
   "custom/system": {
     "format": "",
     "tooltip": false,
   },
-
   "network": {
     "format": "{ifname}",
     "format-wifi": " ",
@@ -135,7 +128,6 @@
     "on-click": "nm-connection-editor",
     "on-click-right": "",
   },
-
   "battery": {
     "states": {
       // "good": 95,
@@ -149,9 +141,14 @@
     "tooltip-format": "{capacity}%",
     "format-good": "", // An empty format will hide the module
     "format-full": "",
-    "format-icons": [" ", " ", " ", " ", " "],
+    "format-icons": [
+      " ",
+      " ",
+      " ",
+      " ",
+      " "
+    ],
   },
-
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
     "format": "{icon} ",
@@ -163,11 +160,14 @@
     "tooltip": true,
     "tooltip-format": "{volume}%",
     "format-icons": {
-      "default": ["", "", ""],
+      "default": [
+        "",
+        "",
+        ""
+      ],
     },
     "on-click": "pavucontrol",
   },
-
   "bluetooth": {
     "format-on": " ",
     "format-disabled": " {status}",
@@ -176,7 +176,6 @@
     "on-click": "kitty bluetoothctl",
     "format-no-controller": "",
   },
-
   "backlight": {
     "format": "{icon} {percent}%",
     "format-icons": [
@@ -198,37 +197,31 @@
     ],
     "scroll-step": 1,
   },
-
   //-------------------------------------------//
   //              Other modules                //
   //-------------------------------------------//
-
   "user": {
     "format": "{user}",
     "interval": 60,
     "icon": false,
   },
-
   "custom/empty": {
     "format": "",
     "icon-size": 21,
     "spacing": 10,
   },
-
   "custom/tools": {
     "format": "",
     "tooltip-format": "Tools",
   },
-
   // Clipboard-manager
   "custom/cliphist": {
     "format": "",
-    "on-click": "sleep 0.1 && ~/.config/ml4w/scripts/cliphist.sh",
-    "on-click-right": "sleep 0.1 && ~/.config/ml4w/scripts/cliphist.sh d",
-    "on-click-middle": "sleep 0.1 && ~/.config/ml4w/scripts/cliphist.sh w",
-    "tooltip-format": "Left: Open clipboard Manager\nRight: Delete an entry\nMiddle: Clear list",
+    "on-click": "",
+    "on-click-right": "",
+    "on-click-middle": "",
+    "tooltip-format": "",
   },
-
   // Taskbar
   "wlr/taskbar": {
     "format": "{icon}",
@@ -236,7 +229,10 @@
     "tooltip-format": "{title}",
     "on-click": "activate",
     "on-click-middle": "close",
-    "ignore-list": ["Alacritty", "kitty"],
+    "ignore-list": [
+      "Alacritty",
+      "kitty"
+    ],
     "app_ids-mapping": {
       "firefoxdeveloperedition": "firefox-developer-edition",
     },
@@ -245,7 +241,6 @@
       "Foot Server": "Terminal",
     },
   },
-
   // SwayNC
   "custom/noti": {
     "tooltip-format": "Left: Notifications\nRight: Do not disturb",
@@ -260,7 +255,6 @@
       "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
       "dnd-inhibited-none": "",
     },
-
     // Group Tools
     "group/tools": {
       "orientation": "inherit",
@@ -276,13 +270,14 @@
         "custom/hyprshade",
       ],
     },
-
     // Group Links
     "group/links": {
       "orientation": "horizontal",
-      "modules": ["custom/chatgpt", "custom/empty"],
+      "modules": [
+        "custom/chatgpt",
+        "custom/empty"
+      ],
     },
-
     // Group Settings
     "group/settings": {
       "orientation": "inherit",
@@ -291,7 +286,11 @@
         "children-class": "not-memory",
         "transition-left-to-right": true,
       },
-      "modules": ["custom/settings", "custom/waybarthemes", "custom/wallpaper"],
+      "modules": [
+        "custom/settings",
+        "custom/waybarthemes",
+        "custom/wallpaper"
+      ],
     },
   },
 }
