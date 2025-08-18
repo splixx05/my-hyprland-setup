@@ -46,8 +46,8 @@ sep_left = { open = "", close = "" }
 sep_right = { open = "", close = "" }
 overall = { fg = "#065287", bg = "#101322" }
 
-progress_label = { fg = "#a9b1d6", bold = true }
-progress_normal = { fg = "#101322" }
+progress_label = { fg = "#101322", bold = true }
+progress_normal = { fg = "#8ccf7e" }
 progress_error = { fg = "#f7768e" }
 
 perm_type = { fg = "#1793D1" }

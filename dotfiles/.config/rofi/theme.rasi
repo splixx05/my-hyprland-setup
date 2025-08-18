@@ -31,6 +31,8 @@
 window {
 	transparency: "real";
 	background-color: @bg; /*base00 + CC (80% opacity)*/
+	width: 750;
+	height: 530;
 }
 
 mainbox {

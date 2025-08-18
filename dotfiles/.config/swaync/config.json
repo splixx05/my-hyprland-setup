@@ -55,7 +55,7 @@
     "inhibitors": {
       "text": "Inhibitors",
       "button-text": "Clear All",
-      "clear-all-button": true
+      "clear-all-button": false
     },
     "title": {
       "text": "Notifications",

@@ -10,7 +10,7 @@
   // General Settings
   "layer": "top",
   "position": "bottom",
-  "height": 25,
+  "height": 35,
   "margin-top": 5,
   "margin-bottom": 10,
   "margin-left": 20,
@@ -47,14 +47,14 @@
   //                   Modules Right //
   //---------------------------------//
   "modules-right": [
-    "custom/updates",
+    // "custom/updates",
     "pulseaudio",
     // "backlight",
     "bluetooth",
     "battery",
     "network",
     // "custom/separator",
-    // "custom/notification",
+    "custom/notification",
     "tray",
     "custom/separator",
     "clock",

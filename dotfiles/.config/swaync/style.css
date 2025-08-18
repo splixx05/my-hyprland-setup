@@ -1,16 +1,18 @@
 :root {
   --cc-bg: #101324;
-  --noti-border-color: #1793d1;
+  --noti-border-color: #7898c7;
+  --noti-highlight: #1793d1;
   --noti-bg: #101324;
+  --noti-info: #00b7eb;
   --noti-bg-alpha: 1;
   --noti-bg-darker: #0d1126;
-  --noti-bg-hover: #1c2533;
-  --noti-bg-focus: #5c6773;
+  --noti-bg-hover: #283457;
+  --noti-bg-focus: #101324;
   --noti-close-bg: #f7768e;
-  --noti-close-bg-hover: #e4c9ff;
+  --noti-close-bg-hover: #f7768e;
   --text-color: #7898c7;
   --text-color-disabled: #1c2533;
-  --bg-selected: #3a3e52;
+  --bg-selected: #101324;
   --notification-icon-size: 64px;
   --notification-app-icon-size: calc(var(--notification-icon-size) / 3);
   --notification-group-icon-size: 32px;
@@ -19,16 +21,16 @@
 .close-button {
   /* The notification Close Button */
   background: var(--noti-close-bg);
-  color: var(--text-color);
+  color: var(--cc-bg);
   text-shadow: none;
   padding: 0;
   border-radius: 100%;
   margin-top: 8px;
   margin-right: 8px;
   box-shadow: none;
-  border: var(--noti-border-color);
-  min-width: 24px;
-  min-height: 24px;
+  border: var(--noti-close-bg);
+  min-width: 18px;
+  min-height: 18px;
 }
 
 .close-button:hover {
@@ -54,7 +56,7 @@
 .notification-row .notification-background .notification {
   /* The actual notification */
   border-radius: 12px;
-  border: 1px solid var(--noti-border-color);
+  border: 0.3px solid var(--noti-border-color);
   padding: 0;
   transition: background 0.15s ease-in-out;
   background: rgba(var(--noti-bg), var(--noti-bg-alpha));
@@ -62,14 +64,17 @@
 
 .notification-row .notification-background .notification.low {
   /* Low Priority Notification */
+  background: var(--noti-info), var(--noti-bg-alpha);
 }
 
 .notification-row .notification-background .notification.normal {
   /* Normal Priority Notification */
+  background: var(--cc-bg), var(--noti-bg-alpha);
 }
 
 .notification-row .notification-background .notification.critical {
   /* Critical Priority Notification */
+  background: #f7768e, var(--noti-bg-alpha);
 }
 
 .notification-row
@@ -77,14 +82,17 @@
   .notification
   .notification-default-action {
   /* The large action that also displays the notification summary and body */
-  padding: 4px;
-  margin: 0;
+  padding: 15px;
+  margin-right: 35;
+  margin-bottom: 35;
   box-shadow: none;
   background: var(--noti-bg);
-  border: 1px solid #1793d1;
+  border: 0.5px solid var(--noti-border-color);
   color: var(--text-color);
   transition: background 0.15s ease-in-out;
   border-radius: 12px;
+  font-size: 16;
+  font-family: Roboto;
 }
 
 .notification-row
@@ -160,10 +168,11 @@
   .text-box
   .summary {
   /* Notification summary/title */
-  font-size: 16px;
+  font-size: 16;
+  font-family: Roboto;
   font-weight: bold;
   background: transparent;
-  color: var(--text-color);
+  color: var(--noti-highlight);
   text-shadow: none;
 }
 
@@ -175,10 +184,11 @@
   .text-box
   .time {
   /* Notification time-ago */
-  font-size: 16px;
+  font-size: 16;
+  font-family: Roboto;
   font-weight: bold;
   background: transparent;
-  color: var(--text-color);
+  color: var(--noti-highlight);
   text-shadow: none;
   margin-right: 30px;
 }
@@ -191,7 +201,8 @@
   .text-box
   .body {
   /* Notification body */
-  font-size: 15px;
+  font-size: 16;
+  font-family: Roboto;
   font-weight: normal;
   background: transparent;
   color: var(--text-color);
@@ -389,8 +400,9 @@
 .control-center {
   /* The Control Center which contains the old notifications + widgets */
   background: var(--cc-bg);
-  color: var(--text-color);
+  color: var(--noti-border-color);
   border-radius: 12px;
+  border: 1px solid var(--noti-border-color);
 }
 
 .control-center .control-center-list-placeholder {
@@ -436,6 +448,11 @@
 
 .floating-notifications .notification {
   box-shadow: none;
+  margin-right: 20;
+  margin-bottom: 20;
+  border: 1px solid var(--noti-border-color);
+  width: 50;
+  height: 30;
 }
 
 /*** Widgets ***/
@@ -444,6 +461,7 @@
   margin: 8px;
   font-size: 1.5rem;
   font-family: Roboto;
+  color: var(--noti-highlight);
 }
 
 .widget-title > button {
@@ -459,12 +477,12 @@
 }
 
 .widget-dnd switch {
-  border-radius: 12px;
+  border-radius: 7px;
   margin: 8px;
 }
 
 .widget-dnd switch slider {
-  border-radius: 12px;
+  border-radius: 7px;
 }
 
 /* Label widget */
