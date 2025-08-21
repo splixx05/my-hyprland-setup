@@ -70,6 +70,7 @@ lxqt-sudo
 ly
 media-downloader
 meld
+moc-mpris-git
 moc-pulse
 mtools
 neofetch
@@ -82,6 +83,7 @@ nm-connection-editor
 noto-fonts-emoji
 npm
 nvim-treesitter-parsers-git
+nwg-look
 obsidian-bin
 pacman-contrib
 pavucontrol
@@ -112,6 +114,7 @@ solaar
 stow
 sudo
 swayimg
+swaync
 system-config-printer
 terminus-font
 thunderbird
@@ -119,6 +122,7 @@ tmux
 trash-cli
 tree
 tumbler
+ulauncher
 unrar
 unzip
 waybar
