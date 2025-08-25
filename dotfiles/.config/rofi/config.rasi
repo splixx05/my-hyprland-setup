@@ -13,21 +13,21 @@ configuration {
 /*	run-shell-command: "{terminal} -e {cmd}";*/
 /*	window-command: "wmctrl -i -R {window}";*/
 /*	window-match-fields: "all";*/
-/*	icon-theme: ;*/
+	icon-theme: "IOTA-Dark-Icons";
 /*	drun-match-fields: "name,generic,exec,categories,keywords";*/
-/*	drun-categories: ;*/
+	drun-categories: "Network,Office,Graphics,AudioVideo,Music";
 /*	drun-exclude-categories: ;*/
 /*	drun-show-actions: false;*/
 /*	drun-display-format: "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";*/
 /*	drun-url-launcher: "xdg-open";*/
 /*	disable-history: false;*/
 /*	ignored-prefixes: "";*/
-/*	sort: false;*/
-/*	sorting-method: "normal";*/
-/*	case-sensitive: false;*/
-/*	case-smart: false;*/
-/*	cycle: true;*/
-/*	sidebar-mode: false;*/
+	sort: true;
+	sorting-method: "normal";
+	case-sensitive: true;
+	case-smart: true;
+	cycle: true;
+	sidebar-mode: false;
 /*	hover-select: false;*/
 /*	eh: 1;*/
 /*	auto-select: false;*/
@@ -65,10 +65,10 @@ configuration {
   }
   filebrowser {
       directories-first: true;
-      sorting-method:    "name";
+      sorting-method: "name";
   }
 }
 
 @import "~/.config/rofi/input.rasi"
 @import "~/.config/rofi/display.rasi"
-@theme "~/.config/rofi/theme.rasi"
+@theme "~/.config/rofi/themes/app.rasi"

@@ -1,19 +1,16 @@
 return {
-  "EdenEast/nightfox.nvim",
+  "folke/tokyonight.nvim",
   priority = 1000,
   config = function()
-    require("nightfox").setup({
-      options = {
-        transparent = true,
-        blur = 1,
-        opacity = 0.7,
-        terminal_colors = true,
-        dim_inactive = false,
-        module_default = true,
-        styles = {},
+    require("tokyonight").setup({
+      style = "storm",
+      transparent = true,
+      styles = {
+        sidebars = "transparent",
+        floats = "transparent",
       },
     })
-    -- setup must be called before loading
-    vim.cmd("colorscheme nightfox")
+
+    vim.cmd("colorscheme tokyonight")
   end,
 }

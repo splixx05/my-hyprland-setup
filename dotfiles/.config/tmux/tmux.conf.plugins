@@ -61,11 +61,14 @@ set -g @nova-segment-session "#{session_name}"
 set -g @nova-segment-session-colors "#1793D1 #101322"
 set -g @nova-segments-0-left "mode | session"
 # Segments right
-set -g @nova-segment-whoami "#(whoami) 💻 #h"
+set -g @nova-segment-whoami "#(whoami)@#h"
 set -g @nova-segment-whoami-colors "#1793D1 #101322"
 set -g @nova-segment-info "#(~/.config/tmux/scripts/nova-info.sh)"
 set -g @nova-segment-info-colors "#101322 #1793D1"
-set -g @nova-segments-0-right "info | whoami"
+set -g @nova-segment-custom "#(~/.config/tmux/scripts/nova-monitor.sh)"
+set -g @nova-segment-custom-colors "#101322 #1793D1"
+set -g @nova-segments-0-right "info | whoami | custom"
+
 # --------------------------------  EOL  ---------------------------------------- #
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run -b '~/.config/tmux/plugins/tpm/tpm'

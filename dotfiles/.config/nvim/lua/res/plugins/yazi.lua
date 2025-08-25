@@ -19,7 +19,7 @@ return {
       desc = "Open Yazi in nvim's working directory",
     },
     {
-      "<c-up>",
+      "<leader>yr",
       "<cmd>Yazi toggle<cr>",
       desc = "Resume the last yazi session",
     },

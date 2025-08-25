@@ -71,7 +71,29 @@ ins_left({
 ins_left({
   -- mode component
   function()
-    return "" -- original character --> 
+    local mode_icons = {
+      n = "", -- Normal
+      i = "", -- Insert
+      v = "", -- Visual
+      [""] = "", -- Visual block
+      V = "", -- Visual line
+      c = "", -- Command
+      no = "",
+      s = "", -- Select
+      S = "",
+      [""] = "",
+      ic = "", -- Insert completion
+      R = "", -- Replace
+      Rv = "",
+      cv = "", -- Vim Ex
+      ce = "",
+      r = "", -- Hit-enter prompt
+      rm = "",
+      ["r?"] = "",
+      ["!"] = "", -- Shell
+      t = "", -- Terminal
+    }
+    return mode_icons[vim.fn.mode()] or ""
   end,
   color = function()
     -- auto change color according to neovims mode

@@ -1,0 +1,16 @@
+{
+    "com.github.ooo-w.ulauncher-hypr-window-switcher": {
+        "id": "com.github.ooo-w.ulauncher-hypr-window-switcher",
+        "url": "https://github.com/oOo-w/ulauncher-hypr-window-switcher",
+        "updated_at": "2025-08-19T06:59:46.861625",
+        "last_commit": "d93e781dc3ef363c28168265ca43860e0aedcd19",
+        "last_commit_time": "2025-02-09T12:48:39"
+    },
+    "com.github.kcoovi.ulauncher-link-opener": {
+        "id": "com.github.kcoovi.ulauncher-link-opener",
+        "url": "https://github.com/kcoovi/ulauncher-link-opener",
+        "updated_at": "2025-08-19T07:08:09.185213",
+        "last_commit": "3effa8f4167f6b837f78a02f6f98807a218f7d53",
+        "last_commit_time": "2025-06-18T16:03:15"
+    }
+}

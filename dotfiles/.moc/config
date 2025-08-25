@@ -1,3 +1,5 @@
+# TODO: set Music-Dir for jumping in 
+
 # This is a configuration file for the MOC player.  It should be named
 # 'config' and placed in the ~/.moc directory.  As this file can specify
 # commands which invoke other applications, MOC will refuse to start if it
@@ -69,13 +71,13 @@
 #
 # Example:    MusicDir = "/home/joe/music"
 #
-# MusicDir = "$XDG_MUSIC_DIR"
+MusicDir = ""
 
 
 # Start in the music directory by default?  If set to 'no', start
 # in the current directory by default.  A single directory on
 # the command line takes precedence.
-#StartInMusicDir = no
+StartInMusicDir = yes
 
 # How to sort?  FileName is the option's only value for now.
 #Sort = FileName
@@ -88,9 +90,9 @@
 #MP3IgnoreCRCErrors = yes
 
 # Set playback toggles.
-#Repeat = no
-#Shuffle = no
-#AutoNext = yes
+Repeat = yes
+Shuffle = yes
+AutoNext = yes
 
 # Default FormatString:
 #
@@ -149,7 +151,7 @@
 #ALSAMixer1 = PCM
 #ALSAMixer2 = Master
 
-# Under some circumstances on 32-bit systems, audio played continously
+# Under some circumstances on 32-bit systems, audio played continuously
 # for long periods of time may begin to stutter.  Setting this option to
 # 'yes' will force MOC to avoid ALSA's dmix resampling and prevent this
 # stutter.  But it also has other implications:
@@ -195,7 +197,7 @@
 #ShowTime = IfAvailable
 
 # Show time played as a percentage in the time progress bar.
-#ShowTimePercent = no
+ShowTimePercent = yes
 
 # Values of the TERM environment variable which are deemed to be managed by
 # screen(1).  If you are setting a specific terminal using screen(1)'s
@@ -209,7 +211,7 @@
 # TERM setting here as well to cause MOC to update the xterm's title.
 #XTerms = xterm
 #XTerms += xterm-colour:xterm-color
-#XTerms += xterm-256colour:xterm-256color
+XTerms += xterm-256colour:xterm-256color
 #XTerms += rxvt:rxvt-unicode
 #XTerms += rxvt-unicode-256colour:rxvt-unicode-256color
 #XTerms += eterm
@@ -220,13 +222,13 @@
 #
 # Example:    Theme = laras_theme
 #
-Theme = transparent-background
+Theme = darkdot_theme
 
 # The theme used when running on an xterm.
 #
 # Example:    XTermTheme = transparent-background
 #
-#XTermTheme =
+XTermTheme = transparent-background
 
 # Should MOC try to autoload the default lyrics file for an audio?  (The
 # default lyrics file is a text file with the same file name as the audio

@@ -32,8 +32,7 @@
   min-width: 18px;
   min-height: 18px;
 }
-
-.close-button:hover {
+j .close-button:hover {
   box-shadow: none;
   background: var(--noti-close-bg-hover);
   transition: background 0.15s ease-in-out;
@@ -470,19 +469,27 @@
 }
 
 /* DND widget */
-.widget-dnd label {
+.widget-dnd > label {
   color: var(--text-color);
   margin: 8px;
   font-size: 1.1rem;
 }
 
-.widget-dnd switch {
+.widget-dnd > switch {
   border-radius: 7px;
   margin: 8px;
 }
 
-.widget-dnd switch slider {
+.widget-dnd > switch:checked {
   border-radius: 7px;
+  margin: 8px;
+  background-color: var(--noti-highlight);
+}
+
+.widget-dnd > switch slider {
+  border-radius: 7px;
+  background-color: var(--noti-bg-hover);
+  border: 0.3px solid var(--noti-border-color);
 }
 
 /* Label widget */
@@ -495,7 +502,7 @@
   font-family: Roboto;
 }
 
-/* Mpris widget */
+/* mpris widget */
 :root {
   --mpris-album-art-overlay: rgba(0, 0, 0, 0.55);
   --mpris-button-hover: rgba(0, 0, 0, 0.5);
@@ -629,8 +636,13 @@
 
 .widget-volume {
   padding: 8px;
-  margin: 8px;
+  margin: 1px 8px 8px 8px;
   border-radius: 12px;
+}
+
+.widget-volume slider {
+  background-color: var(--noti-bg-hover);
+  border: 0.3px solid var(--noti-border-color);
 }
 
 /* Each row app icon */
@@ -639,7 +651,7 @@
 }
 
 .per-app-volume {
-  background-color: var(--noti-bg-alt);
+  background-color: var(--noti-highlight);
   padding: 4px 8px 8px 8px;
   margin: 0px 8px 8px 8px;
   border-radius: 12px;
@@ -652,6 +664,12 @@
   border-radius: 12px;
 }
 
+.widget-slider checked {
+  padding: 8px;
+  margin: 8px;
+  border-radius: 12px;
+}
+
 .widget-slider label {
   font-size: inherit;
 }
@@ -659,8 +677,13 @@
 /* Backlight widget */
 .widget-backlight {
   padding: 8px;
-  margin: 8px;
+  margin: 1px 8px 8px 8px;
   border-radius: 12px;
+}
+
+.widget-backlight slider {
+  background-color: var(--noti-bg-hover);
+  border: 0.3px solid var(--noti-border-color);
 }
 
 /* Inhibitors widget */

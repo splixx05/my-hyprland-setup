@@ -36,4 +36,4 @@ require("barbar").setup({
   },
 })
 
--- ToDo: config the preset from 'default' to 'slanted' (tab style)
+-- TODO: config the preset from 'default' to 'slanted' (tab style)

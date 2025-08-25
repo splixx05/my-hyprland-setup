@@ -16,13 +16,13 @@
   "notification-inline-replies": false,
   "notification-body-image-height": 100,
   "notification-body-image-width": 200,
-  "timeout": 10,
+  "timeout": 7,
   "timeout-low": 5,
   "timeout-critical": 0,
   "fit-to-screen": false,
   "relative-timestamps": true,
-  "control-center-width": 350,
-  "control-center-height": 600,
+  "control-center-width": 400,
+  "control-center-height": 1250,
   "notification-window-width": 400,
   "keyboard-shortcuts": true,
   "notification-grouping": true,
@@ -32,58 +32,69 @@
   "hide-on-action": true,
   "text-empty": "No Notifications",
   "script-fail-notify": true,
-  "scripts": {
-    "example-script": {
-      "exec": "echo 'Do something...'",
-      "urgency": "Normal"
-    },
-    "example-action-script": {
-      "exec": "echo 'Do something actionable!'",
-      "urgency": "Normal",
-      "run-on": "action"
-    }
-  },
-  "notification-visibility": {
-    "example-name": {
-      "state": "muted",
-      "urgency": "Low",
-      "app-name": "Spotify"
-    }
-  },
-  "widgets": ["inhibitors", "title", "dnd", "notifications"],
+  "widgets": [
+    "buttons-grid",
+    "mpris",
+    "volume",
+    "backlight",
+    "title",
+    "dnd",
+    "notifications"
+  ],
   "widget-config": {
-    "inhibitors": {
-      "text": "Inhibitors",
-      "button-text": "Clear All",
-      "clear-all-button": false
-    },
-    "title": {
-      "text": "Notifications",
-      "clear-all-button": true,
-      "button-text": "Clear All"
-    },
     "dnd": {
       "text": "Do Not Disturb"
     },
+    "title": {
+      "text": "Notifications",
+      "clear-all-button": false,
+      "button-text": "Clear"
+    },
     "label": {
-      "max-lines": 5,
-      "text": "Label Text"
+      "max-lines": 1,
+      "text": "Notifications"
     },
     "mpris": {
-      "blacklist": [],
-      "autohide": false,
-      "show-album-art": "always",
-      "loop-carousel": false
+      "image-size": 96,
+      "image-radius": 12
+    },
+    "volume": {
+      "label": "  "
+    },
+    "backlight": {
+      "label": "  "
     },
     "buttons-grid": {
-      "buttons-per-row": 7,
       "actions": [
+        {
+          "label": "󰐥",
+          "command": "wlogout"
+        },
+        {
+          "label": "",
+          "command": "notify-send 'Clipboard history cleared' && cliphist wipe"
+        },
+        {
+          "label": "",
+          "command": "notify-send 'Trash bin cleared' && trash-empty"
+        },
         {
           "label": "直",
           "type": "toggle",
           "active": true,
           "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && nmcli radio wifi on || nmcli radio wifi off'",
           "update-command": "sh -c '[[ $(nmcli radio wifi) == \"enabled\" ]] && echo true || echo false'"
+        },
+        {
+          "label": "",
+          "type": "toggle",
+          "active": true,
+          "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && bluetoothctl power on || bluetoothctl power off'",
+          "update-command": "sh -c '[[ $(bluetoothctl power) == \"enabled\" ]] && echo true || echo false'"
+        },
+        {
+          "label": "",
+          "command": "kitty 'nvim' $HOME/.config/swaync"
         }
       ]
     }

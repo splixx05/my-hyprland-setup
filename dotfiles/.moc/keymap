@@ -15,7 +15,7 @@
 #
 #     - Just a char, like i, L, ", *
 #     - CTRL-KEY sequence: ^k (CTRL-k), ^4
-#     - ALT-KEY (meta) sequence: M-j (ALT-j), M-/
+#     - ALT-KEY (meta) sequence: M-j (ALT-j), M-//music/${USER:-public}
 #     - Special keys: DOWN, UP
 #                     LEFT, RIGHT
 #                     HOME, END

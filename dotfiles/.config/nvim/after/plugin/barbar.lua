@@ -1,4 +1,4 @@
-local hl = require("res.utils.highlight")
+local hl = require("res.utils.colorscheme")
 local set_hl = vim.api.nvim_set_hl
 
 set_hl(0, "BufferCurrent", { fg = hl.Accent, bg = hl.Background, bold = true })

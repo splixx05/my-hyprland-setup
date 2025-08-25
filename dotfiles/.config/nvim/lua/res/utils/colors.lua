@@ -5,7 +5,7 @@ return {
   green = "#8CCF7E",
   yellow = "#FFD580",
   orange = "#FFAA66",
-  red = "#FFFFFF",
+  red = "#f7768e",
   blue = "#065287",
   azure = "#1793D1",
   cyan = "#00B7EB",

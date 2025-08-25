@@ -31,8 +31,8 @@
 window {
 	transparency: "real";
 	background-color: @bg; /*base00 + CC (80% opacity)*/
-	width: 750;
-	height: 530;
+	width: 700;
+	height: 800;
 }
 
 mainbox {
@@ -86,16 +86,21 @@ button selected {
 listview {
 	scrollbar: true;
 	margin: 0 10px 0 30px;
+	columns: 5;
+	lines: 5;
+	cycle: true;
+	spacing: 10;
+	layout: vertical;
 }
 
-scrollbar {
-	background-color: @bg;
-	handle-color: @base;
-	handle-width: 10px;
-	border: 0 1px;
-	border-color: @base;
-	margin: 0 0 0 20px;
-}
+// scrollbar {
+// 	background-color: @bg;
+// 	handle-color: @base;
+// 	handle-width: 10px;
+// 	border: 0 1px;
+// 	border-color: @base;
+// 	margin: 0 0 0 20px;
+// }
 
 element {
 	padding: 5px;
@@ -103,10 +108,15 @@ element {
 	highlight: bold underline;
 	children: [element-icon, element-text];
 }
-element-text, element-icon {
+element-text {
 	background-color : inherit;
 	text-color	     : inherit;
 	foreground-color : inherit;
+	margin: 8px;
+}
+
+element-icon {
+	size: 36px;
 }
 
 element normal {
@@ -123,10 +133,6 @@ element alternate {
 	background-color: @bg;
 	text-color: @fg;
 }
-
-// element normal normal, element selected normal, element alternate normal {
-// 	text-color: @white;
-// }
 
 element normal urgent, element selected urgent, element alternate urgent {
 	text-color: @darkred;
