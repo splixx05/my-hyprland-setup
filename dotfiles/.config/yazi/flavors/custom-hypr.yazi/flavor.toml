@@ -25,7 +25,7 @@ count_selected = { fg = "#7898C7", bg = "#ffaa66" }
 # Border
 border_symbol = "│"
 border_style = { fg = "#7898C7" }
-# syntect_theme = "~/.config/yazi/flavors/custom-hypr.yazi/tmtheme.xml"
+syntect_theme = "~/.config/yazi/flavors/custom-hypr.yazi/tmtheme.xml"
 
 [tabs]
 active = { fg = "#101322", bg = "#1793D1" }

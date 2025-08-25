@@ -10,8 +10,9 @@ title_format = "Yazi: {cwd}"
 [preview]
 enable = true
 tab_size = 2
-max_width = 600
-max_height = 900
+width = 600
+height = 900
+scale_up = true
 fetchers = [
 	# Mimetype
 	{ id = "mime", name = "*", run = "mime", if = "!mime", prio = "high" },
