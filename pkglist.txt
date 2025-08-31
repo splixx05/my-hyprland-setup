@@ -109,6 +109,7 @@ rofi
 rsync
 rust
 simple-mtpfs
+slack-desktop-wayland
 sof-firmware
 solaar
 stow
