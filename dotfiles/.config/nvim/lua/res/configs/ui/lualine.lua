@@ -145,6 +145,22 @@ ins_left({
   },
 })
 
+-- Define a function to check that ollama is installed and working
+local function get_condition()
+  return package.loaded["ollama"] and require("ollama").status ~= nil
+end
+
+-- Define a function to check the status and return the corresponding icon
+local function get_status_icon()
+  local status = require("ollama").status()
+
+  if status == "IDLE" then
+    return "OLLAMA IDLE"
+  elseif status == "WORKING" then
+    return "OLLAMA BUSY"
+  end
+end
+
 -- Insert mid section. You can make any number of sections in neovim :)
 -- for lualine it's any number greater then 2
 ins_left({

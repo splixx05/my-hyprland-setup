@@ -18,8 +18,8 @@
 }
 
 window#waybar {
-  background-color: #101322;
-  border: 1px solid #7898c7;
+  background-color: #161a34;
+  border: 2px solid #7898c7;
   margin: 2px 20px 2px 20px;
   padding: 5px 5px 5px 5px;
   /* background: transparent; */
@@ -380,11 +380,19 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #bluetooth,
-#bluetooth.on,
-#bluetooth.connected {
+#bluetooth.on {
   /* background-color: #000000; */
-  font-size: 16px;
   color: #7898c7;
+  font-size: 20px;
+  border-radius: 5px 5px 5px 5px;
+  padding: 2px 10px 2px 10px;
+  margin: 3px 15px 3px 0px;
+  opacity: 1;
+}
+
+#bluetooth.connected {
+  color: #41ffa4;
+  font-size: 20px;
   border-radius: 5px 5px 5px 5px;
   padding: 2px 10px 2px 10px;
   margin: 3px 15px 3px 0px;
@@ -393,8 +401,11 @@ window#waybar.empty #window {
 
 #bluetooth.off {
   color: #f7768e;
-  padding: 0px;
-  margin: 0px;
+  font-size: 20px;
+  border-radius: 5px 5px 5px 5px;
+  padding: 2px 10px 2px 10px;
+  margin: 3px 15px 3px 0px;
+  opacity: 1;
 }
 
 /* -----------------------------------------------------
@@ -406,7 +417,7 @@ window#waybar.empty #window {
   font-size: 16px;
   color: #7898c7;
   border-radius: 5px 5px 5px 5px;
-  padding: 2px 15px 2px 10px;
+  padding: 2px 10px 2px 10px;
   margin: 3px 15px 3px 0px;
   opacity: 1;
 }

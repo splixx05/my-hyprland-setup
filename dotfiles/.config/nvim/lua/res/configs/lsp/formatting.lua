@@ -8,10 +8,8 @@ conform.setup({
     css = { "prettier" },
     html = { "prettier" },
     json = { "prettier" },
-    yaml = { "yamlfmt" },
     markdown = { "prettier" },
     lua = { "stylua" },
-    xml = { "xmlformatter" },
   },
   format_on_save = {
     lsp_fallback = true,

@@ -17,13 +17,13 @@ unbind %
 bind h split-window -h
 bind v split-window -v
 
-# resize panes using without prefix
+# Resizes pane
+bind -n M-J resize-pane -D
+bind -n M-K resize-pane -U
 bind -n M-H resize-pane -L
 bind -n M-L resize-pane -R
-bind -n M-K resize-pane -U
-bind -n M-J resize-pane -D
 
-# Easier and faster switching between next/prev window
+# Switching between tabs without prefix
 bind -n M-b previous-window 
 bind -n M-n next-window 
 

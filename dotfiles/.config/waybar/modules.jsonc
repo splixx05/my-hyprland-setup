@@ -68,9 +68,9 @@
     "format": "{icon}",
     "tooltip-format": "Left: Notifications\nRight: Do not disturb",
     "format-icons": {
-      "none": "",
+      "none": "",
       "notification": "<span foreground='#f7768e'><sup></sup></span>",
-      "dnd-none": "",
+      "dnd-none": "",
       "dnd-notification": "<span foreground='#f7768e'><sup></sup></span>"
     },
     "return-type": "json",
@@ -115,7 +115,7 @@
     "format-charging": "  {capacity}%",
     "format-plugged": "  {capacity}%",
     "format-alt": "{icon}  {time}",
-    "tooltip-format": "{capacity}%",
+    "tooltip-format": "Battery {capacity}%",
     "format-good": "", // An empty format will hide the module
     "format-full": "",
     "format-icons": [
@@ -131,11 +131,11 @@
     "format": "{icon} ",
     "format-bluetooth": "{icon} {format_source}",
     "format-bluetooth-muted": " {icon} {format_source}",
-    "format-muted": "🎧 Muted",
+    "format-muted": "",
     "format-source": "{volume}% ",
     "format-source-muted": "",
     "tooltip": true,
-    "tooltip-format": "{volume}%",
+    "tooltip-format": "Volume {volume}%",
     "format-icons": {
       "default": [
         "",
@@ -143,15 +143,19 @@
         ""
       ],
     },
-    "on-click": "pavucontrol",
+    "on-click-right": "pavucontrol",
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
   },
   "bluetooth": {
-    "format-on": " ",
-    "format-disabled": " {status}",
-    "format-off": " {status}",
+    "format-on": "",
+    "format-connected": "",
+    "format-disabled": "󰂲",
+    "format-off": "󰂲",
     "interval": 30,
     "on-click": "kitty bluetoothctl",
     "format-no-controller": "",
+    "tooltip": true,
+    "tooltip-format": "Bluetooth {status}"
   },
   "backlight": {
     "format": "{icon} {percent}%",
@@ -218,24 +222,24 @@
       "Foot Server": "Terminal",
     },
   },
-  "custom/notification": {
-    "tooltip-format": "Left: Notifications\nRight: Do not disturb",
-    "format": "{icon}",
-    "format-icons": {
-      "notification": "<span foreground='red'><sup></sup></span>",
-      "none": "",
-      "dnd-notification": "<span foreground='red'><sup></sup></span>",
-      "dnd-none": "",
-      "inhibited-notification": "<span foreground='red'><sup></sup></span>",
-      "inhibited-none": "",
-      "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
-      "dnd-inhibited-none": "",
-    },
-    "return-type": "jsonc",
-    "exec-if": "which swaync-client",
-    "exec": "swaync-client -swb",
-    "on-click": "swaync-client -t",
-    "on-click-right": "swaync-client -d",
-    "escape": true,
-  },
+  //   "custom/notification": {
+  //     "tooltip-format": "Left: Notifications\nRight: Do not disturb",
+  //     "format": "{icon}",
+  //     "format-icons": {
+  //       "notification": "<span foreground='red'><sup></sup></span>",
+  //       "none": "",
+  //       "dnd-notification": "<span foreground='red'><sup></sup></span>",
+  //       "dnd-none": "",
+  //       "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+  //       "inhibited-none": "",
+  //       "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+  //       "dnd-inhibited-none": "",
+  //     },
+  //     "return-type": "jsonc",
+  //     "exec-if": "which swaync-client",
+  //     "exec": "swaync-client -swb",
+  //     "on-click": "swaync-client -t",
+  //     "on-click-right": "swaync-client -d",
+  //     "escape": true,
+  //   },
 }

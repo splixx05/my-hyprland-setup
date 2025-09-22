@@ -1,0 +1,56 @@
+🔊 Lautsprecher an / 🔇 Lautsprecher stumm
+
+📶 Bluetooth an / ❌ Bluetooth getrennt
+
+🔋 Batterie (leer bis voll: 🪫 ▰▰▰▰)
+
+📡 WLAN an / 🚫 WLAN getrennt
+
+🔔 Benachrichtigungen an / 🔕 Benachrichtigungen aus
+
+
+🔊 Lautsprecher
+
+Laut:  (nf-fa-volume-up)
+
+Mute:  (nf-fa-volume-off)
+
+📶 Bluetooth
+
+An:  (nf-fa-bluetooth)
+
+Aus: 󰂲 (nf-md-bluetooth-off)
+
+🔋 Batterie (horizontal)
+
+Leer: 
+
+Viertel: 
+
+Halb: 
+
+Dreiviertel: 
+
+Voll: 
+
+📡 WLAN
+
+An: 
+
+Aus: 󰖪
+
+🔔 Benachrichtigungen
+
+An: 
+
+Aus: 
+
+
+| Kategorie        | Unicode-Emoji (funktioniert überall) | Nerd Font Icon (braucht Nerd Font) |
+| ---------------- | ------------------------------------ | ---------------------------------- |
+| 🔊 **Speaker**   | 🔊 (an), 🔇 (mute)                   |  (an),  (mute)                   |
+| 📶 **Bluetooth** | 🔵 (Workaround)                      |  (on), 󰂲 (off)                   |
+| 🔋 **Batterie**  | 🔋 (ein Emoji, nicht gestuft)        |  (leer), , , ,  (voll)        |
+| 📡 **WiFi**      | 📶 (Signal), 📡 (Alternative)        |  (on), 󰖪 (off)                   |
+| 🔔 **Notify**    | 🔔 (on), 🔕 (off)                    |  (on),  (off)                    |
+

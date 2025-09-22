@@ -1,13 +1,20 @@
-local lspconfig = require("lspconfig")
-lspconfig.lua_ls.setup({})
-lspconfig.ts_ls.setup({})
-lspconfig.html.setup({})
-lspconfig.cssls.setup({})
-lspconfig.markdown_oxide.setup({})
-lspconfig.pylsp.setup({})
-lspconfig.java_language_server.setup({})
-lspconfig.bashls.setup({})
--- lspconfig.typos_ls.setup({})
-lspconfig.yamlls.setup({})
-lspconfig.taplo.setup({})
-lspconfig.lemminx.setup({ filetypes = { "xml" } })
+local servers = {
+  lua_ls = {},
+  ts_ls = {},
+  html = {},
+  cssls = {},
+  markdown_oxide = {},
+  pylsp = {},
+  java_language_server = {},
+  bashls = {},
+  -- typos_ls = {}, -- auskommentiert, wie bei dir
+  yamlls = {},
+  taplo = {},
+  lemminx = { filetypes = { "xml" } },
+}
+
+-- Lade die Server
+for server, config in pairs(servers) do
+  vim.lsp.config(server, config)
+  vim.lsp.enable(server)
+end

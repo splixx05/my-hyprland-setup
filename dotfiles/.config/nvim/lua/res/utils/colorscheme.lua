@@ -2,7 +2,7 @@ return {
   Foreground = "#7898C7",
   Background = "#101322",
   Accent = "#00B7EB",
-  Highlight = "#B4C9FF",
+  Highlight = "#A0CFFF",
   CursorForeground = "#00B7EB",
   CursorBackground = "#101322",
   Visual = "#283457",
@@ -27,7 +27,7 @@ return {
   Statement = "#CBA6F7",
   Conditional = "#CBA6F7",
   Repeat = "#CBA6F7",
-  Label = "#E4C9FF",
+  Label = "#A099FF",
   Operator = "#A099FF",
   Keyword = "#A099FF",
   Exception = "#f7768e",
@@ -40,7 +40,7 @@ return {
 
   Type = "#A099FF",
   StorageClass = "#CBA6F7",
-  Structure = "#E4C9FF",
+  Structure = "#A099FF",
   Typedef = "#f7768e",
 
   Special = "#34eb83",

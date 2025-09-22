@@ -15,7 +15,9 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # Set Nvim to standard & sudo editor
 export EDITOR=nvim
+
 export SUDO_EDITOR=nvim
+export SYSTEMD_EDITOR=nvim
 
 # pnpm
 export PNPM_HOME="$HOME/.local/share/pnpm"
