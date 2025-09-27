@@ -15,7 +15,7 @@ return {
   {
     "hrsh7th/nvim-cmp",
     config = function()
-      require("res.configs.lsp.completions")
+      require("res.configs.ide.completions")
     end,
   },
 }

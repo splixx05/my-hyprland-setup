@@ -1,4 +1,5 @@
 local conform = require("conform")
+
 conform.setup({
   formatters_by_ft = {
     javascript = { "prettier" },
@@ -10,6 +11,10 @@ conform.setup({
     json = { "prettier" },
     markdown = { "prettier" },
     lua = { "stylua" },
+    python = { "ruff" },
+    sh = { "shfmt" },
+    bash = { "shfmt" },
+    toml = { "taplo" },
   },
   format_on_save = {
     lsp_fallback = true,

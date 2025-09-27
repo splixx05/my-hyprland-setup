@@ -1,6 +1,6 @@
 return {
   "windwp/nvim-ts-autotag",
   config = function()
-    require("res.configs.lsp.autotag")
+    require("res.configs.ide.autotag")
   end,
 }

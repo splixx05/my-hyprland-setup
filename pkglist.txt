@@ -13,6 +13,7 @@ brightnessctl
 calcurse
 cliphist
 cnijfilter2
+cpio
 cups
 cups-pdf
 dmenu
@@ -94,6 +95,7 @@ plymouth
 powerdevil
 print-manager
 pv
+pyprland
 python-capng
 python-defusedxml
 python-packaging
@@ -109,9 +111,9 @@ rofi
 rsync
 rust
 simple-mtpfs
-slack-desktop-wayland
 sof-firmware
 solaar
+sshfs
 stow
 sudo
 swayimg
@@ -122,6 +124,7 @@ thunderbird
 tmux
 trash-cli
 tree
+tty-clock
 tumbler
 ulauncher
 unrar

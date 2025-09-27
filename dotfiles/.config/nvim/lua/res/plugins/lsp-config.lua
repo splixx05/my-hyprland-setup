@@ -18,7 +18,7 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function()
-      require("res.configs.lsp.lsp-config")
+      require("res.configs.ide.lsp-config")
     end,
   },
 }

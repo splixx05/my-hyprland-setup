@@ -4,6 +4,6 @@ return {
     "rcarriga/nvim-dap-ui",
   },
   config = function()
-    require("res.configs.lsp.debugger")
+    require("res.configs.ide.debugger")
   end,
 }

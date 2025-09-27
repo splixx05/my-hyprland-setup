@@ -5,9 +5,11 @@ lint.linters_by_ft = {
   typescript = { "eslint_d" },
   javascriptreact = { "eslint_d" },
   typescriptreact = { "eslint_d" },
-  python = { "pylint" },
+  python = { "ruff" },
+  sh = { "shellcheck" },
+  bash = { "shellcheck" },
   markdown = { "markdownlint" },
-  yaml = { "yamllint" },
+  yaml = { "yamlls" },
 }
 
 local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })

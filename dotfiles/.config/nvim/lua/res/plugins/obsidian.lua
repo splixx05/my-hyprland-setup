@@ -31,6 +31,6 @@ return {
     -- vim.ui.open(url) -- need Neovim 0.10.0+
   end,
   config = function()
-    require("res.configs.ide.obsidian")
+    require("res.configs.tools.obsidian")
   end,
 }
