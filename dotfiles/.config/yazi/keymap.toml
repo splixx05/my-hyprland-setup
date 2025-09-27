@@ -238,7 +238,7 @@ desc = "run lazygit"
 [[mgr.prepend_keymap]]
 on = ["u", "t", "f"]
 run = "plugin restore"
-desc = "Restore last deleted files/folders"
+desc = "Restore deleted files/folders"
 
 [[mgr.prepend_keymap]]
 on = ["u", "t", "i"]
@@ -251,4 +251,4 @@ desc = "Restore deleted file (Interactive)"
 [[mgr.prepend_keymap]]
 on = ["u", "p"]
 run = "plugin toggle-pane min-preview"
-desc = "Show or hide the preview pane"
+desc = "Toggle preview pane"

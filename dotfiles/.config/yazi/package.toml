@@ -1,22 +1,17 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:chmod"
-rev = "de53d90"
+rev = "d7588f6"
 hash = "1adc12c2b2b025411ab61eb8f0879574"
 
 [[plugin.deps]]
-use = "lpanebr/yazi-plugins:first-non-directory"
-rev = ""
-hash = "386df6fbcd34b29774ab171b642e91f2"
-
-[[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "de53d90"
+rev = "d7588f6"
 hash = "3996fc74044bc44144b323686f887e1"
 
 [[plugin.deps]]
 use = "Lil-Dank/lazygit"
-rev = "7a08a09"
-hash = "a1fa2b3e1826c3a34804ea8c548e9f80"
+rev = "8f37dc5"
+hash = "ee71543790f0ce3951161045a3787abd"
 
 [[plugin.deps]]
 use = "imsi32/yatline"
@@ -30,7 +25,7 @@ hash = "4d441b38138ce6492a4e10fa349fd65"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "de53d90"
+rev = "d7588f6"
 hash = "63b6c222bf2103b3023389dde5e2ecfe"
 
 [[plugin.deps]]
@@ -50,23 +45,18 @@ hash = "a94dcbe9266512806c677138e8591ddb"
 
 [[plugin.deps]]
 use = "orhnk/system-clipboard"
-rev = ""
-hash = "487c8c8ec5028db6de2a901a31dd74c2"
-
-[[plugin.deps]]
-use = "lpanebr/yazi-plugins:yatline-symlink"
-rev = ""
-hash = "386df6fbcd34b29774ab171b642e91f2"
+rev = "4f6942d"
+hash = "8e81a147e8ddfd992b10dd957d51a199"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:toggle-pane"
-rev = "de53d90"
+rev = "d7588f6"
 hash = "d6f60c24d8c0cf57a855bf46115b2502"
 
 [[plugin.deps]]
 use = "boydaihungst/restore"
-rev = "84f1921"
-hash = "355f163cb374b5c9514aee2b64121678"
+rev = "dc40509"
+hash = "e7e377f9b1bbaca4a2e5d9ec9709ac4d"
 
 [[plugin.deps]]
 use = "MasouShizuka/close-and-restore-tab"
@@ -75,13 +65,13 @@ hash = "bb24648b1f96f1cef8c1543742189aad"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:piper"
-rev = "de53d90"
+rev = "d7588f6"
 hash = "2143a53182dbbe935a1abd1623424aa5"
 
 [[plugin.deps]]
 use = "KKV9/compress"
-rev = "9fc8fe0"
-hash = "2ad086899bf368fba211a33d8f68c39d"
+rev = "c264639"
+hash = "e17c11b605d989568a1d1741ca17c584"
 
 [[plugin.deps]]
 use = "dedukun/relative-motions"
@@ -90,18 +80,13 @@ hash = "e02a788e5b8ae0fb47fd0193dda589cc"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:types"
-rev = "de53d90"
+rev = "d7588f6"
 hash = "1e047e1b13b5e3fc6ab1f5d0d04a14e2"
 
 [[plugin.deps]]
 use = "AnirudhG07/plugins-yazi:copy-file-contents"
 rev = "71545f4"
 hash = "f8530ee84fee95dbcc26bb1d8d8019c7"
-
-[[plugin.deps]]
-use = "dawsers/dual-pane"
-rev = "c2fed12"
-hash = "c7c303f806f5bbbdc863f22956876551"
 
 [[flavor.deps]]
 use = "kalidyasin/yazi-flavors:tokyonight-storm"

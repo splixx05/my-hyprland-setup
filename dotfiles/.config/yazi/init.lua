@@ -47,7 +47,6 @@ require("yatline"):setup({
 	header_line = {
 		left = {
 			section_a = {
-				-- { type = "coloreds", custom = false, name = "tab_path" },
 				{ type = "string", custom = false, name = "hovered_path" },
 			},
 			section_b = {
