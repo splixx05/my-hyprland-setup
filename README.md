@@ -28,7 +28,7 @@ To keep the environment harmonious I use most of the features via Hyprland itsel
 - qt6ct
 - waybar
 - Wlogout
-- Wofi
+- Wofi/Rofi
 
 Take also a look to pkglist.txt in the repo,
 which defines all packages related to this setup.
@@ -40,7 +40,7 @@ which defines all packages related to this setup.
 The best way to use the setup is as follows:
 
 - Clone this repo
-- first install the basic setup for Arch Linux (you can use the installation script
+- first install the basic setup for Arch Linux (you can use the installation script)
 - then install the list pkglist.txt
 - move fonts & icons to the appropriate folder for your distro
 - move the folder “dotfiles” to your home directory
@@ -55,15 +55,14 @@ You can then fine-tune the settings in the dotfiles according to your wishes
 
 ## 📋 Requirements
 
-Since this repo contains a basic setup for Arch, no special pre-installation is required.
-However, if a different distro is desired, then consider using specific tools such as:
+The repository includes a basic setup based on (Arch), meaning nothing extra needs to be installed.
+If you prefer to use a different setup, make sure to install the following packages:
 
 - Kitty (or Alacritty)
 - Zsh (incl. OMZ)
 - Ly (or greetd & tuigreet)
 - Tmux
 - Neovim
-- Plymouth (Splash)
 - gum
 - Meslo / Roboto fonts
 - Noto Color Emoji (font)
