@@ -1,4 +1,5 @@
 local lint = require("lint")
+lint.linters.shellcheck.args = { "--shell=zsh", "--format=gcc", "-" }
 
 lint.linters_by_ft = {
   javascript = { "eslint_d" },
@@ -8,6 +9,7 @@ lint.linters_by_ft = {
   python = { "ruff" },
   sh = { "shellcheck" },
   bash = { "shellcheck" },
+  zsh = { "shellcheck" },
   markdown = { "markdownlint" },
   yaml = { "yamlls" },
 }

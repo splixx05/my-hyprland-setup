@@ -1,5 +1,3 @@
-# TODO: set Music-Dir for jumping in 
-
 # This is a configuration file for the MOC player.  It should be named
 # 'config' and placed in the ~/.moc directory.  As this file can specify
 # commands which invoke other applications, MOC will refuse to start if it
@@ -71,7 +69,7 @@
 #
 # Example:    MusicDir = "/home/joe/music"
 #
-MusicDir = ""
+MusicDir = "/home/ricky/myStuff/Music"
 
 
 # Start in the music directory by default?  If set to 'no', start

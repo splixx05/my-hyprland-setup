@@ -30,8 +30,6 @@
     "custom/settings",
     "custom/terminal",
     "custom/filemanager",
-    "custom/solaar",
-    "custom/pwmgr",
     "custom/separator",
     "wlr/taskbar",
   ],

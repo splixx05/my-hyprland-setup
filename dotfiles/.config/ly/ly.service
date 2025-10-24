@@ -6,7 +6,7 @@ Conflicts=getty@tty2.service
 
 [Service]
 Type=idle
-ExecStartPre=/usr/bin/bash -c 'printf "\e]P0131A24\e]P87898C7"'
+ExecStartPre=/usr/bin/bash -c 'printf "\e]P0161a34\e]P87898C7"'
 ExecStart=/usr/bin/ly-dm
 StandardInput=tty
 TTYPath=/dev/tty2

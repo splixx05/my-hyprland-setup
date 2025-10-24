@@ -37,7 +37,8 @@
   "custom/appmenu": {
     "format": "",
     "on-click": "rofi -show drun",
-    "tooltip-format": "Menu",
+    "on-click-right": "wlogout",
+    "tooltip-format": "Left: D-Menu\nRight: Wlogout",
   },
   "custom/separator": {
     "format": "|",
