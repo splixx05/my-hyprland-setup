@@ -11,25 +11,25 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # ----------- Path to zsh config dir ------------------- #
-export ZCONFIG="${XDG_CONFIG_HOME:-$HOME}/.zsh"
+export ZSH="$HOME/.zsh"
 # ------------------------------------------------------ #
 
 
 # Load zfiles (without src.zsh)
-for file in $ZCONFIG/*.zsh; do
-  [[ "$file" == "$ZCONFIG/src.zsh" ]] && continue
+for file in $ZSH/*.zsh; do
+  [[ "$file" == "$ZSH/src.zsh" ]] && continue
   [[ -f "$file" ]] && source "$file"
 done
 
 # Load zfunctions
-for file in $ZCONFIG/functions/*.zsh; do
+for file in $ZSH/functions/*.zsh; do
   [[ -f "$file" ]] && source "$file"
 done
 
 # Load zplugins
-source "$ZCONFIG/src.zsh"
+source "$ZSH/src.zsh"
 
 # -------------------- EOF ----------------------------- #
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.zsh/rc/.p10k.zsh ]] || source ~/.zsh/rc/.p10k.zsh
+[[ ! -f "$ZSH/rc/.p10k.zsh" ]] || source "$ZSH/rc/.p10k.zsh"
 # ------------------------------------------------------ #
