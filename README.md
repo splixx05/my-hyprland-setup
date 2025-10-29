@@ -55,15 +55,16 @@ You can then fine-tune the settings in the dotfiles according to your wishes
 
 ## 📋 Requirements
 
-The repository includes a basic setup based on (Arch), meaning nothing extra needs to be installed.
+The repository includes a basic setup (based on Arch), meaning nothing extra needs to be installed.
 If you prefer to use a different setup, make sure to install the following packages:
 
 - Kitty (or Alacritty)
-- Zsh (incl. OMZ)
+- Zsh
+- Optional: Oh-My-Zsh (I don't use it, but it's possible as well)
 - Ly (or greetd & tuigreet)
 - Tmux
 - Neovim
-- gum
+- Gum
 - Meslo / Roboto fonts
 - Noto Color Emoji (font)
 
