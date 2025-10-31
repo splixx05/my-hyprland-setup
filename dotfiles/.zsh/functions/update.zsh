@@ -12,12 +12,12 @@ EOF
 # -------------- Update all local (git) pakages ------------------
 sleep 1
 echo "          --- The ultimate full Zsh update! ---"
-sleep 1
 echo "		--- developed by r!cky ---"
 sleep 1
 echo " "
 echo " "
 echo "🔄 Updating local Zsh plugins..."
+echo " "
 sleep 1
 
 # Detect correct plugin directory
@@ -37,6 +37,7 @@ for dir in "$plugin_root"/*/.git; do
   git -C "$plugin_dir" pull --ff-only
 done
 sleep 1
+	echo " "
 	echo "✅ All git packages on zsh updated!"
 echo " "
 echo "-------------------------------------------------------------------"
@@ -44,6 +45,7 @@ echo "-------------------------------------------------------------------"
 sleep 2
 echo " "
 	echo "⚙️ Updating global packages..."
+	echo " "
 	echo "Looking for package manager..."
 sleep 1
 	if command -v yay &>/dev/null; then
@@ -61,6 +63,7 @@ sleep 1
 	else
 		echo "⚠️  No supported package manager found." && exit 0
 sleep 1
+	echo " "
 	echo "✅ All packages updated!"
 	fi
 }

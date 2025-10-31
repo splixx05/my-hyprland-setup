@@ -5,11 +5,18 @@
 #   |_|\___|_|  |_| |_| |_|_|_| |_|\__,_|_|
 
 
-#color
+# Colors 
 set -g default-terminal "tmux-256color"
 set -ag terminal-overrides ",xterm-256color:RGB"
 
-# reload config file (change file location to your the tmux.conf you want to use)
+#FIX: Cursors - seems not to work and need
+# set -ga terminal-overrides ',xterm-kitty:Cr=\E[4 q:Cr=\E[4 q'
+# run-shell "printf '\033[4 q'"
+
+# Setting for nnn and similars
+set -g allow-passthrough on
+
+# Reload config file (change file location to your the tmux.conf you want to use)
 unbind r
 bind r source-file ~/.config/tmux/tmux.conf
 
@@ -19,3 +26,4 @@ set -g mouse on
 # Number of characters for tmux
 set -g status-left-length 100
 set -g status-right-length 100
+
