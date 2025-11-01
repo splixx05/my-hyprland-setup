@@ -9,6 +9,16 @@
   //------------------------------------------------------//
   // Modules left                                         //
   //----------------------------------------------------- //
+  "custom/pwmgr": {
+    "format": "🛡",
+    "on-click": "bitwarden-desktop",
+    "tooltip-format": "Bitwarden",
+  },
+  "custom/solaar": {
+    "format": "",
+    "on-click": "solaar",
+    "tooltip-format": "Solaar",
+  },
   "custom/settings": {
     "format": "",
     "on-click": "kitty nvim $HOME/.config/hypr/",
@@ -25,7 +35,7 @@
     "tooltip-format": "Yazi > My Stuff",
   },
   "custom/appmenu": {
-    "format": " r¢h LinuX",
+    "format": "",
     "on-click": "rofi -show drun",
     "on-click-right": "wlogout",
     "tooltip-format": "Left: D-Menu\nRight: Wlogout",
@@ -54,28 +64,6 @@
   //------------------------------------------------------//
   //                                        Modules right //
   //------------------------------------------------------//
-  // Group Tools
-  "group/tools": {
-    "orientation": "inherit",
-    "drawer": {
-      "transition-duration": 300,
-      "children-class": "not-memory",
-      "transition-left-to-right": false,
-    },
-    "modules": [
-      "clock",
-      "pulseaudio",
-      "battery",
-      "bluetooth",
-      "network",
-      "custom/noti",
-      "tray",
-    ],
-  },
-  "custom/tools": {
-    "format": "",
-    "tooltip": false,
-  },
   // SwayNC
   "custom/noti": {
     "format": "{icon}",
@@ -99,7 +87,7 @@
     "spacing": 10,
   },
   "clock": {
-    "format": "{:%a - %H:%M}",
+    "format": "{:%H:%M}",
     "on-click": "kitty calcurse",
     "interval": 60,
     "timezone": "",

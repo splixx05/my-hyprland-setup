@@ -26,6 +26,11 @@
   "modules-left": [
     "custom/empty",
     "custom/appmenu",
+    "custom/separator",
+    "custom/settings",
+    "custom/terminal",
+    "custom/filemanager",
+    "custom/separator",
     "wlr/taskbar",
   ],
   //-----------------------------------//
@@ -40,6 +45,13 @@
   //                   Modules Right //
   //---------------------------------//
   "modules-right": [
-    "group/tools",
+    "pulseaudio",
+    "bluetooth",
+    "battery",
+    "network",
+    "custom/noti",
+    "tray",
+    "custom/separator",
+    "clock",
   ],
 }

@@ -23,10 +23,13 @@
   //--------------------------------------//
   // Modules Left                         //
   //--------------------------------------//
+  "custom/group-left": {
+    "format": "{custom/empty}{custom/appmenu}{custom/separator}{custom/settings}{custom/terminal}{custom/filemanager}{custom/separator}{wlr/taskbar}",
+    "tooltip": false
+  }
+
   "modules-left": [
-    "custom/empty",
-    "custom/appmenu",
-    "wlr/taskbar",
+    "custom/group-left",
   ],
   //-----------------------------------//
   //          Modules Center           //
@@ -40,6 +43,13 @@
   //                   Modules Right //
   //---------------------------------//
   "modules-right": [
-    "group/tools",
+    "pulseaudio",
+    "bluetooth",
+    "battery",
+    "network",
+    "custom/noti",
+    "tray",
+    "custom/separator",
+    "clock",
   ],
 }

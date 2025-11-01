@@ -1,69 +1,39 @@
-:update()
-{
-    cat << "EOF"
- ______     ______     __  __        __  __     ______   _____     ______     ______   ______   
-/\___  \   /\  ___\   /\ \_\ \      /\ \/\ \   /\  == \ /\  __-.  /\  __ \   /\__  _\ /\  ___\  
-\/_/  /__  \ \___  \  \ \  __ \     \ \ \_\ \  \ \  _-/ \ \ \/\ \ \ \  __ \  \/_/\ \/ \ \  __\  
-  /\_____\  \/\_____\  \ \_\ \_\     \ \_____\  \ \_\    \ \____-  \ \_\ \_\    \ \_\  \ \_____\
-  \/_____/   \/_____/   \/_/\/_/      \/_____/   \/_/     \/____/   \/_/\/_/     \/_/   \/_____/
+:update() {
+  FULL=false
+  GIT=false
+  PKG=false
 
-EOF
+  while [[ $# -gt 0 ]]; do
+    case "$1" in
+      -f|--full) FULL=true ;;
+      -g|--git) GIT=true ;;
+      -p|--pkg) PKG=true ;;
+      -h|--help)
+        echo "Usage: :update [option]"
+        echo " " 
+        echo "Available options are:" 
+        echo "-f | --full        --> This will start a full update (pkgs & git plugins in zsh)" 
+        echo "-g | --git         --> This will start a update only for zsh plugins (git plugins in zsh)"
+        echo "-p | --pkg         --> This will start an update only for pkgs (acording your pkgs manager)" 
+        return 0 
+        ;;
+      *) echo "Unknown option: $1" && return 1 ;;
+    esac
+    shift
+  done
 
-# -------------- Update all local (git) pakages ------------------
-sleep 1
-echo "          --- The ultimate full Zsh update! ---"
-echo "		--- developed by r!cky ---"
-sleep 1
-echo " "
-echo " "
-echo "🔄 Updating local Zsh plugins..."
-echo " "
-sleep 1
+  # Fallback
+  if ! $FULL && ! $GIT && ! $PKG; then
+    FULL=true
+  fi
 
-# Detect correct plugin directory
-if [[ -d "$ZSH/plugins/local" ]]; then
-  plugin_root="$ZSH/plugins/local"
-elif [[ -d "$ZSH/custom/plugins" ]]; then
-  plugin_root="$ZSH/custom/plugins"
-else
-  echo "⚠️  No local or custom plugin directory found."
-  exit 0
-fi
+  local SCRIPT_DIR="$ZSH/scripts"
 
-# Loop through plugins
-for dir in "$plugin_root"/*/.git; do
-  plugin_dir=$(dirname "$dir")
-  echo "→ $(basename "$plugin_dir")"
-  git -C "$plugin_dir" pull --ff-only
-done
-sleep 1
-	echo " "
-	echo "✅ All git packages on zsh updated!"
-echo " "
-echo "-------------------------------------------------------------------"
-# ---------- Update all global (pkg-mgr) pakages ------------------
-sleep 2
-echo " "
-	echo "⚙️ Updating global packages..."
-	echo " "
-	echo "Looking for package manager..."
-sleep 1
-	if command -v yay &>/dev/null; then
-		echo "yay has been detected!"
-sleep 1
-		echo "📦 Updating system packages via yay..." && yay -Syu --noconfirm
-	elif command -v apt &>/dev/null; then
-		echo "apt has been detected!"
-sleep 1
-		echo "📦 Updating system packages via apt..." && sudo apt update && sudo apt upgrade
-	elif command -v brew &>/dev/null; then
-		echo "Homebrew has been detected"
-sleep 1
-		echo "🍺 Updating Homebrew packages..." && brew update && brew upgrade
-	else
-		echo "⚠️  No supported package manager found." && exit 0
-sleep 1
-	echo " "
-	echo "✅ All packages updated!"
-	fi
+  if $FULL; then
+    "$SCRIPT_DIR/update_full.sh"
+  elif $GIT; then
+    "$SCRIPT_DIR/update_git.sh"
+  elif $PKG; then
+    "$SCRIPT_DIR/update_pkg.sh"
+  fi
 }

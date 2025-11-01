@@ -1,6 +1,5 @@
 alias cl='clear'
 alias lazy='lazygit'
-alias nix='nix-shell'
 alias host='hostnamectl hostname'
 alias yt='yt-dlp'
 alias task='python ~/Dev/tasks/t/t.py --task-dir ~/Dev/tasks/list --list tasks'
