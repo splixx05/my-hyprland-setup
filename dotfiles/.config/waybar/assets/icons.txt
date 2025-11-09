@@ -54,3 +54,10 @@ Aus: 
 | 📡 **WiFi**      | 📶 (Signal), 📡 (Alternative)        |  (on), 󰖪 (off)                   |
 | 🔔 **Notify**    | 🔔 (on), 🔕 (off)                    |  (on),  (off)                    |
 
+| Zweck                   | Emoji | Alternativen     | Kommentar                                             |
+| ----------------------- | ----- | ---------------- | ----------------------------------------------------- |
+| 🧠 **RAM**              | `🧠`  | `💾`, `📊`       | Das Gehirn steht ziemlich nice für Arbeitsspeicher 😄 |
+| 🌡️ **Temperatur**      | `🌡️` | `🔥`, `🥵`, `❄️` | je nach Theme oder Humor-Level 😅                     |
+| 💽 **SSD / Festplatte** | `💽`  | `💾`, `🧮`, `📀` | „Diskette“ oder „CD“ wirken retro, aber charmant      |
+
+

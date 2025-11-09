@@ -1,0 +1,258 @@
+//  __  __           _       _
+// |  \/  | ___   __| |_   _| | ___  ___
+// | |\/| |/ _ \ / _` | | | | |/ _ \/ __|
+// | |  | | (_) | (_| | |_| | |  __/\__ \
+// |_|  |_|\___/ \__,_|\__,_|_|\___||___/
+//
+//
+{
+  //------------------------------------------------------//
+  // Modules left                                         //
+  //----------------------------------------------------- //
+  "custom/settings": {
+    "format": "",
+    "on-click": "kitty nvim $HOME/.config/hypr/",
+    "tooltip-format": "Hypr Config",
+  },
+  "custom/terminal": {
+    "format": "",
+    "on-click": "kitty",
+    "tooltip-format": "kitty (clear)",
+  },
+  "custom/filemanager": {
+    "format": "",
+    "on-click": "kitty yazi $HOME/myStuff",
+    "tooltip-format": "Yazi > My Stuff",
+  },
+  "custom/appmenu": {
+    "format": " r¢h LinuX",
+    "on-click": "rofi -show drun",
+    "on-click-right": "wlogout",
+    "tooltip-format": "Left: D-Menu\nRight: Wlogout",
+  },
+  "custom/separator": {
+    "format": "|",
+    "tooltip": false,
+  },
+  //------------------------------------------------------//
+  //                Modules center                        //
+  //------------------------------------------------------//
+  "hyprland/workspaces": {
+    "on-scroll-up": "hyprctl dispatch workspace r+1",
+    "on-scroll-down": "hyprctl dispatch workspace r-1",
+    "on-click": "activate",
+    "active-only": false,
+    "all-outputs": true,
+    "format": "{}",
+    "format-icons": {
+      "urgent": "",
+      "active": "",
+      "default": "",
+    },
+    "persistent-workspaces": 5,
+  },
+  //------------------------------------------------------//
+  //                                        Modules right //
+  //------------------------------------------------------//
+  // Group Tools
+  "group/tools": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 300,
+      "children-class": "not-memory",
+      "transition-left-to-right": false,
+    },
+    "modules": [
+      "clock",
+      "pulseaudio",
+      "battery",
+      "bluetooth",
+      "network",
+      "tray",
+    ],
+  },
+  "custom/tools": {
+    "format": "",
+    "tooltip": false,
+  },
+  // SwayNC
+  "custom/noti": {
+    "format": "{icon}",
+    "tooltip-format": "Left: Notifications\nRight: Do not disturb",
+    "format-icons": {
+      "none": "",
+      "notification": "<span foreground='#f7768e'><sup></sup></span>",
+      "dnd-none": "",
+      "dnd-notification": "<span foreground='#f7768e'><sup></sup></span>"
+    },
+    "return-type": "json",
+    "exec": "swaync-client -swb",
+    "exec-if": "which swaync-client",
+    "on-click": "swaync-client -t",
+    "on-click-right": "swaync-client -d",
+    "escape": true
+  },
+  // System tray
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10,
+  },
+  "clock": {
+    "format": "{:%a - %H:%M}",
+    "on-click": "kitty calcurse",
+    "interval": 60,
+    "timezone": "",
+    "tooltip-format": "{:%a - %d.%m.%y}",
+  },
+  "network": {
+    "format": "{ifname}",
+    "format-wifi": " ",
+    "format-ethernet": " ",
+    "format-disconnected": "Disconnected ⚠",
+    "format-off": " Wifi off",
+    "tooltip-format": " {ifname} via {gwaddr}",
+    "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
+    "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50,
+    "on-click": "nm-connection-editor",
+    "on-click-right": "",
+  },
+  "battery": {
+    "states": {
+      // "good": 95,
+      "warning": 30,
+      "critical": 15,
+    },
+    "format": "{icon}",
+    "format-charging": "  {capacity}%",
+    "format-plugged": "  {capacity}%",
+    "format-alt": "{icon}  {time}",
+    "tooltip-format": "Battery {capacity}%",
+    "format-good": "", // An empty format will hide the module
+    "format-full": "",
+    "format-icons": [
+      " ",
+      " ",
+      " ",
+      " ",
+      " "
+    ],
+  },
+  "pulseaudio": {
+    // "scroll-step": 1, // %, can be a float
+    "format": "{icon} ",
+    "format-bluetooth": "{icon} {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-muted": "",
+    "format-source": "{volume}% ",
+    "format-source-muted": "",
+    "tooltip": true,
+    "tooltip-format": "Volume {volume}%",
+    "format-icons": {
+      "default": [
+        "",
+        "",
+        ""
+      ],
+    },
+    "on-click-right": "pavucontrol",
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+  },
+  "bluetooth": {
+    "format-on": "",
+    "format-connected": "",
+    "format-disabled": "󰂲",
+    "format-off": "󰂲",
+    "interval": 30,
+    "on-click": "kitty bluetoothctl",
+    "format-no-controller": "",
+    "tooltip": true,
+    "tooltip-format": "Bluetooth {status}"
+  },
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+    ],
+    "scroll-step": 1,
+  },
+  //-------------------------------------------//
+  //              Other modules                //
+  //-------------------------------------------//
+  "user": {
+    "format": "{user}",
+    "interval": 60,
+    "icon": false,
+  },
+  "custom/empty": {
+    "format": "",
+    "icon-size": 21,
+    "spacing": 10,
+  },
+  "custom/tools": {
+    "format": "",
+    "tooltip-format": "Tools",
+  },
+  // Clipboard-manager
+  "custom/cliphist": {
+    "format": "",
+    "on-click": "",
+    "on-click-right": "",
+    "on-click-middle": "",
+    "tooltip-format": "",
+  },
+  // Taskbar
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 24,
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "ignore-list": [
+      "Alacritty",
+      "kitty"
+    ],
+    "app_ids-mapping": {
+      "firefoxdeveloperedition": "firefox-developer-edition",
+    },
+    "rewrite": {
+      "Firefox Web Browser": "Firefox",
+      "Foot Server": "Terminal",
+    },
+  },
+  //   "custom/notification": {
+  //     "tooltip-format": "Left: Notifications\nRight: Do not disturb",
+  //     "format": "{icon}",
+  //     "format-icons": {
+  //       "notification": "<span foreground='red'><sup></sup></span>",
+  //       "none": "",
+  //       "dnd-notification": "<span foreground='red'><sup></sup></span>",
+  //       "dnd-none": "",
+  //       "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+  //       "inhibited-none": "",
+  //       "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+  //       "dnd-inhibited-none": "",
+  //     },
+  //     "return-type": "jsonc",
+  //     "exec-if": "which swaync-client",
+  //     "exec": "swaync-client -swb",
+  //     "on-click": "swaync-client -t",
+  //     "on-click-right": "swaync-client -d",
+  //     "escape": true,
+  //   },
+}

@@ -1,5 +1,0 @@
-alias zsh.conf='yazi "$HOME/.zsh/"'
-alias hypr.conf='yazi "$HOME/.config/hypr"'
-alias kitty.conf='yazi "$HOME/.config/kitty"'
-alias way.conf='yazi "$HOME/.config/waybar"'
-alias nvim.conf='yazi "$HOME/.config/nvim"'

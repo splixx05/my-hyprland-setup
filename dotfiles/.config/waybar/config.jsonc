@@ -24,22 +24,27 @@
   // Modules Left                         //
   //--------------------------------------//
   "modules-left": [
-    "custom/empty",
     "custom/appmenu",
+    "custom/separator",
+    "hyprland/workspaces",
+    "custom/separator",
     "wlr/taskbar",
   ],
   //-----------------------------------//
   //          Modules Center           //
   //-----------------------------------//
-  "modules-center": [
-    "custom/empty",
-    "hyprland/workspaces",
-    "custom/empty"
-  ],
+  "modules-center": [],
   //---------------------------------//
   //                   Modules Right //
   //---------------------------------//
   "modules-right": [
-    "group/tools",
+    "pulseaudio",
+    "bluetooth",
+    "battery",
+    "network",
+    "custom/noti",
+    "tray",
+    "custom/separator",
+    "clock",
   ],
 }

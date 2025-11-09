@@ -1,0 +1,40 @@
+:root {
+  /* Fonts */
+  --font-main: Roboto, sans-serif;
+  --font-spec: FontAwesome;
+  --font-big: 20px;
+  --font-mid: 18px;
+  --font-small: 15px;
+
+  /* Colors */
+  --bg: #161a34;
+  --bg-2: #101322;
+  --fg: #7898c7;
+  --black: #0e141b;
+  --green: #8ccf7e;
+  --yellow: #ffd580;
+  --orange: #ffaa66;
+  --red: #f7768e;
+  --blue: #5caeff;
+  --darkblue: #065287;
+  --azure: #1793d1;
+  --turquoise: #00e5ff;
+  --cyan: #00b7eb;
+  --white: #f0f4ff;
+  --magenta: #cba6f7;
+  --violet: #a099ff;
+  --grey: #5c6773;
+  --darkgrey: #283457;
+
+  /* Layout */
+  --border-radius: 5px;
+
+  --margin-main: 3px 1px 3px 1px;
+  --padding-main: 2px 10px 2px 10px;
+
+  --margin-module: 3px 15px 3px 0px;
+  --padding-module: 2px 10px 2px 10px;
+
+  --margin-spec: 2px 18px 3px 0px;
+  --padding-spec: 0px 2px;
+}

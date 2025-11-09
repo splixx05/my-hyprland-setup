@@ -1,0 +1,452 @@
+/*
+ * __        __          _                  ____  _         _
+ * \ \      / /_ _ _   _| |__   __ _ _ __  / ___|| |_ _   _| | ___
+ *  \ \ /\ / / _` | | | | '_ \ / _` | '__| \___ \| __| | | | |/ _ \
+ *   \ V  V / (_| | |_| | |_) | (_| | |     ___) | |_| |_| | |  __/
+ *    \_/\_/ \__,_|\__, |_.__/ \__,_|_|    |____/ \__|\__, |_|\___|
+ *                 |___/                              |___/
+ */
+
+/* -----------------------------------------------------
+ * General
+ * ----------------------------------------------------- */
+
+* {
+  font-family: FontAwesome, Roboto, sans-serif;
+  border: none;
+  border-radius: 7px 7px 7px 7px;
+}
+
+window#waybar {
+  background-color: #101322;
+  border: 1px solid #7898c7;
+  margin: 2px 20px 2px 20px;
+  padding: 5px 5px 5px 5px;
+  /* background: transparent; */
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+/* -----------------------------------------------------
+ * Workspaces
+ * ----------------------------------------------------- */
+
+#workspaces {
+  /* background: none; */
+  margin: 2px 18px 3px 0px;
+  padding: 0px 2px;
+  font-style: normal;
+  font-weight: bold;
+  opacity: 1;
+  color: #7898c7;
+  font-family: Pirulen;
+}
+
+#workspaces button {
+  padding: 0px 6px;
+  margin: 3px 2px;
+  border-radius: 3px 3px 3px 3px;
+  color: #7898c7;
+  transition: all 0.1s linear;
+  opacity: 1;
+  font-family: FontAwesome, Pirulen, sans-serif;
+}
+
+#workspaces button.active {
+  color: #130622;
+  background: #7898c7;
+  border-color: #289ddf;
+  border-radius: 3px 3px 3px 3px;
+  min-width: 30px;
+  transition: all 0.1s linear;
+  opacity: 1;
+  font-family: FontAwesome, Pirulen, sans-serif;
+}
+
+#workspaces button:hover {
+  color: #130622;
+  background: #7898c7;
+  border-radius: 3px 3px 3px 3px;
+  opacity: 0.7;
+  font-family: FontAwesome, Pirulen, sans-serif;
+}
+
+/* -----------------------------------------------------
+ * Tooltips
+ * ----------------------------------------------------- */
+
+tooltip {
+  border-radius: 3px 3px 3px 3px;
+  border: 1px solid #7898c7;
+  background-color: #131a24;
+  font-size: 18px;
+  opacity: 1;
+  padding: 35px;
+  margin: 25px;
+}
+
+tooltip label {
+  color: #7898c7;
+}
+
+/* -----------------------------------------------------
+ * Window
+ * ----------------------------------------------------- */
+
+#window {
+  margin: 3px 15px 3px 0px;
+  padding: 2px 10px 2px 10px;
+  border-radius: 5px 5px 5px 5px;
+  color: white;
+  font-size: 20px;
+  font-weight: normal;
+  opacity: 1;
+}
+
+window#waybar.empty #window {
+  background-color: transparent;
+}
+
+/* -----------------------------------------------------
+ * Taskbar
+ * ----------------------------------------------------- */
+
+#taskbar {
+  margin: 5px 5px 5px 5px;
+  padding: 0px;
+  /* border-radius: 5px 5px 5px 5px; */
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  opacity: 1;
+  /* border-bottom: 3px solid #289ddf; */
+}
+
+#taskbar button {
+  margin: 0;
+  border-radius: 5px 5px 5px 5px;
+  padding: 0px 15px 0px 15px;
+}
+
+#taskbar.empty {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin: 10px;
+}
+
+/* -----------------------------------------------------
+ * Modules
+ * ----------------------------------------------------- */
+
+.modules-left > widget:first-child > #workspaces {
+  margin-left: 0;
+}
+
+.modules-right > widget:last-child > #workspaces {
+  margin-right: 0;
+}
+
+/* -----------------------------------------------------
+ * Custom Quicklinks
+ * ----------------------------------------------------- */
+
+#custom-browser,
+#custom-calculator,
+#custom-cliphist,
+#custom-system,
+#custom-hypridle,
+#custom-tools,
+#custom-mail {
+  margin-right: 25px;
+  margin-left: 17px;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 1;
+  color: #7898c7;
+}
+
+#custom-settings {
+  margin-left: 20px;
+  margin-right: 25px;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 1;
+  color: #5f7a89;
+}
+
+#custom-terminal {
+  margin-left: 20px;
+  margin-right: 25px;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 1;
+  color: #4bdd59;
+}
+
+#custom-filemanager {
+  margin-left: 20px;
+  margin-right: 25px;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 1;
+  color: #2590cc;
+}
+
+#custom-solaar {
+  margin-left: 20px;
+  margin-right: 25px;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 1;
+  color: #1ea298;
+}
+#custom-pwmgr {
+  margin-left: 20px;
+  margin-right: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 1;
+  color: #1d5bcb;
+}
+
+#custom-tools {
+  margin-right: 12px;
+}
+
+#custom-hypridle.active {
+  color: #289ddf;
+}
+
+#custom-hypridle.notactive {
+  color: #dc2f2f;
+}
+
+/* -----------------------------------------------------
+ * Idle Inhibator
+ * ----------------------------------------------------- */
+
+#idle_inhibitor {
+  margin-right: 15px;
+  font-size: 22px;
+  font-weight: bold;
+  opacity: 1;
+  color: #7898c7;
+}
+
+#idle_inhibitor.activated {
+  margin-right: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 1;
+  color: #dc2f2f;
+}
+
+/* -----------------------------------------------------
+ * Custom Modules
+ * ----------------------------------------------------- */
+#custom-appmenu {
+  font-size: 23px;
+  color: #1793d1;
+  border-radius: 15px 15px 15px 15px;
+  padding: 0px 10px 0px 10px;
+  margin-right: 5px;
+  margin-left: 25px;
+  opacity: 1;
+  /* border: 1.5px solid #289ddf; */
+}
+
+#custom-separator {
+  margin-right: 15px;
+  margin-left: 25px;
+  font-size: 25px;
+  font-weight: bold;
+  opacity: 1;
+  /* color: #003481; */
+  color: #7898c7;
+}
+
+/* -----------------------------------------------------
+ * Custom Notification
+ * ----------------------------------------------------- */
+
+#custom-noti {
+  margin: 0px 13px 0px 10px;
+  padding: 0px;
+  font-size: 20px;
+  color: #7898c7;
+  opacity: 1;
+}
+
+#custom-noti.dnd-none,
+#custom-noti.dnd-notification {
+  color: #f7768e;
+  margin: 0px 13px 0px 10px;
+  padding: 0px;
+  font-size: 20px;
+  opacity: 1;
+}
+
+/* -----------------------------------------------------
+ * Custom Exit
+ * ----------------------------------------------------- */
+
+#custom-exit {
+  margin: 0px 25px 0px 20px;
+  padding: 0px;
+  font-size: 20px;
+  color: #7898c7;
+  opacity: 1;
+}
+
+/* -----------------------------------------------------
+ * Clock
+ * ----------------------------------------------------- */
+
+#clock {
+  /* background-color: #000000; */
+  font-size: 15px;
+  color: #1793d1;
+  padding: 5px 10px 5px 10px;
+  margin: 2px 10px 2px 2px;
+  opacity: 1;
+  font-family: FontAwesome, Pirulen, sans-serif;
+  font-size: 16px;
+}
+
+/* -----------------------------------------------------
+ * Backlight
+ * ----------------------------------------------------- */
+
+#backlight {
+  /* background-color: #000000; */
+  font-size: 16px;
+  color: #7898c7;
+  border-radius: 5px 5px 5px 5px;
+  padding: 2px 10px 0px 10px;
+  margin: 3px 15px 3px 0px;
+  opacity: 1;
+}
+
+/* -----------------------------------------------------
+ * Pulseaudio
+ * ----------------------------------------------------- */
+
+#pulseaudio {
+  /* background-color: #000000; */
+  font-size: 16px;
+  color: #7898c7;
+  border-radius: 5px 5px 5px 5px;
+  padding: 2px 10px 2px 10px;
+  margin: 3px 15px 3px 0px;
+  opacity: 1;
+}
+
+#pulseaudio.muted {
+  /* background-color: #000000; */
+  color: #f7768e;
+}
+
+/* -----------------------------------------------------
+ * Network
+ * ----------------------------------------------------- */
+
+#network {
+  /* background-color: #000000; */
+  font-size: 16px;
+  color: #7898c7;
+  border-radius: 5px 5px 5px 5px;
+  padding: 2px 10px 2px 10px;
+  margin: 3px 15px 3px 0px;
+  opacity: 1;
+}
+
+#network.ethernet {
+  /* background-color: #000000; */
+  color: #7898c7;
+}
+
+#network.wifi {
+  /* background-color: #000000; */
+  color: #7898c7;
+}
+
+#network.disconnected {
+  color: #f7768e;
+}
+
+/* -----------------------------------------------------
+ * Bluetooth
+ * ----------------------------------------------------- */
+
+#bluetooth,
+#bluetooth.on,
+#bluetooth.connected {
+  /* background-color: #000000; */
+  font-size: 16px;
+  color: #7898c7;
+  border-radius: 5px 5px 5px 5px;
+  padding: 2px 10px 2px 10px;
+  margin: 3px 15px 3px 0px;
+  opacity: 1;
+}
+
+#bluetooth.off {
+  color: #f7768e;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* -----------------------------------------------------
+ * Battery
+ * ----------------------------------------------------- */
+
+#battery {
+  /* background-color: #000000; */
+  font-size: 16px;
+  color: #7898c7;
+  border-radius: 5px 5px 5px 5px;
+  padding: 2px 15px 2px 10px;
+  margin: 3px 15px 3px 0px;
+  opacity: 1;
+}
+
+#battery.charging,
+#battery.plugged {
+  color: #f7768e;
+  /* background-color: #000000; */
+}
+
+/* @keyframes blink { */
+/*   to { */
+/*     background-color: none; */
+/*     color: #7898c7; */
+/*   } */
+/* } */
+
+#battery.critical:not(.charging) {
+  background-color: #f7768e;
+  color: #f7768e;
+  /* animation-name: blink; */
+  /* animation-duration: 0.5s; */
+  /* animation-timing-function: linear; */
+  /* animation-iteration-count: infinite; */
+  /* animation-direction: alternate; */
+}
+
+/* -----------------------------------------------------
+ * Tray
+ * ----------------------------------------------------- */
+
+#tray {
+  padding: 2px 8px 2px 8px;
+  margin: 3px 8px 3px 8px;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+}

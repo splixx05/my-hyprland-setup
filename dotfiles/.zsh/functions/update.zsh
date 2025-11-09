@@ -13,8 +13,9 @@
         echo " " 
         echo "Available options are:" 
         echo "-f | --full        --> This will start a full update (pkgs & git plugins in zsh)" 
-        echo "-g | --git         --> This will start a update only for zsh plugins (git plugins in zsh)"
+        echo "-g | --git         --> This will start an update only for zsh plugins (git plugins in zsh)"
         echo "-p | --pkg         --> This will start an update only for pkgs (acording your pkgs manager)" 
+        echo "no option selcted  --> This will start an update only for pkgs (fallback)" 
         return 0 
         ;;
       *) echo "Unknown option: $1" && return 1 ;;
@@ -24,7 +25,7 @@
 
   # Fallback
   if ! $FULL && ! $GIT && ! $PKG; then
-    FULL=true
+    PKG=true
   fi
 
   local SCRIPT_DIR="$ZSH/scripts"
