@@ -1,58 +1,155 @@
-return {
-  Foreground = "#7898C7",
-  Background = "#101322",
-  Accent = "#00B7EB",
-  Highlight = "#A0CFFF",
-  CursorForeground = "#00B7EB",
-  CursorBackground = "#101322",
-  Visual = "#283457",
-  CursorLine = "#283457",
-  CursorLineNr = "#00B7EB",
-  LineNr = "#7898C7",
+local M = {}
 
-  Comment = "#5C6773",
-  Todo = "#34eb83",
+-- =========================================================
+-- 🎨 PALETTE SECTION —
+-- =========================================================
+local c = require("res.utils.colors")
 
-  Constant = "#FFD580",
-  String = "#7898C7",
-  Character = "#00E5FF",
-  Number = "#FFAA66",
-  Boolean = "#f7768e",
-  Float = "#00B7EB",
+-- =========================================================
+-- 🧠 Helper
+-- =========================================================
+local function hi(group, opts)
+  vim.api.nvim_set_hl(0, group, opts)
+end
 
-  Identifier = "#5CAEFF",
-  Function = "#5CAEFF",
-  Variable = "#5CAEFF",
+-- =========================================================
+-- 🎨 HIGHLIGHTS SECTION —
+-- =========================================================
+local highlights = {
+  -- UI / Editor
+  Normal = { fg = c.fg.main, bg = c.bg.main },
+  NormalNC = { fg = c.fg.main, bg = c.bg.main },
+  Cursor = { fg = c.prim.main, bg = c.bg.main },
+  CursorLine = { bg = c.bg.slate },
+  CursorLineNr = { fg = c.fg.acc, bold = true },
+  LineNr = { fg = c.fg.main },
+  Visual = { bg = c.bg.slate },
+  SignColumn = {},
+  ColorColumn = {},
+  StatusLine = {},
+  StatusLineNC = {},
+  StatusLineTerm = {},
+  StatusLineTermNC = {},
+  VertSplit = {},
 
-  Statement = "#CBA6F7",
-  Conditional = "#CBA6F7",
-  Repeat = "#CBA6F7",
-  Label = "#A099FF",
-  Operator = "#A099FF",
-  Keyword = "#A099FF",
-  Exception = "#f7768e",
+  -- Comments
+  Comment = { fg = c.tone.grey, italic = true },
+  Todo = { fg = c.spec.green, bold = true },
 
-  PreProc = "#00B7EB",
-  Include = "#00E5FF",
-  Field = "#00E5FF",
-  Define = "#00B7EB",
-  Macro = "#00B7EB",
+  -- Constants
+  Constant = { fg = c.acc.yellow },
+  String = { fg = c.fg.main },
+  Character = { fg = c.acc.blue },
+  Number = { fg = c.acc.orange },
+  Boolean = { fg = c.prim.deep },
+  Float = { fg = c.prim.high },
 
-  Type = "#A099FF",
-  StorageClass = "#CBA6F7",
-  Structure = "#A099FF",
-  Typedef = "#f7768e",
+  -- Identifiers
+  Identifier = { fg = c.prim.deep },
+  Function = { fg = c.prim.main, bold = true },
+  Builtin = { fg = c.prim.deep },
+  Search = { fg = c.acc.magenta, bg = "NONE" },
+  IncSearch = { fg = c.prim.deep },
+  MatchParen = { fg = c.spec.green },
 
-  Special = "#34eb83",
-  SpecialChar = "#41ffa4",
-  Tag = "#CBA6F7",
-  Delimiter = "#5C6773",
-  SpecialComment = "#5C6773",
-  Debug = "#f7768e",
+  -- Statements
+  Statement = { fg = c.acc.magenta },
+  Conditional = { fg = c.acc.magenta },
+  Repeat = { fg = c.acc.magenta },
+  Label = { fg = c.prim.high },
+  Operator = { fg = c.acc.violet },
+  Keyword = { fg = c.acc.violet, italic = true },
+  Exception = { fg = c.acc.red },
 
-  Underlined = "#A0CFFF",
-  Ignore = "#3A3E52",
-  Error = "#f7768e",
-  Warning = "#FFAA66",
-  Boarder = "#00E5FF",
+  -- Preprocessor
+  PreProc = { fg = c.acc.blue },
+  Include = { fg = c.acc.magenta },
+  Define = { fg = c.acc.blue },
+  Macro = { fg = c.acc.blue },
+  Error = { fg = c.acc.red },
+  NormalFloat = { fg = c.prim.main, bg = "NONE" },
+  Floatborder = { fg = c.prim.main, bg = "NONE" },
+
+  -- Types
+  Type = { fg = c.acc.violet },
+  StorageClass = { fg = c.acc.blue },
+  Structure = { fg = c.acc.cyan },
+  Typedef = { fg = c.acc.red },
+
+  -- Specials
+  Special = { fg = c.prim.deep },
+  SpecialChar = { fg = c.prim.high },
+  Tag = { fg = c.acc.magenta },
+  Delimiter = { fg = c.tone.grey },
+  SpecialComment = { fg = c.fg.acc },
+  Debug = { fg = c.acc.red },
+
+  -- Diagnostics
+  DiagnosticError = { fg = c.acc.red },
+  DiagnosticWarn = { fg = c.acc.orange },
+  DiagnosticInfo = { fg = c.acc.blue },
+  DiagnosticHint = { fg = c.acc.cyan },
+
+  -- Diff
+  DiffAdd = { bg = c.acc.green },
+  DiffDelete = { bg = c.acc.red },
+  DiffChange = { bg = c.acc.blue },
+
+  -- LSP
+  LspReferenceText = { bg = c.bg.slate },
+  LspReferenceRead = { bg = c.bg.slate },
+  LspReferenceWrite = { bg = c.bg.slate },
+
+  -- Treesitter ------------------------------
+
+  -- Operators, Punctuation & Types
+  ["@number"] = { link = "Number" },
+  ["@type"] = { link = "Type" },
+  ["@type.builtin"] = { link = "Type" },
+  ["@type.definition"] = { link = "Type" },
+  ["@punctuation"] = { link = "Delimiter" },
+  ["@operator"] = { link = "Operator" },
+  ["@punctuation.delimiter"] = { link = "Delimiter" },
+  ["@punctuation.bracket"] = { fg = c.spec.green },
+  ["@punctuation.special"] = { fg = c.spec.green },
+
+  -- Variables
+  ["@variable.builtin"] = { fg = c.fg.acc },
+  ["@variable"] = { fg = c.fg.main },
+
+  -- Fields / Properties
+  ["@field"] = { fg = c.prim.deep },
+  ["@property"] = { fg = c.acc.cyan },
+
+  -- Functions
+  ["@function"] = { link = "Function" },
+  ["@function.builtin"] = { link = "Builtin" },
+  ["@function.call"] = { link = "Function" },
+  ["@method"] = { link = "Builtin" },
+
+  -- Keywords
+  ["@keyword"] = { link = "Keyword" },
+  ["@keyword.function"] = { link = "Keyword" },
+  ["@keyword.return"] = { link = "Keyword" },
+
+  -- Constants & Strings
+  ["@constant"] = { link = "Constant" },
+  ["@constant.builtin"] = { link = "Constant" },
+  ["@string"] = { link = "String" },
+  ["@string.escape"] = { link = "String" },
+
+  -- Comments
+  ["@comment"] = { link = "Comment" },
+  ["@todo"] = { link = "Comment" },
 }
+
+-- =========================================================
+-- 🚀 SETUP
+-- =========================================================
+function M.setup()
+  for group, opts in pairs(highlights) do
+    hi(group, opts)
+  end
+end
+
+return M

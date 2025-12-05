@@ -1,19 +1,38 @@
 return {
-  bg = "#101322",
-  fg = "#7898C7",
-  black = "#0e141b",
-  green = "#8CCF7E",
-  yellow = "#FFD580",
-  orange = "#FFAA66",
-  red = "#f7768e",
-  blue = "#5CAEFF",
-  darkblue = "#065287",
-  azure = "#1793D1",
-  lightcyan = "#00E5FF",
-  cyan = "#00B7EB",
-  white = "#f0f4ff",
-  magenta = "#CBA6F7",
-  violet = "#A099FF",
-  grey = "#5C6773",
-  darkgrey = "#283457",
+  prim = {
+    main = "#1793D1",
+    deep = "#0166a9",
+    high = "#00E5FF",
+  },
+  bg = {
+    main = "#101322",
+    slate = "#283457",
+    deep = "#071321",
+  },
+  fg = {
+    main = "#7898C7",
+    acc = "#ABC9ED",
+    hi = "#85DEFF",
+  },
+
+  tone = {
+    black = "#0e141b",
+    grey = "#5C6773",
+    white = "#f0f4ff",
+  },
+
+  acc = {
+    green = "#8CCF7E",
+    yellow = "#FFD580",
+    orange = "#FFAA66",
+    red = "#FF6E8A",
+    blue = "#5CAEFF",
+    cyan = "#00B7EB",
+    magenta = "#E178FF",
+    violet = "#947CFF",
+  },
+
+  spec = {
+    green = "#34eb83",
+  },
 }

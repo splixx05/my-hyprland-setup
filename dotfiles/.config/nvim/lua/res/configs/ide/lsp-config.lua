@@ -6,7 +6,9 @@ local servers = {
   html = {},
   hyprls = {},
   jsonls = {},
-  lua_ls = {},
+  lua_ls = {
+    cmd = { "/sbin/lua-language-server" },
+  },
   markdown_oxide = {},
   pyright = {},
   ts_ls = {},

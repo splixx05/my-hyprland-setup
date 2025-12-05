@@ -1,0 +1,120 @@
+;; ** Variables ***********************************************************************
+
+;; System vars
+(defpoll HOST :interval "5s" `host`)
+(defpoll CPU_USAGE :interval "1s" `scripts/sys_info --cpu`)
+(defpoll MEM_USAGE :interval "1s" `scripts/sys_info --mem`)
+(defpoll BLIGHT :interval "1s" `scripts/sys_info --blight`)
+(defpoll BATTERY :interval "5s" `scripts/sys_info --bat`)
+
+;; Time vars
+(defpoll HOUR :interval "5s" `date +\"%I\"`)
+(defpoll MIN :interval "5s" `date +\"%M\"`)
+
+;; Date vars
+(defpoll DAY :interval "5s" `date +\"%a\"`)
+(defpoll day :interval "5s" `date +\"%d\"`)
+(defpoll MONTH :interval "5s" `date +\"%m\"`)
+(defpoll YEAR :interval "5s" `date +\"%y\"`)
+
+;; Files vars
+(defpoll FREE :interval "5s" `df -h / | awk '{print $4}' | tail -n 1 | sed 's/G/GB/'`)
+
+
+;; ** Widgets *************************************************************************
+
+;; system
+(defwidget system [] 
+	(box :class "genwin" :vexpand "false" :hexpand "false" 
+		(box :orientation "v" :spacing 20 :halign "center" :valign "center" :space-evenly "false" :vexpand "false" :hexpand "false" 
+			(box :class "cpu_bar" :orientation "h" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false" 
+				(label :class "iconcpu" :text "")
+				(scale :min 0 :max 100 :value CPU_USAGE :active "false"))
+			(box :class "mem_bar" :orientation "h" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false" 
+				(label :class "iconmem" :text "")
+				(scale :min 0 :max 100 :value MEM_USAGE :active "false"))
+			(box :class "bat_bar" :orientation "h" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false" 
+				(label :class "iconbat" :text "")
+				(scale :min 0 :max 100 :value BATTERY :active "false")))))
+
+;; clock
+(defwidget clock [] 
+	(box :class "genwin" :orientation "h" :spacing 50 :space-evenly false :vexpand "false" :hexpand "false" 
+		(box :orientation "h" :spacing 0
+			(label :class "time_hour" :valign "start" :wrap "true" :limit-width 25 :text HOUR)
+			(label :class "time_min" :valign "end" :wrap "true" :limit-width 25 :text MIN))
+		(box :orientation "v" :spacing 0 
+			(label :class "date_DAY" :valign "start" :halign "end" :wrap "true" :limit-width 25 :text DAY))))
+
+;; power buttons
+(defwidget logout [] 
+	(box :class "genwin" :vexpand "false" :hexpand "false" 
+		(button :class "btn_logout" :onclick "openbox --exit" "")))
+(defwidget sleep [] 
+	(box :class "genwin" :vexpand "false" :hexpand "false" 
+		(button :class "btn_sleep" :onclick "systemctl suspend" "󰽥")))
+(defwidget reboot [] 
+	(box :class "genwin" :vexpand "false" :hexpand "false" 
+		(button :class "btn_reboot" :onclick "systemctl reboot" "")))
+(defwidget poweroff [] 
+	(box :class "genwin" :vexpand "false" :hexpand "false" 
+		(button :class "btn_poweroff" :onclick "systemctl poweroff" "󰐥")))
+
+;; folders
+(defwidget folders [] 
+	(box :class "genwin" :orientation "v" :space-evenly "false" :vexpand "false" :hexpand "false" 
+		(box :class "hddbox" :orientation "h" :space-evenly "false" :vexpand "false" :hexpand "false" 
+			(box :space-evenly "false" :vexpand "false" :hexpand "false"
+				(button :class "hddicon" :onclick "scripts/open_apps --fm" "")
+				(label :class "fs_sep" :text "|"))
+			(box :space-evenly "false" :vexpand "false" :hexpand "false" 
+				(label :class "hdd_label" :wrap "true" :limit-width 25 :text FREE)))
+		(box :orientation "h" :space-evenly "false" :vexpand "false" :hexpand "false" 
+			(button :class "iconfolder1" :onclick "scripts/open_folders --docs" "")
+			(button :class "label_folder1" :onclick "scripts/open_folders --docs" "Documents"))
+		(box :orientation "h" :space-evenly "false" :vexpand "false" :hexpand "false" 
+			(button :class "iconfolder2" :onclick "scripts/open_folders --dl" "")
+			(button :class "label_folder2" :onclick "scripts/open_folders --dl" "Downloads"))
+		(box :orientation "h" :space-evenly "false" :vexpand "false" :hexpand "false" 
+			(button :class "iconfolder3" :onclick "scripts/open_folders --music" "")
+			(button :class "label_folder3" :onclick "scripts/open_folders --music" "Music"))
+		(box :orientation "h" :space-evenly "false" :vexpand "false" :hexpand "false" 
+			(button :class "iconfolder4" :onclick "scripts/open_folders --pics" "")
+			(button :class "label_folder4" :onclick "scripts/open_folders --pics" "Pictures"))))
+
+;; ** Windows *************************************************************************
+
+;; sleep
+(defwindow sleep :monitor 0 :stacking "bg" :focusable "false" :screen 1 
+	    :geometry (geometry :x 1600 :y 100 :width 60 :height 60)
+					(sleep))
+
+;; logout
+(defwindow logout :monitor 0 :stacking "bg" :focusable "false" :screen 1 
+	    :geometry (geometry :x 1670 :y 100 :width 60 :height 60)
+					(logout))
+
+;; reboot
+(defwindow reboot :monitor 0 :stacking "bg" :focusable "false" :screen 1 
+	    :geometry (geometry :x 1740 :y 100 :width 60 :height 60)
+					(reboot))
+
+;; poweroff
+(defwindow poweroff :monitor 0 :stacking "bg" :focusable "false" :screen 1 
+	    :geometry (geometry :x 1810 :y 100 :width 60 :height 60)
+					(poweroff))
+
+;; clock
+(defwindow clock :monitor 0 :stacking "bg" :focusable "false" :screen 1 
+	    :geometry (geometry :x 1600 :y 170 :width 270 :height 100)
+					(clock))
+
+;; system
+(defwindow system :monitor 0 :stacking "bg" :focusable "false" :screen 1 
+	    :geometry (geometry :x 1600 :y 282 :width 270 :height 170)
+					(system))
+
+;; folders
+(defwindow folders :monitor 0 :stacking "bg" :focusable "false" :screen 1 
+	    :geometry (geometry :x 1600 :y 462 :width 270 :height 300)
+					(folders))

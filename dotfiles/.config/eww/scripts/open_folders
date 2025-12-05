@@ -1,0 +1,21 @@
+#!/bin/bash
+
+if [[ "$1" == "--dl" ]]; then
+	pcmanfm-qt ~/Downloads &
+
+elif [[ "$1" == "--docs" ]]; then
+	pcmanfm-qt ~/myStuff/Documents &
+
+elif [[ "$1" == "--music" ]]; then
+	pcmanfm-qt ~/myStuff/Music &
+
+elif [[ "$1" == "--pics" ]]; then
+	pcmanfm-qt ~/myStuff/Pictures &
+
+elif [[ "$1" == "--cfg" ]]; then
+	pcmanfm-qt ~/.config &
+
+elif [[ "$1" == "--local" ]]; then
+	pcmanfm-qt ~/.local/share &
+
+fi

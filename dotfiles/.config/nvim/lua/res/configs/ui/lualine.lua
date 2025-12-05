@@ -25,8 +25,8 @@ local config = {
       -- We are going to use lualine_c an lualine_x as left and
       -- right section. Both are highlighted by c theme .  So we
       -- are just setting default looks o statusline
-      normal = { c = { fg = colors.fg, bg = colors.bg } },
-      inactive = { c = { fg = colors.fg, bg = colors.bg } },
+      normal = { c = { fg = colors.fg.main, bg = colors.bg.main } },
+      inactive = { c = { fg = colors.fg.main, bg = colors.bg.main } },
     },
   },
   sections = {
@@ -64,7 +64,7 @@ ins_left({
   function()
     return " " -- other character --> ▊ 
   end,
-  color = { fg = colors.cyan }, -- Sets highlighting of component
+  color = { fg = colors.prim.main }, -- Sets highlighting of component
   padding = { left = 0, right = 1 }, -- We don't need space before this
 })
 
@@ -98,26 +98,26 @@ ins_left({
   color = function()
     -- auto change color according to neovims mode
     local mode_color = {
-      n = colors.azure,
-      i = colors.green,
-      v = colors.magenta,
-      [""] = colors.blue,
-      V = colors.violet,
-      c = colors.magenta,
-      no = colors.red,
-      s = colors.orange,
-      S = colors.orange,
-      [""] = colors.orange,
-      ic = colors.yellow,
-      R = colors.violet,
-      Rv = colors.violet,
-      cv = colors.red,
-      ce = colors.red,
-      r = colors.cyan,
-      rm = colors.cyan,
-      ["r?"] = colors.cyan,
-      ["!"] = colors.red,
-      t = colors.red,
+      n = colors.prim.main,
+      i = colors.acc.green,
+      v = colors.acc.magenta,
+      [""] = colors.acc.blue,
+      V = colors.acc.violet,
+      c = colors.acc.magenta,
+      no = colors.acc.red,
+      s = colors.acc.orange,
+      S = colors.acc.orange,
+      [""] = colors.acc.orange,
+      ic = colors.acc.yellow,
+      R = colors.acc.violet,
+      Rv = colors.acc.violet,
+      cv = colors.acc.red,
+      ce = colors.acc.red,
+      r = colors.prim.main,
+      rm = colors.prim.main,
+      ["r?"] = colors.prim.main,
+      ["!"] = colors.acc.red,
+      t = colors.acc.red,
     }
     return { fg = mode_color[vim.fn.mode()] }
   end,
@@ -130,18 +130,18 @@ ins_left({
 -- 	cond = conditions.buffer_not_empty,
 -- })
 
-ins_left({ "progress", color = { fg = colors.cyan } })
+ins_left({ "progress", color = { fg = colors.prim.main } })
 
-ins_left({ "location", color = { fg = colors.cyan } })
+ins_left({ "location", color = { fg = colors.prim.main } })
 
 ins_left({
   "diagnostics",
   sources = { "nvim_diagnostic" },
   symbols = { error = " ", warn = " ", info = " " },
   diagnostics_color = {
-    error = { fg = colors.red },
-    warn = { fg = colors.yellow },
-    info = { fg = colors.cyan },
+    error = { fg = colors.acc.red },
+    warn = { fg = colors.acc.yellow },
+    info = { fg = colors.prim.main },
   },
 })
 
@@ -193,7 +193,7 @@ ins_left({
     return msg
   end,
   icon = " LSP:",
-  color = { fg = colors.fg, gui = "bold" },
+  color = { fg = colors.fg.main, gui = "bold" },
 })
 
 -- Add components to right sections
@@ -201,20 +201,20 @@ ins_right({
   "o:encoding", -- option component same as &encoding in viml
   fmt = string.upper, -- I'm not sure why it's upper case either ;)
   cond = conditions.hide_in_width,
-  color = { fg = colors.cyan },
+  color = { fg = colors.prim.main },
 })
 
 ins_right({
   "fileformat",
   fmt = string.upper,
   icons_enabled = true, -- I think icons are cool but Eviline doesn't have them. sigh
-  color = { fg = colors.cyan },
+  color = { fg = colors.prim.main },
 })
 
 ins_right({
   "branch",
   icon = "",
-  color = { fg = colors.green, gui = "bold" },
+  color = { fg = colors.acc.green, gui = "bold" },
 })
 
 ins_right({
@@ -222,9 +222,9 @@ ins_right({
   -- Is it me or the symbol for modified us really weird
   symbols = { added = " ", modified = "󰝤 ", removed = " " },
   diff_color = {
-    added = { fg = colors.green },
-    modified = { fg = colors.orange },
-    removed = { fg = colors.red },
+    added = { fg = colors.acc.green },
+    modified = { fg = colors.acc.orange },
+    removed = { fg = colors.acc.red },
   },
   cond = conditions.hide_in_width,
 })
@@ -233,7 +233,7 @@ ins_right({
   function()
     return " " -- other character --> ▊ 
   end,
-  color = { fg = colors.cyan },
+  color = { fg = colors.prim.main },
   padding = { left = 1 },
 })
 

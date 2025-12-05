@@ -1,0 +1,58 @@
+return {
+  Foreground = "#7898C7",
+  Background = "#101322",
+  Accent = "#00B7EB",
+  Highlight = "#A0CFFF",
+  CursorForeground = "#00B7EB",
+  CursorBackground = "#101322",
+  Visual = "#283457",
+  CursorLine = "#283457",
+  CursorLineNr = "#00B7EB",
+  LineNr = "#7898C7",
+
+  Comment = "#5C6773",
+  Todo = "#34eb83",
+
+  Constant = "#FFD580",
+  String = "#7898C7",
+  Character = "#00E5FF",
+  Number = "#FFAA66",
+  Boolean = "#f7768e",
+  Float = "#00B7EB",
+
+  Identifier = "#5CAEFF",
+  Function = "#5CAEFF",
+  Variable = "#5CAEFF",
+
+  Statement = "#CBA6F7",
+  Conditional = "#CBA6F7",
+  Repeat = "#CBA6F7",
+  Label = "#A099FF",
+  Operator = "#A099FF",
+  Keyword = "#A099FF",
+  Exception = "#f7768e",
+
+  PreProc = "#00B7EB",
+  Include = "#00E5FF",
+  Field = "#00E5FF",
+  Define = "#00B7EB",
+  Macro = "#00B7EB",
+
+  Type = "#A099FF",
+  StorageClass = "#CBA6F7",
+  Structure = "#A099FF",
+  Typedef = "#f7768e",
+
+  Special = "#34eb83",
+  SpecialChar = "#41ffa4",
+  Tag = "#CBA6F7",
+  Delimiter = "#5C6773",
+  SpecialComment = "#5C6773",
+  Debug = "#f7768e",
+
+  Underlined = "#A0CFFF",
+  Ignore = "#3A3E52",
+  Error = "#f7768e",
+  Warning = "#FFAA66",
+  Boarder = "#00E5FF",
+}
