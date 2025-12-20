@@ -9,7 +9,6 @@
 
 EOF
 
-# -------------- Update all local (git) pakages ------------------
 sleep 1
 echo "          --- The ultimate Zsh-pkg update! ---"
 echo "		--- developed by r!cky ---"

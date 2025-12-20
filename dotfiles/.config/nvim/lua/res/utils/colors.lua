@@ -5,9 +5,11 @@ return {
     high = "#00E5FF",
   },
   bg = {
-    main = "#101322",
+    main = "NONE", -- in case of transparent bg
+    -- main = "#07060E",
+    fbg = "#07060E",
     slate = "#283457",
-    deep = "#071321",
+    deep = "#101322",
   },
   fg = {
     main = "#7898C7",

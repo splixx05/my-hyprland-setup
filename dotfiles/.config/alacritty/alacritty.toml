@@ -1,4 +1,4 @@
-general.import = ["~/.config/alacritty/themes/themes/hypr.toml"]
+general.import = ["~/.config/alacritty/themes/themes/electric-midnight.toml"]
 
 [env]
 WINIT_X11_SCALE_FACTOR = "1.0"

@@ -10,3 +10,6 @@
 for file in ~/.zsh/aliases/*.zsh; do
   source "$file"
 done
+
+# Show all aliases
+alias show-all-alias='cat $ZSH/aliases/*'

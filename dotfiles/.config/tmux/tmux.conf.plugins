@@ -42,28 +42,28 @@ set -g @plugin 'o0th/tmux-nova'
 set -g @nova-rows 0
 # Style
 set -g @nova-pane "#I:#P#{?pane_in_mode, ❱ #{pane_mode},} ❱ #W"
-set -g @nova-pane-active-border-style "#101322"
-set -g @nova-pane-border-style "#101322"
-set -g @nova-status-style-bg "#101322"
+set -g @nova-pane-active-border-style "#07060E"
+set -g @nova-pane-border-style "#07060E"
+set -g @nova-status-style-bg "#07060E"
 set -g @nova-status-style-fg "#283457"
-set -g @nova-status-style-active-bg "#101322"
+set -g @nova-status-style-active-bg "#07060E"
 set -g @nova-status-style-active-fg "#1793D1"
 # Segments left
 set -g @nova-segment-mode "#{?client_prefix,🔥,💤}"
-set -g @nova-segment-mode-colors "#101322 #1793D1"
+set -g @nova-segment-mode-colors "#07060E #1793D1"
 set -g @nova-segment-session "#{session_name}"
-set -g @nova-segment-session-colors "#101322 #f7768e"
+set -g @nova-segment-session-colors "#07060E #947CFF"
 set -g @nova-segments-0-left "mode | session"
 # Segments right
-set -g @nova-segment-whoami "-=#(whoami)@#h=-"
-set -g @nova-segment-whoami-colors "#101322 #f7768e"
+set -g @nova-segment-whoami "#(whoami)@#h"
+set -g @nova-segment-whoami-colors "#07060E #947CFF"
 set -g @nova-segment-connex "#(~/.config/tmux/scripts/nova-connex.sh)"
-set -g @nova-segment-connex-colors "#101322 #1793D1"
+set -g @nova-segment-connex-colors "#07060E #1793D1"
 set -g @nova-segment-monitor "#(~/.config/tmux/scripts/nova-monitor.sh)"
-set -g @nova-segment-monitor-colors "#101322 #1793D1"
+set -g @nova-segment-monitor-colors "#07060E #1793D1"
 set -g @nova-segment-sysinfo "#(~/.config/tmux/scripts/nova-sysinfo.sh)"
-set -g @nova-segment-sysinfo-colors "#101322 #1793D1"
-set -g @nova-segments-0-right "sysinfo | connex | whoami | monitor"
+set -g @nova-segment-sysinfo-colors "#07060E #1793D1"
+set -g @nova-segments-0-right "connex | whoami | monitor"
 
 # --------------------------------  EOL  ---------------------------------------- #
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)

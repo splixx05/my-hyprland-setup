@@ -6,6 +6,16 @@
 #
 # ----------------------------------------------------------------------------
 
+# # Log yazi --> uncomment, if needed or use as 1-time-cmd
+# export YAZI_LOG=debug
+
+if [[ "$TERM" == "xterm-kitty" ]]; then
+  export TERM=kitty
+fi
+
+# Set nvm to shell
+source /usr/share/nvm/init-nvm.sh
+
 # zoxide config
 export _ZO_ECHO='1'
 eval "$(zoxide init zsh)"
@@ -33,3 +43,4 @@ export EZA_CONFIG_DIR="$HOME/.config/eza"
 
 # Set opencode to path
 export PATH=/home/ricky/.opencode/bin:$PATH
+

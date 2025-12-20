@@ -1,19 +1,22 @@
 :update() {
   FULL=false
   GIT=false
+  YAZI=false
   PKG=false
 
   while [[ $# -gt 0 ]]; do
     case "$1" in
       -f|--full) FULL=true ;;
       -g|--git) GIT=true ;;
+      -y|--yazi) YAZI=true ;;
       -p|--pkg) PKG=true ;;
       -h|--help)
         echo "Usage: :update [option]"
         echo " " 
         echo "Available options are:" 
-        echo "-f | --full        --> This will start a full update (pkgs & git plugins in zsh)" 
+        echo "-f | --full        --> This will start a full update" 
         echo "-g | --git         --> This will start an update only for zsh plugins (git plugins in zsh)"
+        echo "-y | --yazi        --> This will start an update only for yazi plugins"
         echo "-p | --pkg         --> This will start an update only for pkgs (acording your pkgs manager)" 
         echo "no option selcted  --> This will start an update only for pkgs (fallback)" 
         return 0 
@@ -24,7 +27,7 @@
   done
 
   # Fallback
-  if ! $FULL && ! $GIT && ! $PKG; then
+  if ! $FULL && ! $GIT && ! $YAZI && ! $PKG; then
     PKG=true
   fi
 
@@ -34,6 +37,8 @@
     "$SCRIPT_DIR/update_full.sh"
   elif $GIT; then
     "$SCRIPT_DIR/update_git.sh"
+  elif $YAZI; then
+    "$SCRIPT_DIR/update_yazi.sh"
   elif $PKG; then
     "$SCRIPT_DIR/update_pkg.sh"
   fi

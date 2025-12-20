@@ -1,3 +1,4 @@
+## cmd abreviations
 alias cl='clear'
 alias lazy='lazygit'
 alias host='hostnamectl hostname'
@@ -6,3 +7,4 @@ alias task='python ~/Dev/tasks/t/t.py --task-dir ~/Dev/tasks/list --list tasks'
 alias tclock='tty-clock -c -C 6 -b -u -n -B -D'
 alias mntws='sshfs bachata1@194.150.248.122:/home/bachata1/public_html ~/myStuff/Documents/Bachata-Novalis/Website/remote'
 alias umntws='fusermount -u ~/myStuff/Documents/Bachata-Novalis/Website/remote'
+

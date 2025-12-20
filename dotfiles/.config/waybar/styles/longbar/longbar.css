@@ -25,9 +25,9 @@ window#waybar {
  * ----------------------------------------------------- */
 
 #workspaces {
-  margin-left: 15px;
-  margin-right: 15px;
-  padding: 3px;
+  margin-left: 13px;
+  margin-right: 13px;
+  padding: 5px;
   font-size: 18px;
   color: #7898c7;
   font-family: FontAwesome, Roboto, sans-serif;

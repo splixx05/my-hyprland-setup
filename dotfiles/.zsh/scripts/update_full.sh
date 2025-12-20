@@ -41,6 +41,27 @@ sleep 1
 	echo "✅ All git packages on zsh updated!"
 echo " "
 echo "-------------------------------------------------------------------"
+# -------------- Update all Yazi pakages ------------------
+echo " "
+echo "🦆 Updating Yazi plugins..."
+echo " "
+sleep 2
+
+PLUGIN_DIR="$HOME/.config/yazi/plugins"
+
+# Detect correct plugin directory
+if [[ -d "$PLUGIN_DIR" ]]; then
+	ya pkg upgrade
+else
+	echo "⚠️  No local or custom plugin directory found."
+	exit 0
+fi
+
+sleep 1
+echo " "
+echo "✅ All Yazi packages updated!"
+echo " "
+echo "-------------------------------------------------------------------"
 # ---------- Update all global (pkg-mgr) pakages ------------------
 sleep 2
 echo " "

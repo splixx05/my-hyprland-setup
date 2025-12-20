@@ -42,7 +42,7 @@ local highlights = {
   Character = { fg = c.acc.blue },
   Number = { fg = c.acc.orange },
   Boolean = { fg = c.prim.deep },
-  Float = { fg = c.prim.high },
+  Float = { fg = c.prim.main },
 
   -- Identifiers
   Identifier = { fg = c.prim.deep },

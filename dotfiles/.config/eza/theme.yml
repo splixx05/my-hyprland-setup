@@ -14,19 +14,19 @@ colourful: true
 filekinds:
   normal: { foreground: "#7898C7" }
   directory: { foreground: "#00baff" }
-  symlink: { foreground: "#947CFF" }
+  symlink: { foreground: "#007caa" }
   pipe: { foreground: "#007caa" }
   block_device: { foreground: "#FF6E8A" }
   char_device: { foreground: "#FF6E8A" }
   socket: { foreground: "#44475A" }
   special: { foreground: "#FF79C6" }
-  executable: { foreground: "#8CCF7E" }
+  executable: { foreground: "#947CFF" }
   mount_point: { foreground: "#FFB86C" }
 
 perms:
   user_read: { foreground: "#7898C7" }
   user_write: { foreground: "#FFB86C" }
-  user_execute_file: { foreground: "#8CCF7E" }
+  user_execute_file: { foreground: "#947CFF" }
   user_execute_other: { foreground: "#8CCF7E" }
   group_read: { foreground: "#7898C7" }
   group_write: { foreground: "#FFB86C" }
@@ -61,7 +61,7 @@ users:
   group_root: { foreground: "#FF6E8A" }
 
 links:
-  normal: { foreground: "#947CFF" }
+  normal: { foreground: "#FF79C6" }
   multi_link_file: { foreground: "#FFB86C" }
 
 git:
@@ -107,7 +107,7 @@ header: { foreground: "#7898C7" }
 octal: { foreground: "#8CCF7E" }
 flags: { foreground: "#FF79C6" }
 
-symlink_path: { foreground: "#947CFF" }
+symlink_path: { foreground: "#FF79C6" }
 control_char: { foreground: "#00baff" }
 broken_symlink: { foreground: "#FF6E8A" }
-broken_path_overlay: { foreground: "#007caa" }
+broken_path_overlay: { foreground: "#FF6E8A" }

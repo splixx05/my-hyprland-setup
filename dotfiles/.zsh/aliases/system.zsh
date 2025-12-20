@@ -1,5 +1,7 @@
+## System cmds
 alias update='yay -Syu --noconfirm'
 alias install='yay -S'
 alias search='yay -s'
 alias remove='yay -Rns'
 alias jhypr='journalctl -u hyprland.service -b --no-pager | fzf --ansi --preview "echo {}" --preview-window=up:3:wrap'
+alias szshr='source "$ZSH/rc/.zshrc"'

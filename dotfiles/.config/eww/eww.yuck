@@ -8,7 +8,7 @@
 (defpoll BATTERY :interval "5s" `scripts/sys_info --bat`)
 
 ;; Time vars
-(defpoll HOUR :interval "5s" `date +\"%I\"`)
+(defpoll HOUR :interval "5s" `date +\"%H\"`)
 (defpoll MIN :interval "5s" `date +\"%M\"`)
 
 ;; Date vars

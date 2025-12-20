@@ -17,6 +17,6 @@ export LANG=en_US.UTF-8
 # If the file exists, it is loaded, otherwise it is ignored, so it doesn't matter whether the line is commented out or not.
 # -- Can be customized if required --
 
-# [ -f ~/.config/hypr/conf.d/zp-env.conf ] && source ~/.config/hypr/conf.d/zp-env.conf
+[ -f ~/.config/hypr/conf.d/zp-env.conf ] && source ~/.config/hypr/conf.d/zp-env.conf
 
 #  --------------------------------------------------------------------- #

@@ -1,15 +1,23 @@
--- ########################################################################
+-- ################## Debug ######################################################
+--
+-- ya.dbg("lazygit.yazi: entry() called")
+--
+-- local status = Command("lazygit"):stdin(Command.INHERIT):stdout(Command.INHERIT):stderr(Command.INHERIT):status()
+--
+-- ya.dbg("lazygit.yazi: exited with code " .. tostring(status.code))
+
+-- ################## GIT ########################################################
 
 require("git"):setup()
 
--- ########################################################################
+-- ################## Border #####################################################
 
 require("full-border"):setup({
 	-- Available values: ui.Border.PLAIN, ui.Border.ROUNDED
 	type = ui.Border.ROUNDED,
 })
 
--- ########################################################################
+-- ################## Yatline ####################################################
 
 require("yatline"):setup({
 	section_separator = { open = "", close = "" },
@@ -24,8 +32,8 @@ require("yatline"):setup({
 			un_select = "#FF6B6B",
 		},
 	},
-	style_b = { fg = "#1793D1", bg = "#101322" },
-	style_c = { fg = "#1793D1", bg = "#101322" },
+	style_b = { fg = "#1793D1" },
+	style_c = { fg = "#1793D1" },
 
 	permissions_t_fg = "#1793D1",
 	permissions_r_fg = "#8CCF7E",
@@ -94,7 +102,7 @@ require("yatline"):setup({
 	},
 })
 
--- -- ########################################################################
+-- -- ################### GIT-Head #####################################################
 
 local hypr = {
 	prefix_color = "#7898C7",
@@ -110,7 +118,7 @@ require("yatline-githead"):setup({
 	theme = hypr,
 })
 
--- -- ########################################################################
+-- -- #################### Tab-Path ####################################################
 --
 require("yatline-tab-path"):setup({
 	path_fg = "#101322",
@@ -122,23 +130,17 @@ require("yatline-tab-path"):setup({
 	separator = "",
 })
 
--- -- ########################################################################
+-- -- ##################### Symlink ###################################################
 
 require("yatline-symlink"):setup({
 	symlink_color = "#CBA6F7",
 })
 
--- -- ########################################################################
-
-require("yamb"):setup({
-	jump_notify = true,
-})
-
--- -- ########################################################################
+-- -- ##################### Restore ##################################################
 
 require("restore"):setup({})
 
--- -- ########################################################################
+-- -- ##################### Relative Motions ###################################################
 
 require("relative-motions"):setup({
 	show_numbers = "relative",
@@ -146,12 +148,34 @@ require("relative-motions"):setup({
 	enter_mode = "first",
 })
 
--- -- ########################################################################
+-- -- ##################### Copy File Content ###################################################
 
 require("copy-file-contents"):setup({
 	append_char = "\n",
 	notification = true,
 })
+
+-- -- ##################### Bookmarks ###################################################
+
+require("bookmarks"):setup({
+	last_directory = { enable = true, persist = true, mode = "mark" },
+	persist = "all",
+	desc_format = "full",
+	file_pick_mode = "hover",
+	custom_desc_input = true,
+	show_keys = true,
+	notify = {
+		enable = false,
+		timeout = 1,
+		message = {
+			new = "New bookmark '<key>' -> '<folder>'",
+			delete = "Deleted bookmark in '<key>'",
+			delete_all = "Deleted all bookmarks",
+		},
+	},
+})
+
+-- Doc --> https://github.com/dedukun/bookmarks.yazi
 
 -- -- ########################################################################
 
