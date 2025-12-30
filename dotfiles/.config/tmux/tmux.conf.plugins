@@ -36,9 +36,6 @@ set -g @plugin 'sainnhe/tmux-fzf'
 # ----------------  Themes  ----------------- #
 # ---------------------------------------------
 set -g @plugin 'o0th/tmux-nova'
-# set -g @nova-nerdfonts true
-# set -g @nova-nerdfonts-left 
-# set -g @nova-nerdfonts-right 
 set -g @nova-rows 0
 # Style
 set -g @nova-pane "#I:#P#{?pane_in_mode, ❱ #{pane_mode},} ❱ #W"
@@ -56,14 +53,13 @@ set -g @nova-segment-session-colors "#07060E #947CFF"
 set -g @nova-segments-0-left "mode | session"
 # Segments right
 set -g @nova-segment-whoami "#(whoami)@#h"
-set -g @nova-segment-whoami-colors "#07060E #947CFF"
 set -g @nova-segment-connex "#(~/.config/tmux/scripts/nova-connex.sh)"
 set -g @nova-segment-connex-colors "#07060E #1793D1"
 set -g @nova-segment-monitor "#(~/.config/tmux/scripts/nova-monitor.sh)"
 set -g @nova-segment-monitor-colors "#07060E #1793D1"
-set -g @nova-segment-sysinfo "#(~/.config/tmux/scripts/nova-sysinfo.sh)"
-set -g @nova-segment-sysinfo-colors "#07060E #1793D1"
-set -g @nova-segments-0-right "connex | whoami | monitor"
+set -g @nova-segment-battery "#(~/.config/tmux/scripts/nova-battery.sh)"
+set -g @nova-segment-battery-colors "#07060E #947CFF"
+set -g @nova-segments-0-right "connex | battery | monitor"
 
 # --------------------------------  EOL  ---------------------------------------- #
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)

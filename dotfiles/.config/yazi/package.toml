@@ -9,11 +9,6 @@ rev = "19dc890"
 hash = "3996fc74044bc44144b323686f887e1"
 
 [[plugin.deps]]
-use = "Lil-Dank/lazygit"
-rev = "ea20d05"
-hash = "b95f2d56dd4b2df1be338179a6f1f6c9"
-
-[[plugin.deps]]
 use = "imsi32/yatline"
 rev = "88bd1c5"
 hash = "981acbe9b758b1af3a8154c932bb936d"
@@ -87,6 +82,11 @@ hash = "f8530ee84fee95dbcc26bb1d8d8019c7"
 use = "dedukun/bookmarks"
 rev = "9ef1254"
 hash = "92fbb5483657fa7976cdf4e0104e18e0"
+
+[[plugin.deps]]
+use = "Lil-Dank/lazygit"
+rev = "a90fc71"
+hash = "894e801b788d0fca94627b58f8c9e1d4"
 
 [[flavor.deps]]
 use = "kalidyasin/yazi-flavors:tokyonight-storm"

@@ -44,3 +44,5 @@ export EZA_CONFIG_DIR="$HOME/.config/eza"
 # Set opencode to path
 export PATH=/home/ricky/.opencode/bin:$PATH
 
+# Set local script resource to path
+export PATH="$HOME/.local/bin:$PATH"

@@ -1,7 +1,7 @@
 [flavor]
 
-# light = "custom-hypr"
-# dark = "custom-hypr"
+# light = "hyprwave"
+# dark = "hyprwave"
 
 light = "Electric-Midnight"
 dark = "Electric-Midnight"
