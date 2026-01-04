@@ -1,12 +1,22 @@
--- ################## Debug ######################################################
---
--- ya.dbg("lazygit.yazi: entry() called")
---
--- local status = Command("lazygit"):stdin(Command.INHERIT):stdout(Command.INHERIT):stderr(Command.INHERIT):status()
---
--- ya.dbg("lazygit.yazi: exited with code " .. tostring(status.code))
+-- ################## Colors ######################################################
 
--- ################## GIT ########################################################
+local c = {
+	bg = "#07060E",
+	fg = "#A0CFFF",
+	black = "#283457",
+	grey = "#7898C7",
+	green = "#38ff9c",
+	yellow = "#FFD580",
+	orange = "#FFAA66",
+	red = "#FF6B6B",
+	blue = "#5CAEFF",
+	cyan = "#00B7EB",
+	magenta = "#E178FF",
+	violet = "#947CFF",
+	white = "#A0CFFF",
+}
+
+-- ################## GIT #####################################################
 
 require("git"):setup()
 
@@ -25,30 +35,30 @@ require("yatline"):setup({
 	inverse_separator = { open = "", close = "" },
 
 	style_a = {
-		fg = "#1793D1",
+		fg = c.cyan,
 		bg_mode = {
-			-- normal = "#101322",
-			select = "#CBA6F7",
-			un_select = "#FF6B6B",
+			-- normal = c.bg,
+			select = c.magenta,
+			un_select = c.red,
 		},
 	},
-	style_b = { fg = "#1793D1" },
-	style_c = { fg = "#1793D1" },
+	style_b = { fg = c.cyan },
+	style_c = { fg = c.cyan },
 
-	permissions_t_fg = "#1793D1",
-	permissions_r_fg = "#8CCF7E",
-	permissions_w_fg = "#FFD580",
-	permissions_x_fg = "#FF6B6B",
-	permissions_s_fg = "#1793D1",
+	permissions_t_fg = c.blue,
+	permissions_r_fg = c.green,
+	permissions_w_fg = c.yellow,
+	permissions_x_fg = c.red,
+	permissions_s_fg = c.cyan,
 
-	selected = { icon = "󰻭", fg = "#FFD580" },
-	copied = { icon = "", fg = "#8CCF7E" },
-	cut = { icon = "", fg = "#FF6B6B" },
-	total = { icon = "󰮍", fg = "#FFD580" },
-	succ = { icon = "", fg = "#8CCF7E" },
-	fail = { icon = "", fg = "#FF6B6B" },
-	found = { icon = "󰮕", fg = "#065287" },
-	processed = { icon = "󰐍", fg = "#8CCF7E" },
+	selected = { icon = "󰻭", fg = c.yellow },
+	copied = { icon = "", fg = c.green },
+	cut = { icon = "", fg = c.red },
+	total = { icon = "󰮍", fg = c.yellow },
+	succ = { icon = "", fg = c.green },
+	fail = { icon = "", fg = c.red },
+	found = { icon = "󰮕", fg = c.blue },
+	processed = { icon = "󰐍", fg = c.green },
 
 	show_background = false,
 
@@ -68,10 +78,10 @@ require("yatline"):setup({
 			section_a = {
 				{ type = "line", custom = false, name = "tabs", params = { "left" } },
 			},
-			section_b = {
+			section_b = {},
+			section_c = {
 				{ type = "coloreds", custom = false, name = "githead" },
 			},
-			section_c = {},
 		},
 	},
 
@@ -104,25 +114,25 @@ require("yatline"):setup({
 
 -- -- ################### GIT-Head #####################################################
 
-local hypr = {
-	prefix_color = "#7898C7",
-	branch_color = "#00B7EB",
-	commit_color = "#8CCF7E",
-	stashes_color = "#8CCF7E",
-	state_color = "#FF6B6B",
-	staged_color = "#FFD580",
-	unstaged_color = "#FF6B6B",
-	untracked_color = "#1793D1",
+local colorscheme = {
+	prefix_color = c.grey,
+	branch_color = c.cyan,
+	commit_color = c.green,
+	stashes_color = c.green,
+	state_color = c.red,
+	staged_color = c.orange,
+	unstaged_color = c.red,
+	untracked_color = "c.cyan",
 }
 require("yatline-githead"):setup({
-	theme = hypr,
+	theme = colorscheme,
 })
 
 -- -- #################### Tab-Path ####################################################
 --
 require("yatline-tab-path"):setup({
-	path_fg = "#101322",
-	filter_fg = "#FFD580",
+	path_fg = c.bg,
+	filter_fg = c.orange,
 	search_label = " search",
 	filter_label = " filter",
 	no_filter_label = "",
@@ -133,19 +143,7 @@ require("yatline-tab-path"):setup({
 -- -- ##################### Symlink ###################################################
 
 require("yatline-symlink"):setup({
-	symlink_color = "#CBA6F7",
-})
-
--- -- ##################### Restore ##################################################
-
-require("restore"):setup({})
-
--- -- ##################### Relative Motions ###################################################
-
-require("relative-motions"):setup({
-	show_numbers = "relative",
-	show_motion = true,
-	enter_mode = "first",
+	symlink_color = c.magenta,
 })
 
 -- -- ##################### Copy File Content ###################################################

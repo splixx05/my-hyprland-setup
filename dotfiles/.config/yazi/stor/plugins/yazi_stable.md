@@ -1,3 +1,39 @@
+---
+id: yazi_stable
+aliases: []
+tags: []
+---
+
+## Last yazi stable version
+
+last stable version --> yazi-25.5.31-2-x86_64.pkg.tar.zst
+
+## Downgrade yazi to this version:
+
+```
+sudo pacman -U /var/cache/pacman/pkg/yazi-25.5.31-2-x86_64.pkg.tar.zst
+```
+
+> [!warning] Don't forget!!
+> add yazi to PkgIgnore to /etc/pacman.conf - otherwise yazi will update to another version!
+> either update yazi pkgs until you know, if it has breaking changes!
+
+## Plugins from yazi-rs:
+
+This Plugins will always need the newest version of yazi, so you may have to config them to run:
+
+yazi-rs/plugins:full-border
+yazi-rs/plugins:piper
+yazi-rs/plugins:git
+yazi-rs/plugins:chmod
+
+They are not installed via ya pkg-mgr, and are mantained manually
+
+## Pkg that are stable for v25.5.31-2
+
+This Plugins work on this version without config:
+
+```
 [[plugin.deps]]
 use = "imsi32/yatline"
 rev = "88bd1c5"
@@ -56,3 +92,5 @@ hash = "ab2e66065a94cca4886b303518e44bd8"
 
 [flavor]
 deps = []
+
+```

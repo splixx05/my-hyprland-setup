@@ -6,12 +6,6 @@
 light = "Electric-Midnight"
 dark = "Electric-Midnight"
 
-# light = "tokyonight-storm"
-# dark = "tokyonight-storm"
-
-# light = "catppuccin-mocha"
-# dark = "catppuccin-mocha"
-
 
 [icon]
 files = [

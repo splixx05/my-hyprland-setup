@@ -140,9 +140,9 @@ rules = [
 ]
 
 [plugin]
-# prepend_previewers = [
-#   { name = "*.md", run = 'piper -- CLICOLOR_FORCE=1 glow -w=$w -s=dark "$1"' },
-# ]
+prepend_previewers = [
+  { name = "*.md", run = 'piper -- CLICOLOR_FORCE=1 glow -w=$w -s=dark "$1"' },
+]
 
 prepend_fetchers = [
   { id = "git", name = "*", run = "git" },
