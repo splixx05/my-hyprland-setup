@@ -2,8 +2,16 @@ vim.cmd("let g:netrw_liststyle = 1")
 
 local opt = vim.opt
 
+-- line, numbers and cursor
+opt.cursorline = true
 opt.relativenumber = true
 opt.number = true
+opt.fillchars = {
+  eob = " ",
+  vert = "│",
+  fold = " ",
+  msgsep = "─",
+}
 
 -- tabs & indentation
 opt.tabstop = 2 -- 2 spaces for tabs (prettier default)
@@ -15,8 +23,6 @@ opt.wrap = false
 -- search settings
 opt.ignorecase = true -- ignore case when searching
 opt.smartcase = true -- if you include mixed case in your search, assumes you want case-sensitive
-
-opt.cursorline = true
 
 -- turn on termguicolors for tokyonight colorscheme to work
 -- (have to use iterm2 or any other true color terminal)

@@ -34,7 +34,7 @@ local highlights = {
 
   -- Comments
   Comment = { fg = c.tone.grey, italic = true },
-  Todo = { fg = c.spec.green, bold = true },
+  Todo = { fg = c.acc.green, bold = true },
 
   -- Constants
   Constant = { fg = c.acc.yellow },
@@ -42,7 +42,7 @@ local highlights = {
   Character = { fg = c.acc.blue },
   Number = { fg = c.acc.orange },
   Boolean = { fg = c.prim.deep },
-  Float = { fg = c.prim.main },
+  Float = { fg = c.prim.main, bg = "NONE" },
 
   -- Identifiers
   Identifier = { fg = c.prim.deep },
@@ -50,7 +50,7 @@ local highlights = {
   Builtin = { fg = c.prim.deep },
   Search = { fg = c.acc.magenta, bg = "NONE" },
   IncSearch = { fg = c.prim.deep },
-  MatchParen = { fg = c.spec.green },
+  MatchParen = { fg = c.acc.green },
 
   -- Statements
   Statement = { fg = c.acc.magenta },
@@ -110,8 +110,8 @@ local highlights = {
   ["@punctuation"] = { link = "Delimiter" },
   ["@operator"] = { link = "Operator" },
   ["@punctuation.delimiter"] = { link = "Delimiter" },
-  ["@punctuation.bracket"] = { fg = c.spec.green },
-  ["@punctuation.special"] = { fg = c.spec.green },
+  ["@punctuation.bracket"] = { fg = c.acc.green },
+  ["@punctuation.special"] = { fg = c.acc.green },
 
   -- Variables
   ["@variable.builtin"] = { fg = c.fg.acc },

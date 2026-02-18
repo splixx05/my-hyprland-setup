@@ -25,8 +25,8 @@ local config = {
       -- We are going to use lualine_c an lualine_x as left and
       -- right section. Both are highlighted by c theme .  So we
       -- are just setting default looks o statusline
-      normal = { c = { fg = colors.fg.main, bg = colors.bg.main } },
-      inactive = { c = { fg = colors.fg.main, bg = colors.bg.main } },
+      normal = { c = { fg = colors.fg.main, bg = "NONE" } },
+      inactive = { c = { fg = colors.fg.main, bg = "NONE" } },
     },
   },
   sections = {
@@ -72,26 +72,26 @@ ins_left({
   -- mode component
   function()
     local mode_icons = {
-      n = "", -- Normal
-      i = "", -- Insert
-      v = "", -- Visual
-      [""] = "", -- Visual block
-      V = "", -- Visual line
-      c = "", -- Command
+      n = "", -- Normal
+      i = "󰏫", -- Insert
+      v = "", -- Visual
+      [""] = "", -- Visual block
+      V = "", -- Visual line
+      c = "", -- Command
       no = "",
-      s = "", -- Select
-      S = "",
-      [""] = "",
-      ic = "", -- Insert completion
-      R = "", -- Replace
-      Rv = "",
-      cv = "", -- Vim Ex
-      ce = "",
-      r = "", -- Hit-enter prompt
-      rm = "",
-      ["r?"] = "",
-      ["!"] = "", -- Shell
-      t = "", -- Terminal
+      s = "󰏫", -- Select
+      S = "󰏫",
+      [""] = "󰏫",
+      ic = "󰏫", -- Insert completion
+      R = "󰑓", -- Replace
+      Rv = "󰑓",
+      cv = "󰈆", -- Vim Ex
+      ce = "󰈆",
+      r = "󰑓", -- Hit-enter prompt
+      rm = "󰑓",
+      ["r?"] = "󰑓",
+      ["!"] = "", -- Shell
+      t = "", -- Terminal
     }
     return mode_icons[vim.fn.mode()] or ""
   end,
@@ -172,7 +172,7 @@ ins_left({
 ins_left({
   "filename",
   cond = conditions.buffer_not_empty,
-  color = { fg = colors.fg, gui = "bold" },
+  color = { fg = colors.fg.main, gui = "bold" },
 })
 
 ins_left({

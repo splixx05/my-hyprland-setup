@@ -2,14 +2,15 @@ return {
   prim = {
     main = "#1793D1",
     deep = "#0166a9",
-    high = "#00E5FF",
+    high = "#46d6ff",
   },
+
   bg = {
-    main = "NONE", -- in case of transparent bg
-    -- main = "#07060E",
-    fbg = "#07060E",
-    slate = "#283457",
     deep = "#101322",
+    slate = "#283457",
+    main = "NONE", -- in case of transparent bg
+    -- main = #000000, -- in case of non-transparent bg
+    term = "#000000", -- this is used for plugins who cannot handle transparancy (i.e. barbar)
   },
   fg = {
     main = "#7898C7",
@@ -19,22 +20,29 @@ return {
 
   tone = {
     black = "#0e141b",
-    grey = "#5C6773",
-    white = "#f0f4ff",
+    grey = "#4A6070",
+    white = "#B4C9FF",
   },
 
   acc = {
-    green = "#8CCF7E",
-    yellow = "#FFD580",
-    orange = "#FFAA66",
-    red = "#FF6E8A",
+    green = "#34eb83",
+    yellow = "#DAFF1F",
+    orange = "#FF7F0F",
+    red = "#FF4747",
     blue = "#5CAEFF",
     cyan = "#00B7EB",
     magenta = "#E178FF",
     violet = "#947CFF",
   },
 
-  spec = {
-    green = "#34eb83",
+  alt = {
+    green = "#7DF2B0",
+    yellow = "#E7FF70",
+    orange = "#FFB370",
+    red = "#f7768e",
+    lightblue = "#178FFF",
+    darkblue = "#065287",
+    cyan = "#00E5FF",
+    magenta = "#cba6f7",
   },
 }

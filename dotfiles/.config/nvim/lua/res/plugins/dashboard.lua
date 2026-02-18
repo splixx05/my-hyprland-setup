@@ -8,18 +8,8 @@ return {
     dashboard = {
       sections = {
         { section = "header" },
-        {
-          pane = 2,
-          section = "terminal",
-          cmd = "",
-          height = 7,
-          padding = 1,
-        },
-        {
-          section = "keys",
-          gap = 1,
-          padding = 1,
-        },
+        { pane = 2, section = "terminal", cmd = "", height = 10, padding = 1 },
+        { section = "keys", gap = 1, padding = 1 },
         {
           pane = 2,
           icon = " ",
@@ -35,13 +25,20 @@ return {
           file = vim.fn.fnamemodify(".", ":~"),
           padding = 1,
         },
-        {
-          pane = 2,
-          section = "recent_files",
-          cwd = true,
-          limit = 5,
-          padding = 1,
-        },
+        { pane = 2, section = "recent_files", cwd = true, limit = 5, padding = 1 },
+      },
+      preset = {
+        pick = nil,
+        header = [[
+                                                                           
+             ████ ██████           █████      ██                     
+            ███████████             █████                             
+            █████████ ███████████████████ ███  ███████████   
+           █████████  ███    █████████████ ████ ██████████████   
+          █████████ ██████████ █████████ ████ █████ ████ █████   
+        ███████████ ███    ███ █████████ ████ █████ ████ █████  
+       ██████  █████████████████████ ████ ████ █████ ████ ██████ 
+       ]],
       },
     },
   },
